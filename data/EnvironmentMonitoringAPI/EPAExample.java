@@ -14,7 +14,7 @@ public class EPAExample {
 
   public static void main(String[] args) {
     try {
-        String urlString = "https://gateway.api.epa.vic.gov.au/environmentMonitoring/v1/sites/63a73778-4244-481b-82d9-3a7c416832eb/parameters?since=2022-05-03T02:00:00Z&until=2022-05-04T03:00:00Z&interval=1HR_AV";
+        String urlString = "https://gateway.api.epa.vic.gov.au/environmentMonitoring/v1/sites/63a73778-4244-481b-82d9-3a7c416832eb/parameters?since=2024-05-03T02:00:00Z&until=2024-05-04T03:00:00Z&interval=1HR_AV";
         URL url = new URL(urlString);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
