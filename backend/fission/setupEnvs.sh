@@ -5,8 +5,9 @@ SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
 
 # ref: fission env create --spec --name python --image fission/python-env --builder fission/python-builder
 (
+    FISSION_NAMESPACE=default
     declare -A envs
-    envs["python"]="fission/python-env fission/python-env-3.9"
+    envs["python"]="fission/python-env-3.9 fission/python-builder-3.9"
     envs["nodejs"]="fission/node-env fission/node-builder"
 
     # check if env exists; otherwise create
@@ -15,11 +16,11 @@ SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
         image="${config[0]}"
         builder="${config[1]}"
 
-        env_exists=$(fission env get --name $env 2>&1 || echo "not found")
+        env_exists=$(fission env get --name $env --namespace $FISSION_NAMESPACE 2>&1 || echo "not found")
 
         if [[ "$env_exists" == *"not found"* ]]; then
             echo "$env environment does not exist. Creating now..."
-            fission env create --name $env --image $image --builder $builder
+            fission env create --name $env --image $image --builder $builder --namespace $FISSION_NAMESPACE
         else
             echo "$env environment already exists."
         fi
@@ -27,4 +28,3 @@ SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
     done
 
 )
-

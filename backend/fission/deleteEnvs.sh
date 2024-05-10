@@ -2,6 +2,7 @@
 set -e
 
 SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+FISSION_NAMESPACE=default
 
 # ref: fission env create --spec --name python --image fission/python-env --builder fission/python-builder
 
@@ -16,12 +17,12 @@ SCRIPT_DIR=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
         image="${config[0]}"
         builder="${config[1]}"
 
-        env_exists=$(fission env get --name $env 2>&1 || echo "not found")
+        env_exists=$(fission env get --name $env --namespace $FISSION_NAMESPACE 2>&1 || echo "not found")
 
         if [[ "$env_exists" == *"not found"* ]]; then
             echo "$env environment does not exist. Nothing to be deleted."
         else
-            fission environment delete --name $env
+            fission environment delete --name $env --namespace $FISSION_NAMESPACE
         fi
         echo ""
     done
