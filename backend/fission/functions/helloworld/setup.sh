@@ -17,11 +17,11 @@ ROUTE_URL="/helloworld"
 ROUTE_CREATEINGRESS="TRUE"
 #####################################
 
-(
-    fission route delete --name helloworld
-    fission fn delete --name helloworld
-    fission pkg delete --name helloworld
-)
+# (
+#     fission route delete --name $ROUTE_NAME
+#     fission fn delete --name $FN_NAME
+#     fission pkg delete --name $PKG_NAME
+# )
 
 (
     pushd "$DIR"
@@ -31,7 +31,7 @@ ROUTE_CREATEINGRESS="TRUE"
 
 (
     fission package create --name $PKG_NAME --sourcearchive $DIR/upload.zip --env $ENV_NAME --buildcmd "./build.sh" --namespace $FISSION_NAMESPACE
-    fission fn create --name $FN_NAME --env $ENV_NAME --pkg helloworld --entrypoint $FN_ENTRYPOINT --namespace $FISSION_NAMESPACE
+    fission fn create --name $FN_NAME --env $ENV_NAME --pkg $PKG_NAME --entrypoint $FN_ENTRYPOINT --namespace $FISSION_NAMESPACE
 
     if [ "$ROUTE_CREATEINGRESS" = "TRUE" ]; then
         fission route create --name $ROUTE_NAME --method $ROUTE_METHOD --url $ROUTE_URL --function $FN_NAME --namespace $FISSION_NAMESPACE --createingress
