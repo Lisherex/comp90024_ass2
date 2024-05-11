@@ -1,0 +1,198 @@
+{
+    "organisation": "TUA_PHIDU",
+    "name": "phidu_admiss_principal_diag_females_lga_2017_18",
+    "title": "PHIDU - Admissions - Principal Diagnosis: Females  (LGA) 2017-2018",
+    "legal": {
+        "copyrightYear": "2021",
+        "attributionYear": "2021",
+        "attribution": "{datasource.organisationTitle}, ({dataset.attributionYear}): {dataset.title}; accessed from SUDO on {dateOfAccess}.",
+        "clickthrough": false,
+        "licenceType": "Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Australia (CC BY-NC-SA 3.0 AU)",
+        "copyrightNotice": "&copy; {datasource.organisationTitle} {dataset.copyrightYear}",
+        "suggestedCitation": "{datasource.organisationTitle}, ({dataset.attributionYear}): {dataset.title}; accessed from SUDO on {dateOfAccess}."
+    },
+    "referenceSystemIdentifier": "urn:x-ogc:def:crs:EPSG:4283",
+    "geoLevel": "lga2016",
+    "key": "lga_code",
+    "keyRegex": null,
+    "availability": "true",
+    "geomField": "geom",
+    "keyword": "HEALTH SCIENCES,Public health",
+    "theme": "",
+    "temporalExtent": {
+        "beginDate": "2017-07-01T00:00:00",
+        "endDate": "2018-06-30T00:00:00",
+        "selectTime": false
+    },
+    "type": "dataset",
+    "_id": "dataset-TUA_PHIDU-phidu_admiss_principal_diag_females_lga_2017_18-lga2016",
+    "bbox": [
+        96.81,
+        -43.75,
+        159.11,
+        -9.14
+    ],
+    "abstract": "This dataset, released June 2020, contains data relating to female hospital admissions during 2017-2018 by a principal diagnosis of Parasitic disease, cancer, Blood-organ disease, metabolic disease, nervous system disease, eye disease, ear disease, circulatory system disease, respiratory system disease, digestive system disease, skin disease, musculoskeletal disease, genitourinary system disease, perinatal condition, congenital deformations and external causes. The data is by Local Government Area (LGA) 2016 geographic boundaries.<br/><br/>\n\n\nFor more information please see the <a href=\"https://phidu.torrens.edu.au/current/data/sha-aust/notes/phidu_data_sources_notes.pdf\" target=\"_blank\">data source notes</a> on the data. <br/><br/>\n\nSource: Compiled by PHIDU using data from the Australian Institute of Health and Welfare, supplied on behalf of State\nand Territory health departments for 2017/18; and the average of the ABS Estimated Resident Population, 30 June 2017 and 30 June 2018.<br/><br/> SUDO has spatially enabled the <a href= \"https://phidu.torrens.edu.au/social-health-atlases/data#social-health-atlases-of-australia-local-government-areas\" target=\"_blank\">original data</a>. Data that was not shown/not applicable/not published/not available for the specific area ('#', '..', '^', 'np, 'n.a.', 'n.y.a.' in original PHIDU data) was removed.It has been replaced by by Blank cells. For other keys and abbreviations refer to <a href=\"https://cloudstor.aarnet.edu.au/plus/s/1ryaKpnBQB6cMCp\" target=\"_blank\">PHIDU Keys</a>.",
+    "selectedAttributes": [
+        {
+            "name": "lga_code",
+            "type": "Integer",
+            "title": "LGA Code 2016",
+            "description": "lga_code",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "lga_name",
+            "type": "String",
+            "title": "LGA Name 2016",
+            "description": "lga_name",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admssns_chrnc_obstrctve_plmnry_dsse_cpd_fmls_hsptls_201718_nmbr",
+            "type": "Double",
+            "title": "Admissions For Chronic Obstructive Pulmonary Disease (Copd), Females  - All Hospitals 2017/18 Number",
+            "description": "admssns_chrnc_obstrctve_plmnry_dsse_cpd_fmls_hsptls_201718_nmbr",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admssns_chrnc_obstrctve_plmnry_dsse_cpd_fmls_hsptls_201718_sg",
+            "type": "String",
+            "title": "Admissions For Chronic Obstructive Pulmonary Disease (Copd), Females  - All Hospitals 2017/18 Sig.",
+            "description": "admssns_chrnc_obstrctve_plmnry_dsse_cpd_fmls_hsptls_201718_sg",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admssns_chrnc_obstrctve_plmnry_dsse_cpd_fmls_hsptls_201718_sr",
+            "type": "Double",
+            "title": "Admissions For Chronic Obstructive Pulmonary Disease (Copd), Females  - All Hospitals 2017/18 Sr",
+            "description": "admssns_chrnc_obstrctve_plmnry_dsse_cpd_fmls_hsptls_201718_sr",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admsn_chrn_obstrcve_plmnry_dse_cpd_fmls_hsptl_201718_asr_pr_100",
+            "type": "Double",
+            "title": "Admissions For Chronic Obstructive Pulmonary Disease (Copd), Females  - All Hospitals 2017/18 Asr Per 100,000 Males",
+            "description": "admsn_chrn_obstrcve_plmnry_dse_cpd_fmls_hsptl_201718_asr_pr_100",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admsn_chrn_obstrcve_plmnry_dse_cpd_fmls_pblc_hsptl_201718_asr_p",
+            "type": "Double",
+            "title": "Admissions For Chronic Obstructive Pulmonary Disease (Copd), Females  - Public Hospitals 2017/18 Asr Per 100,000 Males",
+            "description": "admsn_chrn_obstrcve_plmnry_dse_cpd_fmls_pblc_hsptl_201718_asr_p",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admsn_chrn_obstrcve_plmnry_dse_cpd_fmls_pblc_hsptl_201718_nmbr",
+            "type": "Double",
+            "title": "Admissions For Chronic Obstructive Pulmonary Disease (Copd), Females  - Public Hospitals 2017/18 Number",
+            "description": "admsn_chrn_obstrcve_plmnry_dse_cpd_fmls_pblc_hsptl_201718_nmbr",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admsn_chrn_obstrcve_plmnry_dse_cpd_fmls_pblc_hsptl_201718_sg",
+            "type": "String",
+            "title": "Admissions For Chronic Obstructive Pulmonary Disease (Copd), Females  - Public Hospitals 2017/18 Sig.",
+            "description": "admsn_chrn_obstrcve_plmnry_dse_cpd_fmls_pblc_hsptl_201718_sg",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admsn_chrn_obstrcve_plmnry_dse_cpd_fmls_pblc_hsptl_201718_sr",
+            "type": "Double",
+            "title": "Admissions For Chronic Obstructive Pulmonary Disease (Copd), Females  - Public Hospitals 2017/18 Sr",
+            "description": "admsn_chrn_obstrcve_plmnry_dse_cpd_fmls_pblc_hsptl_201718_sr",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admssns_rsprtry_systm_dsss_fmls_hsptls_201718_asr_pr_100000",
+            "type": "Double",
+            "title": "Admissions For Respiratory System Diseases, Females  - All Hospitals 2017/18 Asr Per 100,000 Females",
+            "description": "admssns_rsprtry_systm_dsss_fmls_hsptls_201718_asr_pr_100000",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admssns_rsprtry_systm_dsss_fmls_hsptls_201718_nmbr",
+            "type": "Double",
+            "title": "Admissions For Respiratory System Diseases, Females  - All Hospitals 2017/18 Number",
+            "description": "admssns_rsprtry_systm_dsss_fmls_hsptls_201718_nmbr",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admssns_rsprtry_systm_dsss_fmls_hsptls_201718_sg",
+            "type": "String",
+            "title": "Admissions For Respiratory System Diseases, Females  - All Hospitals 2017/18 Sig.",
+            "description": "admssns_rsprtry_systm_dsss_fmls_hsptls_201718_sg",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admssns_rsprtry_systm_dsss_fmls_hsptls_201718_sr",
+            "type": "Double",
+            "title": "Admissions For Respiratory System Diseases, Females  - All Hospitals 2017/18 Sr",
+            "description": "admssns_rsprtry_systm_dsss_fmls_hsptls_201718_sr",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admssns_rsprtry_systm_dsss_fmls_pblc_hsptls_201718_nmbr",
+            "type": "Double",
+            "title": "Admissions For Respiratory System Diseases, Females  - Public Hospitals 2017/18 Number",
+            "description": "admssns_rsprtry_systm_dsss_fmls_pblc_hsptls_201718_nmbr",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admssns_rsprtry_systm_dsss_fmls_pblc_hsptls_201718_sg",
+            "type": "String",
+            "title": "Admissions For Respiratory System Diseases, Females  - Public Hospitals 2017/18 Sig.",
+            "description": "admssns_rsprtry_systm_dsss_fmls_pblc_hsptls_201718_sg",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "admssns_rsprtry_systm_dsss_fmls_pblc_hsptls_201718_sr",
+            "type": "Double",
+            "title": "Admissions For Respiratory System Diseases, Females  - Public Hospitals 2017/18 Sr",
+            "description": "admssns_rsprtry_systm_dsss_fmls_pblc_hsptls_201718_sr",
+            "stype": "nominal",
+            "isDimension": false
+        }
+    ],
+    "filter": {
+        "filterType": "tabular",
+        "feature": {
+            "key": "lga_code",
+            "geoLevel": "lga2016",
+            "geoField": "ignored",
+            "year": "2006",
+            "featureBbox": [
+                140.961681984,
+                -39.159189527500004,
+                149.976679008,
+                -33.9806475865
+            ],
+            "featureType": "ste",
+            "featureInstance": "2",
+            "featureName": "Victoria",
+            "referenceSystemIdentifier": "urn:x-ogc:def:crs:EPSG:4283",
+            "prefix": "",
+            "keyTransform": null
+        },
+        "states": [
+            "2"
+        ]
+    }
+}
