@@ -1,0 +1,141 @@
+{
+    "organisation": "AU_Govt_ABS_Census",
+    "name": "lga_p29_number_motor_vehicles_by_dwelling_census_2016",
+    "title": "LGA-P29 Number of Motor Vehicle by Dwelling-Census 2016",
+    "legal": {
+        "attribution": "{datasource.organisationTitle}, ({dataset.attributionYear}): {dataset.title}; accessed from SUDO on {dateOfAccess}.",
+        "attributionYear": "2017",
+        "clickthrough": false,
+        "copyrightNotice": "&copy; {datasource.organisationTitle} {dataset.copyrightYear}",
+        "copyrightYear": "2017",
+        "licenceType": "Creative Commons Attribution 2.5 Australia (CC BY 2.5 AU)"
+    },
+    "referenceSystemIdentifier": "urn:x-ogc:def:crs:EPSG:4283",
+    "geoLevel": "lga2016",
+    "key": "lga_code_2016",
+    "keyRegex": null,
+    "availability": "true",
+    "geomField": "wkb_geometry",
+    "keyword": "pep,motor vehicles ,dwelling,2016,census,cars,p29,place of enumeration profile",
+    "theme": null,
+    "temporalExtent": {
+        "beginDate": "2016-08-09T00:00:00",
+        "endDate": "2016-08-11T00:00:00",
+        "selectTime": false
+    },
+    "type": "dataset",
+    "_id": "dataset-AU_Govt_ABS_Census-lga_p29_number_motor_vehicles_by_dwelling_census_2016-lga2016",
+    "bbox": [
+        96.82,
+        -43.74,
+        159.11,
+        -9.14
+    ],
+    "abstract": "LGA based data for Number of Motor Vehicles by Dwellings, in Place of Enumeration Profile (PEP), 2016 Census. Count of occupied private dwellings categorised by the number of registered motor vehicles owned or used by household members. It includes company owned vehicles garaged, parked at or near private dwellings on Census night. It excludes motorbikes and scooters. The data is by LGA 2016 boundaries. Periodicity: 5-Yearly. <br/> \nNote: There are small random adjustments made to all cell values to protect the confidentiality of data. These adjustments may cause the sum of rows or columns to differ by small amounts from table totals.<br/> \nFor more information visit the data source: <a href=http://www.abs.gov.au/census>http://www.abs.gov.au/census</a>.\n",
+    "selectedAttributes": [
+        {
+            "name": "lga_code_2016",
+            "type": "String",
+            "title": "LGA Code 2016",
+            "description": "LGA Code 2016.",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "lga_name16",
+            "type": "String",
+            "title": "LGA Name 2016",
+            "description": "LGA Name 2016.",
+            "stype": "nominal",
+            "isDimension": false
+        },
+        {
+            "name": "num_mvs_ns",
+            "type": "Integer",
+            "title": "Number of motor vehicles not stated Dwellings",
+            "description": "Number of motor vehicles not stated Dwellings.",
+            "stype": "ratio",
+            "isDimension": false
+        },
+        {
+            "name": "num_mvs_per_dweling_0_mvs",
+            "type": "Integer",
+            "title": "Number of motor vehicles per dwelling None",
+            "description": "Number of motor vehicles per dwelling None.",
+            "stype": "ratio",
+            "isDimension": false
+        },
+        {
+            "name": "num_mvs_per_dweling_1_mvs",
+            "type": "Integer",
+            "title": "Number of motor vehicles per dwelling One",
+            "description": "Number of motor vehicles per dwelling One.",
+            "stype": "ratio",
+            "isDimension": false
+        },
+        {
+            "name": "num_mvs_per_dweling_2_mvs",
+            "type": "Integer",
+            "title": "Number of motor vehicles per dwelling Two",
+            "description": "Number of motor vehicles per dwelling Two.",
+            "stype": "ratio",
+            "isDimension": false
+        },
+        {
+            "name": "num_mvs_per_dweling_3_mvs",
+            "type": "Integer",
+            "title": "Number of motor vehicles per dwelling Three",
+            "description": "Number of motor vehicles per dwelling Three.",
+            "stype": "ratio",
+            "isDimension": false
+        },
+        {
+            "name": "num_mvs_per_dweling_4mo_mvs",
+            "type": "Integer",
+            "title": "Number of motor vehicles per dwelling Four or more",
+            "description": "Number of motor vehicles per dwelling Four or more.",
+            "stype": "ratio",
+            "isDimension": false
+        },
+        {
+            "name": "num_mvs_per_dweling_tot",
+            "type": "Integer",
+            "title": "Total Dwellings with at least one motor vehicle",
+            "description": "Total Dwellings with at least one motor vehicle.",
+            "stype": "ratio",
+            "isDimension": false
+        },
+        {
+            "name": "total_dwelings",
+            "type": "Integer",
+            "title": "Total Dwellings",
+            "description": "Total Dwellings.",
+            "stype": "ratio",
+            "isDimension": false
+        }
+    ],
+    "filter": {
+        "filterType": "tabular",
+        "feature": {
+            "key": "lga_code_2016",
+            "geoLevel": "lga2016",
+            "geoField": "ignored",
+            "year": "2006",
+            "featureBbox": [
+                140.961681984,
+                -39.159189527500004,
+                149.976679008,
+                -33.9806475865
+            ],
+            "featureType": "ste",
+            "featureInstance": "2",
+            "featureName": "Victoria",
+            "referenceSystemIdentifier": "urn:x-ogc:def:crs:EPSG:4283",
+            "prefix": "",
+            "keyTransform": null
+        },
+        "states": [
+            "2"
+        ]
+    }
+}
