@@ -21,22 +21,22 @@ curl -XPUT -k 'https://127.0.0.1:9200/copd'\
             "station_id": {
                 "type": "text"
             },
-            "admissions_respiratory_system_diseases_per_100000_total": {
+            "admissions_respiratory_system_diseases_public_hospital_total_number": {
                 "type": "float"
             },
-            "admissions_respiratory_system_diseases_per_100000_males": {
+            "admissions_respiratory_system_diseases_public_hospital_males_number": {
                 "type": "float"
             },
-            "admissions_respiratory_system_diseases_per_100000_females": {
+            "admissions_respiratory_system_diseases_public_hospital_females_number": {
                 "type": "float"
             },
-            "admissions_chronic_obstructive_pulmonary_disease_per_100000_total": {
+            "admissions_chronic_obstructive_pulmonary_disease_public_hospital_total_number": {
                 "type": "float"
             },
-            "admissions_chronic_obstructive_pulmonary_disease_per_100000_males": {
+            "admissions_chronic_obstructive_pulmonary_disease_public_hospital_males_number": {
                 "type": "float"
             },
-            "admissions_chronic_obstructive_pulmonary_disease_per_100000_females": {
+            "admissions_chronic_obstructive_pulmonary_disease_public_hospital_females_number": {
                 "type": "float"
             }
         }
