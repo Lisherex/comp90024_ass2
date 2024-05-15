@@ -8,7 +8,7 @@ import os
 load_dotenv()
 
 JSON_INDENT = 4
-INDEX_NAME = 'copd'
+INDEX_NAME = 'houseprice'
 
 client = Elasticsearch(
     "https://localhost:9200",
@@ -17,17 +17,17 @@ client = Elasticsearch(
 )
 
 
-def insert_copd_data():
+def insert_house_price_data():
     # Load the JSON file
-    with open('./../../database/copdFinalData.json', 'r') as file:
-        copd_data = json.load(file)
+    with open('./../../database/housePriceFinalData.json', 'r') as file:
+        house_price_data = json.load(file)
 
-    for index, copd in enumerate(copd_data):
-        copd['_index'] = INDEX_NAME
+    for index, house_price in enumerate(house_price_data):
+        house_price['_index'] = INDEX_NAME
 
-    response = bulk(client, copd_data)
+    response = bulk(client, house_price_data)
     return response
 
 # test the connection
 print(client.info())
-print(insert_copd_data())
+print(insert_house_price_data())
