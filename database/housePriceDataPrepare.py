@@ -41,17 +41,17 @@ for i, property in enumerate(properties_data):
             if distance < min_distance:
                 min_distance = distance
                 closest_site_id = site['siteID']
-    
+
     formatted_date = format_date(property.get('Date', ''))  # Format the date
 
     result = {
         "id": i,
         "suburb": property.get('Suburb', ''),
         "address": property.get('Address', ''),
-        "price": property.get('Price', ''),
+        "price": property.get('Price', None) or None,
         "date": formatted_date,  # Use the formatted date
-        "distance": property.get('Distance', ''),
-        "postcode": property.get('Postcode', ''),
+        "distance": property.get('Distance', None) or None,
+        "postcode": property.get('Postcode', None) or None,
         "latitude": lat,
         "longitude": lon,
         "station_id": closest_site_id or "Location not found"
