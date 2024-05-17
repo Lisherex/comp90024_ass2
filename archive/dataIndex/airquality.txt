@@ -1,0 +1,45 @@
+curl -XPUT -k 'https://127.0.0.1:9200/airquality'\
+   --header 'Content-Type: application/json'\
+   --data '{
+    "settings": {
+        "index": {
+            "number_of_shards": 3,
+            "number_of_replicas": 1
+        }
+    },
+    "mappings": {
+        "properties": {
+            "site_id": {
+                "type": "keyword"
+            },
+            "site_name": {
+                "type": "text"
+            },
+            "site_location": {
+                "type": "geo_point"
+            },
+            "since": {
+                "type": "date"
+            },
+            "until": {
+                "type": "date"
+            },
+            "parameter": {
+                "type": "text"
+            },
+            "health_advice": {
+                "type": "text"
+            },
+            "health_advice_color": {
+                "type": "text"
+            },
+            "average_value": {
+                "type": "double"
+            },
+            "unit": {
+                "type": "text"
+            }
+        }
+    }
+}'\
+   --user 'elastic:elastic' | jq '.'
