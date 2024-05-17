@@ -27,7 +27,7 @@ class EnvironmentMonitorAPI:
         queryString = urllib.parse.urlencode(params)
 
         return f"{baseURL}?{queryString}"
-    
+
     @staticmethod
     def getSiteData(baseURL: str, params: dict, hdr: dict) -> dict:
         url = f"{baseURL}?{urllib.parse.urlencode(params)}"
@@ -71,9 +71,8 @@ def updateFunc():
     except Exception as e:
         print(f"Handled unexpected error: {e}")
         raise
-    # return data
-    # print ("test")
-    return json.dumps(data, indent=4)
+
+    return data
 
 
     # url = configLoader("internal-service-ports", "ELASTIC_SEARCH_URL")
@@ -95,7 +94,7 @@ def updateFunc():
     #     coordinates = record.get("geometry", {}).get("coordinates")
     #     if not coordinates:
     #         continue
-        
+
     #     for advice in record.get("siteHealthAdvices", []):
     #         document_id = f"{site_id}_{advice.get("since")}"
     #         action = {
@@ -115,14 +114,11 @@ def updateFunc():
     #             }
     #         }
     #         actions.append(action)
-    
+
     # if actions:
     #     response = helpers.bulk(es, actions)
 
     # return response
-
-
-
 
 def updateFuncLocal():
     configLoader = Config(True)
@@ -147,9 +143,8 @@ def updateFuncLocal():
     except Exception as e:
         print(f"Handled unexpected error: {e}")
         raise
-    # return data
-    # print ("test")
-    return json.dumps(data, indent=4)
+
+    return data
 
 
     # url = ELASTIC_SEARCH_URL
@@ -198,8 +193,6 @@ def updateFuncLocal():
     # return response
 
 
-
-
 def handler():
     try:
         data = updateFunc()
@@ -211,9 +204,9 @@ def handler():
 def handlerLocal():
     try:
         data = updateFuncLocal()
-        return {"status": "success", "data": data}
+        print(json.dumps(data, indent=4))
     except Exception as e:
-        return {"status": "error", "message": str(e)}
+        print("message", str(e))
 
 if __name__ == "__main__":
-    handler()
+    handlerLocal()
