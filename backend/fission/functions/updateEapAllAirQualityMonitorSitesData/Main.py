@@ -1,4 +1,5 @@
 import os
+import json
 from dotenv import load_dotenv
 from elasticsearch import Elasticsearch, helpers
 import urllib.request
@@ -121,8 +122,6 @@ def updateFunc():
     # return response
 
 def updateFuncLocal():
-    configLoader = Config(True)
-    secretLoader = Config(False)
 
     try:
         data = EnvironmentMonitorAPI.getSiteData(
@@ -144,53 +143,54 @@ def updateFuncLocal():
         print(f"Handled unexpected error: {e}")
         raise
 
-    return data
+    # return data
 
 
-    # url = ELASTIC_SEARCH_URL
-    # port = ELASTIC_SEARCH_PORT
-    # username = ES_USERNAME
-    # password = ES_PASSWORD
-    # es = Elasticsearch(f"{url}:{port}",
-    #                    verify_certs=False,
-    #                    basic_auth=(username, password)
-    #                    )
-    # del url, port, username, password
-    # # info = es.info().body
-    # # return info
+    url = ELASTIC_SEARCH_URL
+    port = ELASTIC_SEARCH_PORT
+    username = ES_USERNAME
+    password = ES_PASSWORD
+    es = Elasticsearch(f"{url}:{port}",
+                       verify_certs=False,
+                       basic_auth=(username, password)
+                       )
+    del url, port, username, password
+    # info = es.info().body
+    # return info
 
-    # actions = []
-    # for record in data.get("records", []):
-    #     site_id = record.get("siteID")
-    #     site_name = record.get("siteName")
-    #     coordinates = record.get("geometry", {}).get("coordinates")
-    #     if not coordinates:
-    #         continue
+    actions = []
+    for record in data.get("records", []):
+        site_id = record.get("siteID")
+        site_name = record.get("siteName")
+        coordinates = record.get("geometry", {}).get("coordinates")
+        if not coordinates:
+            continue
         
-    #     for advice in record.get("siteHealthAdvices", []):
-    #         document_id = f"{site_id}_{advice.get("since")}"
-    #         action = {
-    #             "_index": "airquality",
-    #             "_id": document_id,
-    #             "_source": {
-    #                 "siteId": site_id,
-    #                 "siteName": site_name,
-    #                 "siteLocation": {"lat": coordinates[0], "lon": coordinates[1]},
-    #                 "parameter": advice.get("healthParameter"),
-    #                 "value": advice.get("averageValue"),
-    #                 "unit": advice.get("unit"),
-    #                 "healthAdvice": advice.get("healthAdvice"),
-    #                 "healthAdviceColor": advice.get("healthAdviceColor"),
-    #                 "since": advice.get("since"),
-    #                 "until": advice.get("until"),
-    #             }
-    #         }
-    #         actions.append(action)
-    
-    # if actions:
-    #     response = helpers.bulk(es, actions)
+        for advice in record.get("siteHealthAdvices", []):
+            document_id = f"{site_id}_{advice.get('since')}"
+            action = {
+                "_index": "airquality",
+                "_id": document_id,
+                "_source": {
+                    "site_id": site_id,
+                    "site_name": site_name,
+                    "site_location": {"lat": coordinates[0], "lon": coordinates[1]},
+                    "parameter": advice.get("healthParameter"),
+                    "value": advice.get("averageValue"),
+                    "unit": advice.get("unit"),
+                    "health_advice": advice.get("healthAdvice"),
+                    "health_advice_color": advice.get("healthAdviceColor"),
+                    "since": advice.get("since"),
+                    "until": advice.get("until"),
+                }
+            }
+            actions.append(action)
 
-    # return response
+    # return actions
+    
+    if actions:
+        response = helpers.bulk(es, actions)
+        return response
 
 
 def handler():

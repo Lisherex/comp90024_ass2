@@ -4,25 +4,25 @@ For UniMelb COMP90051-Cluster and Cloud Computing Assignment 2
 Assignment Guide (GitLab): https://gitlab.unimelb.edu.au/feit-comp90024/comp90024
 
 Data: 
-1. air pollution (PM2.5) vs weathere (wind/rainfall)
-2. air pollution vs COPD：chronic obstructive pulmonary disease
-3. air pollution vs house price
-3. air pollution vs vehicle
+1. air quality (PM2.5) vs weathere (wind/rainfall)
+2. air quality vs COPD：chronic obstructive pulmonary disease
+3. air quality vs house price
+3. air quality vs vehicle
 
 
 
 URL:
 
-/pollution
+/airquality
 
-/pollution/weather/wind
+/airquality/weather/wind
 
-/pollution/weather/rainfall
+/airquality/weather/rainfall
 
-/pollution/respiratory
+/airquality/respiratory
 
-/pollution/copd
+/airquality/copd
 
-/pollution/houseprice
+/airquality/houseprice
 
-/pollution/vehicle
+/airquality/vehicle
