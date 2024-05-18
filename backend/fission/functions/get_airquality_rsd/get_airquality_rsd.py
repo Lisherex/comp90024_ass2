@@ -16,30 +16,23 @@ ES_PASSWORD = os.getenv('ES_PASSWORD')
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-def calculate_average_copd_admissions(copd_hits):
+def calculate_average_respiratory_admissions(copd_hits):
     admissions_data = defaultdict(lambda: defaultdict(list))
 
+    # Aggregate admissions data by station_id and category
     for hit in copd_hits:
         station_id = hit['_source']['station_id']
-        # Replace None with 0 using the `or 0` pattern
-        total = hit['_source'].get('admissions_chronic_obstructive_pulmonary_disease_public_hospital_total_number', 0) or 0
-        males = hit['_source'].get('admissions_chronic_obstructive_pulmonary_disease_public_hospital_males_number', 0) or 0
-        females = hit['_source'].get('admissions_chronic_obstructive_pulmonary_disease_public_hospital_females_number', 0) or 0
+        admissions_data[station_id]['total'].append(hit['_source'].get('admissions_respiratory_system_diseases_public_hospital_total_number', 0))
+        admissions_data[station_id]['males'].append(hit['_source'].get('admissions_respiratory_system_diseases_public_hospital_males_number', 0))
+        admissions_data[station_id]['females'].append(hit['_source'].get('admissions_respiratory_system_diseases_public_hospital_females_number', 0))
 
-        admissions_data[station_id]['total'].append(total)
-        admissions_data[station_id]['males'].append(males)
-        admissions_data[station_id]['females'].append(females)
-
+    # Calculate average admissions for each category and station_id
     average_admissions = {}
     for station_id, categories in admissions_data.items():
-        total_count = len(categories['total'])
-        male_count = len(categories['males'])
-        female_count = len(categories['females'])
-
         average_admissions[station_id] = {
-            'average_copd_total': sum(categories['total']) / total_count if total_count else 0,
-            'average_copd_males': sum(categories['males']) / male_count if male_count else 0,
-            'average_copd_females': sum(categories['females']) / female_count if female_count else 0
+            'average_rsd_total': sum(categories['total']) / len(categories['total']),
+            'average_rsd_males': sum(categories['males']) / len(categories['males']),
+            'average_rsd_females': sum(categories['females']) / len(categories['females'])
         }
 
     return average_admissions
@@ -84,9 +77,9 @@ def merge_data(air_quality_hits, average_respiratory_admissions):
                 "unit": hit['_source']['unit'],
                 "health_advice": hit['_source']['health_advice'],
                 "health_advice_color": hit['_source']['health_advice_color'],
-                "average_total_copd_admissions_num": averages['average_copd_total'],
-                "average_male_copd_admissions_num": averages['average_copd_males'],
-                "average_female_copd_admissions_num": averages['average_copd_females']
+                "average_total_rsd_admissions_num": averages['average_rsd_total'],
+                "average_male_rsd_admissions_num": averages['average_rsd_males'],
+                "average_female_rsd_admissions_num": averages['average_rsd_females']
             })
 
     return merged_data
@@ -106,10 +99,10 @@ def main():
         air_quality_hits = fetch_air_quality_data(client)
 
         # Calculate average respiratory admissions
-        average_copd_admissions = calculate_average_copd_admissions(copd_hits_all)
+        average_respiratory_admissions = calculate_average_respiratory_admissions(copd_hits_all)
 
         # Merge data
-        merged_results = merge_data(air_quality_hits, average_copd_admissions)
+        merged_results = merge_data(air_quality_hits, average_respiratory_admissions)
         print("merged_results: ", json.dumps(merged_results, indent=4))
         return merged_results
 
