@@ -25,15 +25,6 @@ def haversine(lat1, lon1, lat2, lon2):
     c = 2 * atan2(sqrt(a), sqrt(1-a))
     return R * c
 
-def format_date(date_str):
-    try:
-        return datetime.strptime(date_str, "%d/%m/%Y").strftime("%Y-%m-%d")
-    except ValueError:
-        try:
-            return datetime.strptime(date_str, "%Y-%m-%d").strftime("%Y-%m-%d")
-        except ValueError:
-            return None  # or return date_str if you want to keep the original on error
-
 
 
 class K8S_Data:
