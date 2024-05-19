@@ -1,0 +1,102 @@
+[
+    {
+        "id": 0,
+        "station_id": "4afe6adc-cbac-4bf1-afbe-ff98d59564f9",
+        "average_price": 1165231.724870764
+    },
+    {
+        "id": 1,
+        "station_id": "031354b3-b6a2-403b-aae3-79e18f69c957",
+        "average_price": 887176.0711095843
+    },
+    {
+        "id": 2,
+        "station_id": "c69ed768-34d2-4d72-86f3-088c250758a8",
+        "average_price": 1400925.0117967331
+    },
+    {
+        "id": 3,
+        "station_id": "4c4e8933-a66b-4e76-b2c2-ad9bb56d8809",
+        "average_price": 1080334.9878934624
+    },
+    {
+        "id": 4,
+        "station_id": "78dbc892-d9e9-490b-94a6-baf1ca72c36c",
+        "average_price": 670333.1884368309
+    },
+    {
+        "id": 5,
+        "station_id": "d56ede8c-637a-41e9-a055-f53198e9456a",
+        "average_price": 1346494.1986365046
+    },
+    {
+        "id": 6,
+        "station_id": "77062cb7-3e3b-4984-b6d0-03dda76177f2",
+        "average_price": 1447335.6231825524
+    },
+    {
+        "id": 7,
+        "station_id": "fd9971b2-130e-4163-b56c-a37beadc7846",
+        "average_price": 758445.9434652478
+    },
+    {
+        "id": 8,
+        "station_id": "b2972c05-c6c6-4d50-94ad-7fa53722e9d0",
+        "average_price": 1051886.380597015
+    },
+    {
+        "id": 9,
+        "station_id": "9a9f2a8f-e108-4ae6-b9d3-ec6fe25863b5",
+        "average_price": 953154.8192771084
+    },
+    {
+        "id": 10,
+        "station_id": "9348c1f5-60c5-4c35-b4f1-1f0931ab1415",
+        "average_price": 861608.6939313984
+    },
+    {
+        "id": 11,
+        "station_id": "69088979-01eb-4b48-9535-22b6d69421ec",
+        "average_price": 849979.4670846395
+    },
+    {
+        "id": 12,
+        "station_id": "07967f24-444c-4fd8-901c-9c0c67144053",
+        "average_price": 616557.1794871795
+    },
+    {
+        "id": 13,
+        "station_id": "3420cbd3-a860-455b-813d-38656d72ef11",
+        "average_price": 802596.7741935484
+    },
+    {
+        "id": 14,
+        "station_id": "22b21e76-76f2-4b0d-b133-3fc852c721b5",
+        "average_price": 688000.0
+    },
+    {
+        "id": 15,
+        "station_id": "ea40fbea-46ce-4acf-8f3e-eb76c26c712b",
+        "average_price": 437640.873015873
+    },
+    {
+        "id": 16,
+        "station_id": "15b90658-97fe-42a4-8bb8-cfc5cc90cdc9",
+        "average_price": 575107.9424778761
+    },
+    {
+        "id": 17,
+        "station_id": "d9c23fd4-2ed0-4627-87a7-4199bffad9b4",
+        "average_price": 545321.4285714285
+    },
+    {
+        "id": 18,
+        "station_id": "1619e162-e4a5-4f96-b6a4-540ecd1a471c",
+        "average_price": 423000.0
+    },
+    {
+        "id": 19,
+        "station_id": "fc15d85f-4141-4949-b2ef-e93c5c825205",
+        "average_price": 670000.0
+    }
+]
