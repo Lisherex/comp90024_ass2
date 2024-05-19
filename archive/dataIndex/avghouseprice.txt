@@ -1,0 +1,24 @@
+curl -XPUT -k 'https://127.0.0.1:9200/avghouseprice'\
+   --header 'Content-Type: application/json'\
+   --data '{
+    "settings": {
+        "index": {
+            "number_of_shards": 3,
+            "number_of_replicas": 1
+        }
+    },
+    "mappings": {
+        "properties": {
+            "id": {
+                "type": "keyword"
+            },
+            "avg_price": {
+                "type": "integer"
+            },
+            "station_id": {
+                "type": "text"
+            }
+        }
+    }
+}'\
+   --user 'elastic:elastic' | jq '.'
