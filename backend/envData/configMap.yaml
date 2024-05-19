@@ -22,9 +22,6 @@ metadata:
   namespace: default
   name: internal-service-ports
 data:
-  "ELASTIC_SEARCH_URL": "https://elasticsearch-master.elastic.svc.cluster.local"
+  "ELASTIC_SEARCH_URL": "https://elasticsearch-master"
   "ELASTIC_SEARCH_PORT": "9200"
-  "ELASTIC_SEARCH_MASTER_URL": "https://elasticsearch-master"
-  "K8S_PERM_RESOURCE_URL":"https://elasticsearch-master.dev.vdb"
-  "K8S_PERM_RESOURCE_PORT":"9200"
   
