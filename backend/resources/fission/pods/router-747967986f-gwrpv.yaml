@@ -1,0 +1,202 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: "8080"
+    prometheus.io/scrape: "true"
+  creationTimestamp: "2024-04-26T01:49:30Z"
+  generateName: router-747967986f-
+  labels:
+    application: fission-router
+    pod-template-hash: 747967986f
+    svc: router
+  name: router-747967986f-gwrpv
+  namespace: fission
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: router-747967986f
+    uid: 0b8a0c34-ee20-46f4-b3bf-24cb5dcca020
+  resourceVersion: "111248"
+  uid: bf3521e7-eaa2-4717-a1bd-5e327fae59b4
+spec:
+  containers:
+  - args:
+    - --routerPort
+    - "8888"
+    - --executorUrl
+    - http://executor.fission
+    command:
+    - /fission-bundle
+    env:
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: ROUTER_ROUND_TRIP_TIMEOUT
+      value: 50ms
+    - name: ROUTER_ROUNDTRIP_TIMEOUT_EXPONENT
+      value: "2"
+    - name: ROUTER_ROUND_TRIP_KEEP_ALIVE_TIME
+      value: 30s
+    - name: ROUTER_ROUND_TRIP_DISABLE_KEEP_ALIVE
+      value: "true"
+    - name: ROUTER_ROUND_TRIP_MAX_RETRIES
+      value: "10"
+    - name: ROUTER_SVC_ADDRESS_MAX_RETRIES
+      value: "5"
+    - name: ROUTER_SVC_ADDRESS_UPDATE_TIMEOUT
+      value: 30s
+    - name: ROUTER_UNTAP_SERVICE_TIMEOUT
+      value: 3600s
+    - name: USE_ENCODED_PATH
+      value: "false"
+    - name: DEBUG_ENV
+      value: "false"
+    - name: PPROF_ENABLED
+      value: "false"
+    - name: DISPLAY_ACCESS_LOG
+      value: "false"
+    - name: FISSION_BUILDER_NAMESPACE
+    - name: FISSION_FUNCTION_NAMESPACE
+    - name: FISSION_DEFAULT_NAMESPACE
+      value: default
+    - name: FISSION_RESOURCE_NAMESPACES
+      value: default
+    - name: OTEL_EXPORTER_OTLP_ENDPOINT
+    - name: OTEL_EXPORTER_OTLP_INSECURE
+      value: "true"
+    - name: OTEL_TRACES_SAMPLER
+      value: parentbased_traceidratio
+    - name: OTEL_TRACES_SAMPLER_ARG
+      value: "0.1"
+    - name: OTEL_PROPAGATORS
+      value: tracecontext,baggage
+    image: ghcr.io/fission/fission-bundle:v1.20.0
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /router-healthz
+        port: 8888
+        scheme: HTTP
+      initialDelaySeconds: 35
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: router
+    ports:
+    - containerPort: 8080
+      name: metrics
+      protocol: TCP
+    - containerPort: 8888
+      name: http
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 30
+      httpGet:
+        path: /router-healthz
+        port: 8888
+        scheme: HTTP
+      initialDelaySeconds: 1
+      periodSeconds: 1
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/config/config.yaml
+      name: config-volume
+      subPath: config.yaml
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-4ccgs
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: elastic-g3wcd274rwob-node-0
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 10001
+    runAsGroup: 10001
+    runAsNonRoot: true
+    runAsUser: 10001
+  serviceAccount: fission-router
+  serviceAccountName: fission-router
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - configMap:
+      defaultMode: 420
+      name: feature-config
+    name: config-volume
+  - name: kube-api-access-4ccgs
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:30Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:51Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:51Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:30Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://d0a0e764058ccbcf559e9e99412556abd37c3e9fd589f7e6171de2a61c21448a
+    image: ghcr.io/fission/fission-bundle:v1.20.0
+    imageID: ghcr.io/fission/fission-bundle@sha256:53bfa3f9c7ea3beb3c51775372a1ab5aa43e58a88c6fde155d0cf58663cc82bd
+    lastState: {}
+    name: router
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-04-26T01:49:50Z"
+  hostIP: 192.168.10.60
+  phase: Running
+  podIP: 10.100.1.12
+  podIPs:
+  - ip: 10.100.1.12
+  qosClass: BestEffort
+  startTime: "2024-04-26T01:49:30Z"

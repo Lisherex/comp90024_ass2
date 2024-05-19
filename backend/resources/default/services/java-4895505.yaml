@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-05-16T05:57:22Z"
+  labels:
+    envName: java
+    envNamespace: default
+    envResourceVersion: "4895505"
+    owner: buildermgr
+  name: java-4895505
+  namespace: default
+  resourceVersion: "4895507"
+  uid: ef86c61b-86b0-4837-954d-107834881aec
+spec:
+  clusterIP: 10.254.250.63
+  clusterIPs:
+  - 10.254.250.63
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: fetcher-port
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+  - name: builder-port
+    port: 8001
+    protocol: TCP
+    targetPort: 8001
+  selector:
+    envName: java
+    envNamespace: default
+    envResourceVersion: "4895505"
+    owner: buildermgr
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

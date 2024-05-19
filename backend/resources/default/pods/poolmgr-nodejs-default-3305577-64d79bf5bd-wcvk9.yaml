@@ -1,0 +1,225 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2024-05-10T06:07:43Z"
+  generateName: poolmgr-nodejs-default-3305577-64d79bf5bd-
+  labels:
+    environmentName: nodejs
+    environmentNamespace: default
+    environmentUid: 47069a70-d965-4074-90dd-17ec23ff2994
+    executorType: poolmgr
+    managed: "true"
+    pod-template-hash: 64d79bf5bd
+  name: poolmgr-nodejs-default-3305577-64d79bf5bd-wcvk9
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: poolmgr-nodejs-default-3305577-64d79bf5bd
+    uid: e46151fc-fd7a-48ee-b77a-0a1c741b8289
+  resourceVersion: "3558025"
+  uid: 4b2837b3-995c-413c-9ca5-db8e6479111c
+spec:
+  containers:
+  - image: fission/node-env
+    imagePullPolicy: IfNotPresent
+    lifecycle:
+      preStop:
+        exec:
+          command:
+          - /bin/sleep
+          - "0"
+    name: nodejs
+    ports:
+    - containerPort: 8000
+      name: http-fetcher
+      protocol: TCP
+    - containerPort: 8888
+      name: http-env
+      protocol: TCP
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /userfunc
+      name: userfunc
+    - mountPath: /secrets
+      name: secrets
+    - mountPath: /configs
+      name: configmaps
+    - mountPath: /etc/podinfo
+      name: podinfo
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-n8qll
+      readOnly: true
+  - command:
+    - /fetcher
+    - -secret-dir
+    - /secrets
+    - -cfgmap-dir
+    - /configs
+    - /userfunc
+    env:
+    - name: OTEL_PROPAGATORS
+      value: tracecontext,baggage
+    - name: OTEL_TRACES_SAMPLER
+      value: parentbased_traceidratio
+    - name: OTEL_EXPORTER_OTLP_ENDPOINT
+    - name: OTEL_EXPORTER_OTLP_INSECURE
+      value: "true"
+    - name: OTEL_TRACES_SAMPLER_ARG
+      value: "0.1"
+    image: fission/fetcher:v1.20.0
+    imagePullPolicy: IfNotPresent
+    lifecycle:
+      preStop:
+        exec:
+          command:
+          - /bin/sleep
+          - "0"
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8000
+        scheme: HTTP
+      initialDelaySeconds: 1
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: fetcher
+    readinessProbe:
+      failureThreshold: 30
+      httpGet:
+        path: /readiness-healthz
+        port: 8000
+        scheme: HTTP
+      initialDelaySeconds: 1
+      periodSeconds: 1
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 16Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /userfunc
+      name: userfunc
+    - mountPath: /secrets
+      name: secrets
+    - mountPath: /configs
+      name: configmaps
+    - mountPath: /etc/podinfo
+      name: podinfo
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-n8qll
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: elastic-g3wcd274rwob-node-1
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: fission-fetcher
+  serviceAccountName: fission-fetcher
+  terminationGracePeriodSeconds: 0
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - emptyDir: {}
+    name: userfunc
+  - emptyDir: {}
+    name: secrets
+  - emptyDir: {}
+    name: configmaps
+  - downwardAPI:
+      defaultMode: 420
+      items:
+      - fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+        path: name
+      - fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+        path: namespace
+    name: podinfo
+  - name: kube-api-access-n8qll
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-05-10T06:07:43Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-05-10T06:07:55Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-05-10T06:07:55Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-05-10T06:07:43Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://906fa0d619035cff893825970ae63d56d9ff7b22fc0199551a71b8f93db29e1d
+    image: docker.io/fission/fetcher:v1.20.0
+    imageID: docker.io/fission/fetcher@sha256:9d99de3e502540bcc0ee6573ce48171fa2bfaeeaf4200d37b383349ec7fde7a4
+    lastState: {}
+    name: fetcher
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-05-10T06:07:54Z"
+  - containerID: containerd://73fd07a5a63d33fbe44bb8d8257a1c34fae4c6707efa7eb97d3543de09cc9fcd
+    image: docker.io/fission/node-env:latest
+    imageID: docker.io/fission/node-env@sha256:90d36e0b4714d515e69028faae26b3b9a3f98b6e0fd1d8acea35deda44265480
+    lastState: {}
+    name: nodejs
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-05-10T06:07:52Z"
+  hostIP: 192.168.10.161
+  phase: Running
+  podIP: 10.100.2.66
+  podIPs:
+  - ip: 10.100.2.66
+  qosClass: Burstable
+  startTime: "2024-05-10T06:07:43Z"

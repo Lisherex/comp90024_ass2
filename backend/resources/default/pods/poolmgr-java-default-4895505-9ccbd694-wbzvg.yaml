@@ -1,0 +1,225 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2024-05-16T07:32:48Z"
+  generateName: poolmgr-java-default-4895505-9ccbd694-
+  labels:
+    environmentName: java
+    environmentNamespace: default
+    environmentUid: 7c09c11d-b64b-41ef-97a7-12f50b1d932c
+    executorType: poolmgr
+    managed: "true"
+    pod-template-hash: 9ccbd694
+  name: poolmgr-java-default-4895505-9ccbd694-wbzvg
+  namespace: default
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: poolmgr-java-default-4895505-9ccbd694
+    uid: 50f77e68-3ee3-4cc5-9f1b-7a5ca28161ab
+  resourceVersion: "4911006"
+  uid: f7df2224-c1dc-4ee0-8685-77c3755e845c
+spec:
+  containers:
+  - image: fission/jvm-env
+    imagePullPolicy: IfNotPresent
+    lifecycle:
+      preStop:
+        exec:
+          command:
+          - /bin/sleep
+          - "0"
+    name: java
+    ports:
+    - containerPort: 8000
+      name: http-fetcher
+      protocol: TCP
+    - containerPort: 8888
+      name: http-env
+      protocol: TCP
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /userfunc
+      name: userfunc
+    - mountPath: /secrets
+      name: secrets
+    - mountPath: /configs
+      name: configmaps
+    - mountPath: /etc/podinfo
+      name: podinfo
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-885tw
+      readOnly: true
+  - command:
+    - /fetcher
+    - -secret-dir
+    - /secrets
+    - -cfgmap-dir
+    - /configs
+    - /userfunc
+    env:
+    - name: OTEL_PROPAGATORS
+      value: tracecontext,baggage
+    - name: OTEL_TRACES_SAMPLER
+      value: parentbased_traceidratio
+    - name: OTEL_EXPORTER_OTLP_ENDPOINT
+    - name: OTEL_EXPORTER_OTLP_INSECURE
+      value: "true"
+    - name: OTEL_TRACES_SAMPLER_ARG
+      value: "0.1"
+    image: fission/fetcher:v1.20.0
+    imagePullPolicy: IfNotPresent
+    lifecycle:
+      preStop:
+        exec:
+          command:
+          - /bin/sleep
+          - "0"
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8000
+        scheme: HTTP
+      initialDelaySeconds: 1
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: fetcher
+    readinessProbe:
+      failureThreshold: 30
+      httpGet:
+        path: /readiness-healthz
+        port: 8000
+        scheme: HTTP
+      initialDelaySeconds: 1
+      periodSeconds: 1
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      requests:
+        cpu: 10m
+        memory: 16Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /userfunc
+      name: userfunc
+    - mountPath: /secrets
+      name: secrets
+    - mountPath: /configs
+      name: configmaps
+    - mountPath: /etc/podinfo
+      name: podinfo
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-885tw
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: elastic-g3wcd274rwob-node-2
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: fission-fetcher
+  serviceAccountName: fission-fetcher
+  terminationGracePeriodSeconds: 0
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - emptyDir: {}
+    name: userfunc
+  - emptyDir: {}
+    name: secrets
+  - emptyDir: {}
+    name: configmaps
+  - downwardAPI:
+      defaultMode: 420
+      items:
+      - fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+        path: name
+      - fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+        path: namespace
+    name: podinfo
+  - name: kube-api-access-885tw
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-05-16T07:32:48Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-05-16T07:32:53Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-05-16T07:32:53Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-05-16T07:32:48Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://7bb2e40249d53a4348d1a6b2e3827586592f90cadd750e20877f6c2fb466240f
+    image: docker.io/fission/fetcher:v1.20.0
+    imageID: docker.io/fission/fetcher@sha256:9d99de3e502540bcc0ee6573ce48171fa2bfaeeaf4200d37b383349ec7fde7a4
+    lastState: {}
+    name: fetcher
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-05-16T07:32:52Z"
+  - containerID: containerd://d60f5be407960748a47db7991a54678a8d3d0b2f44ea3461a649e4f5b4689f77
+    image: docker.io/fission/jvm-env:latest
+    imageID: docker.io/fission/jvm-env@sha256:ff27197f2b8010ecd8137201d4f44ec16739acee7b110b5548c4eb7ae928df4f
+    lastState: {}
+    name: java
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-05-16T07:32:52Z"
+  hostIP: 192.168.10.25
+  phase: Running
+  podIP: 10.100.3.76
+  podIPs:
+  - ip: 10.100.3.76
+  qosClass: Burstable
+  startTime: "2024-05-16T07:32:48Z"

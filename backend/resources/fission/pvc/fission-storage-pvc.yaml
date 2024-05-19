@@ -1,0 +1,37 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    meta.helm.sh/release-name: fission
+    meta.helm.sh/release-namespace: fission
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    volume.beta.kubernetes.io/storage-provisioner: cinder.csi.openstack.org
+    volume.kubernetes.io/storage-provisioner: cinder.csi.openstack.org
+  creationTimestamp: "2024-04-26T01:49:29Z"
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app: fission-storage
+    app.kubernetes.io/managed-by: Helm
+    chart: fission-all-v1.20.0
+    release: fission
+  name: fission-storage-pvc
+  namespace: fission
+  resourceVersion: "111096"
+  uid: f0424505-d6e6-4415-8667-fa4304c208cb
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi
+  storageClassName: default
+  volumeMode: Filesystem
+  volumeName: pvc-f0424505-d6e6-4415-8667-fa4304c208cb
+status:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 8Gi
+  phase: Bound

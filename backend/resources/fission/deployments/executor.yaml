@@ -1,0 +1,154 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+    meta.helm.sh/release-name: fission
+    meta.helm.sh/release-namespace: fission
+  creationTimestamp: "2024-04-26T01:49:30Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    chart: fission-all-v1.20.0
+    svc: executor
+  name: executor
+  namespace: fission
+  resourceVersion: "111203"
+  uid: cf2c43c2-b0b7-439d-8622-50cdfe2a9875
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      svc: executor
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        prometheus.io/path: /metrics
+        prometheus.io/port: "8080"
+        prometheus.io/scrape: "true"
+      creationTimestamp: null
+      labels:
+        svc: executor
+    spec:
+      containers:
+      - args:
+        - --executorPort
+        - "8888"
+        command:
+        - /fission-bundle
+        env:
+        - name: FETCHER_IMAGE
+          value: fission/fetcher:v1.20.0
+        - name: FETCHER_IMAGE_PULL_POLICY
+          value: IfNotPresent
+        - name: RUNTIME_IMAGE_PULL_POLICY
+          value: IfNotPresent
+        - name: ADOPT_EXISTING_RESOURCES
+          value: "false"
+        - name: POD_READY_TIMEOUT
+          value: 300s
+        - name: ENABLE_ISTIO
+          value: "false"
+        - name: FETCHER_MINCPU
+          value: 10m
+        - name: FETCHER_MINMEM
+          value: 16Mi
+        - name: FETCHER_MAXCPU
+        - name: FETCHER_MAXMEM
+        - name: DEBUG_ENV
+          value: "false"
+        - name: PPROF_ENABLED
+          value: "false"
+        - name: OBJECT_REAPER_INTERVAL
+          value: "5"
+        - name: SERVICEACCOUNT_CHECK_ENABLED
+          value: "true"
+        - name: SERVICEACCOUNT_CHECK_INTERVAL
+          value: "0"
+        - name: FISSION_BUILDER_NAMESPACE
+        - name: FISSION_FUNCTION_NAMESPACE
+        - name: FISSION_DEFAULT_NAMESPACE
+          value: default
+        - name: FISSION_RESOURCE_NAMESPACES
+          value: default
+        - name: HELM_RELEASE_NAME
+          value: fission
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: OTEL_EXPORTER_OTLP_INSECURE
+          value: "true"
+        - name: OTEL_TRACES_SAMPLER
+          value: parentbased_traceidratio
+        - name: OTEL_TRACES_SAMPLER_ARG
+          value: "0.1"
+        - name: OTEL_PROPAGATORS
+          value: tracecontext,baggage
+        image: ghcr.io/fission/fission-bundle:v1.20.0
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /healthz
+            port: 8888
+            scheme: HTTP
+          initialDelaySeconds: 35
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: executor
+        ports:
+        - containerPort: 8080
+          name: metrics
+          protocol: TCP
+        - containerPort: 8888
+          name: http
+          protocol: TCP
+        readinessProbe:
+          failureThreshold: 30
+          httpGet:
+            path: /healthz
+            port: 8888
+            scheme: HTTP
+          initialDelaySeconds: 1
+          periodSeconds: 1
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext:
+        fsGroup: 10001
+        runAsGroup: 10001
+        runAsNonRoot: true
+        runAsUser: 10001
+      serviceAccount: fission-executor
+      serviceAccountName: fission-executor
+      terminationGracePeriodSeconds: 30
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2024-04-26T01:49:45Z"
+    lastUpdateTime: "2024-04-26T01:49:45Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-04-26T01:49:30Z"
+    lastUpdateTime: "2024-04-26T01:49:45Z"
+    message: ReplicaSet "executor-8b5c8489c" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1
