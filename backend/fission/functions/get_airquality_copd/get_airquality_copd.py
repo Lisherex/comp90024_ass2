@@ -1,16 +1,16 @@
-from elasticsearch8 import Elasticsearch, helpers
+from elasticsearch import Elasticsearch, helpers
 import json
 import os
-from dotenv import load_dotenv
 import logging
 from collections import defaultdict
+from config import Config
 
-load_dotenv()
+# load_dotenv()
 
-ELASTIC_SEARCH_URL = os.getenv('ELASTIC_SEARCH_URL')
-ELASTIC_SEARCH_PORT = os.getenv('ELASTIC_SEARCH_PORT')
-ES_USERNAME = os.getenv('ES_USERNAME')
-ES_PASSWORD = os.getenv('ES_PASSWORD')
+# ELASTIC_SEARCH_URL = os.getenv('ELASTIC_SEARCH_URL')
+# ELASTIC_SEARCH_PORT = os.getenv('ELASTIC_SEARCH_PORT')
+# ES_USERNAME = os.getenv('ES_USERNAME')
+# ES_PASSWORD = os.getenv('ES_PASSWORD')
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -94,12 +94,24 @@ def merge_data(air_quality_hits, average_respiratory_admissions):
 
 
 def main():
+    configLoader = Config(True)
+    secretLoader = Config(False)
+
+    url = configLoader("internal-service-ports", "ELASTIC_SEARCH_URL")
+    port = configLoader("internal-service-ports", "ELASTIC_SEARCH_PORT")
+    username = secretLoader("auth", "ES_USERNAME")
+    password = secretLoader("auth", "ES_PASSWORD")
+
     try:
-        client = Elasticsearch(
-            f'{ELASTIC_SEARCH_URL}:{ELASTIC_SEARCH_PORT}',
-            verify_certs=False,
-            basic_auth=(ES_USERNAME, ES_PASSWORD)
-        )
+        # client = Elasticsearch(
+        #     f'{ELASTIC_SEARCH_URL}:{ELASTIC_SEARCH_PORT}',
+        #     verify_certs=False,
+        #     basic_auth=(ES_USERNAME, ES_PASSWORD)
+        # )
+        client = Elasticsearch(f'{url}:{port}',
+                                verify_certs=False,
+                                basic_auth=(username, password)
+                                )
 
         # Fetch data
         copd_hits_all = fetch_copd_data_all(client)
@@ -110,12 +122,12 @@ def main():
 
         # Merge data
         merged_results = merge_data(air_quality_hits, average_copd_admissions)
-        print("merged_results: ", json.dumps(merged_results, indent=4))
-        return merged_results
+        # print("merged_results: ", json.dumps(merged_results, indent=4))
+        return json.dumps(merged_results, indent=4)
 
 
     except Exception as e:
         logger.error(f"Error connecting to Elasticsearch: {e}")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
