@@ -1,16 +1,16 @@
 from elasticsearch import Elasticsearch, helpers
 import json
 import os
-# from dotenv import load_dotenv
+from dotenv import load_dotenv
 import logging
 from collections import defaultdict
 from Config import Config
-# load_dotenv()
+load_dotenv()
 
-# ELASTIC_SEARCH_URL = os.getenv('ELASTIC_SEARCH_URL')
-# ELASTIC_SEARCH_PORT = os.getenv('ELASTIC_SEARCH_PORT')
-# ES_USERNAME = os.getenv('ES_USERNAME')
-# ES_PASSWORD = os.getenv('ES_PASSWORD')
+ELASTIC_SEARCH_URL = os.getenv('ELASTIC_SEARCH_URL')
+ELASTIC_SEARCH_PORT = os.getenv('ELASTIC_SEARCH_PORT')
+ES_USERNAME = os.getenv('ES_USERNAME')
+ES_PASSWORD = os.getenv('ES_PASSWORD')
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -94,48 +94,53 @@ def merge_data(avg_house_price_hits, average_respiratory_admissions):
 
 
 def main():
-    configLoader = Config(True)
-    secretLoader = Config(False)
+    # configLoader = Config(True)
+    # secretLoader = Config(False)
 
-    url = configLoader("internal-service-ports", "ELASTIC_SEARCH_URL")
-    port = configLoader("internal-service-ports", "ELASTIC_SEARCH_PORT")
-    username = secretLoader("auth", "ES_USERNAME")
-    password = secretLoader("auth", "ES_PASSWORD")
+    # url = configLoader("internal-service-ports", "ELASTIC_SEARCH_URL")
+    # port = configLoader("internal-service-ports", "ELASTIC_SEARCH_PORT")
+    # username = secretLoader("auth", "ES_USERNAME")
+    # password = secretLoader("auth", "ES_PASSWORD")
     try:
+        # client = Elasticsearch(
+        #     f'{url}:{port}',
+        #     verify_certs=False,
+        #     basic_auth=(username, password)
+        # )
+
         client = Elasticsearch(
-            f'{url}:{port}',
+            f'{ELASTIC_SEARCH_URL}:{ELASTIC_SEARCH_PORT}',
             verify_certs=False,
-            basic_auth=(username, password)
+            basic_auth=(ES_USERNAME, ES_PASSWORD)
         )
 
-        res = client.search(
-            index='copd*',
-            body={
-                'size': 10000,
-                'query': {
-                    'match_all': {}
-                }
-            }
-        )
+        # res = client.search(
+        #     index='copd*',
+        #     body={
+        #         'size': 10000,
+        #         'query': {
+        #             'match_all': {}
+        #         }
+        #     }
+        # )
         
-        return json.dumps(res['hits']['hits'], indent=4)
-        # # Fetch data
-        # copd_hits_all = fetch_copd_data_all(client)
-        # return copd_hits_all
-        # avg_house_price_hits = fetch_avg_house_price_data(client)
-        # return avg_house_price_hits
+        # return json.dumps(res['hits']['hits'], indent=4)
+        # Fetch data
+        copd_hits_all = fetch_copd_data_all(client)
+        avg_house_price_hits = fetch_avg_house_price_data(client)
+        #return json.dumps(avg_house_price_hits, indent=4)
 
-        # # Calculate average respiratory admissions
-        # average_copd_admissions = calculate_average_copd_admissions(copd_hits_all)
+        # Calculate average respiratory admissions
+        average_copd_admissions = calculate_average_copd_admissions(copd_hits_all)
 
-        # # Merge data
-        # merged_results = merge_data(avg_house_price_hits, average_copd_admissions)
-        # print("merged_results: ", json.dumps(merged_results, indent=4))
-        # return merged_results
+        # Merge data
+        merged_results = merge_data(avg_house_price_hits, average_copd_admissions)
+        print("merged_results: ", json.dumps(merged_results, indent=4))
+        return json.dumps(merged_results, indent=4)
 
 
     except Exception as e:
         logger.error(f"Error connecting to Elasticsearch: {e}")
 
-# if __name__ == "__main__":
-#     main()
+if __name__ == "__main__":
+    main()
