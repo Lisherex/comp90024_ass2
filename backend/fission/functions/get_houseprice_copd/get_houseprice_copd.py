@@ -1,16 +1,9 @@
 from elasticsearch import Elasticsearch, helpers
 import json
 import os
-# from dotenv import load_dotenv
 import logging
 from collections import defaultdict
 from Config import Config
-# load_dotenv()
-
-# ELASTIC_SEARCH_URL = os.getenv('ELASTIC_SEARCH_URL')
-# ELASTIC_SEARCH_PORT = os.getenv('ELASTIC_SEARCH_PORT')
-# ES_USERNAME = os.getenv('ES_USERNAME')
-# ES_PASSWORD = os.getenv('ES_PASSWORD')
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -106,28 +99,15 @@ def main():
             basic_auth=(username, password)
         )
 
-        # res = client.search(
-        #     index='copd*',
-        #     body={
-        #         'size': 10000,
-        #         'query': {
-        #             'match_all': {}
-        #         }
-        #     }
-        # )
-        
-        # return json.dumps(res['hits']['hits'], indent=4)
         # Fetch data
         copd_hits_all = fetch_copd_data_all(client)
         avg_house_price_hits = fetch_avg_house_price_data(client)
-        #return json.dumps(avg_house_price_hits, indent=4)
 
         # Calculate average respiratory admissions
         average_copd_admissions = calculate_average_copd_admissions(copd_hits_all)
 
         # Merge data
         merged_results = merge_data(avg_house_price_hits, average_copd_admissions)
-        #print("merged_results: ", json.dumps(merged_results, indent=4))
         return json.dumps(merged_results, indent=4)
 
 
