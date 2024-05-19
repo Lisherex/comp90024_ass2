@@ -16,10 +16,6 @@ from Config import Config
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
-
-
-
-
 def calculate_average_copd_admissions(copd_hits):
     admissions_data = defaultdict(lambda: defaultdict(list))
 
@@ -118,10 +114,11 @@ def main():
                 'size': 10000,
                 'query': {
                     'match_all': {}
-                },
+                }
             }
         )
-        return res['hits']['hits']
+        
+        return json.dumps(res['hits']['hits'], indent=4)
         # # Fetch data
         # copd_hits_all = fetch_copd_data_all(client)
         # return copd_hits_all
@@ -140,5 +137,5 @@ def main():
     except Exception as e:
         logger.error(f"Error connecting to Elasticsearch: {e}")
 
-if __name__ == "__main__":
-    main()
+# if __name__ == "__main__":
+#     main()
