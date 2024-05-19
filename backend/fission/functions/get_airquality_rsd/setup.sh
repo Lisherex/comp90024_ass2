@@ -9,7 +9,7 @@ ENV_NAME="python"
 PKG_NAME="airquality-rsd"
 
 FN_NAME="airquality-rsd"
-FN_ENTRYPOINT="Main.handler"
+FN_ENTRYPOINT="get_airquality_rsd.main"
 
 ROUTE_NAME="airquality-rsd"
 ROUTE_METHOD="GET"
