@@ -155,7 +155,7 @@ def updateFuncLocal():
                        basic_auth=(username, password)
                        )
     del url, port, username, password
-    # info = es.info().body
+    info = es.info().body
     # return info
 
     actions = []

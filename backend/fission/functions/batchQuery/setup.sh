@@ -6,22 +6,22 @@ FISSION_NAMESPACE=default
 
 ENV_NAME="python"
 
-PKG_NAME="helloworld"
+PKG_NAME="update-airquality"
 
-FN_NAME="helloworld"
-FN_ENTRYPOINT="helloworld.main"
+FN_NAME="update-airquality"
+FN_ENTRYPOINT="Main.handler"
 
-ROUTE_NAME="helloworld"
+ROUTE_NAME="update-airquality"
 ROUTE_METHOD="GET"
-ROUTE_URL="/helloworld"
+ROUTE_URL="/update-airquality"
 ROUTE_CREATEINGRESS="TRUE"
 #####################################
 
-# (
-#     fission route delete --name $ROUTE_NAME
-#     fission fn delete --name $FN_NAME
-#     fission pkg delete --name $PKG_NAME
-# )
+(
+    fission route delete --name $ROUTE_NAME
+    fission fn delete --name $FN_NAME
+    fission pkg delete --name $PKG_NAME
+)
 
 (
     pushd "$DIR"
@@ -37,9 +37,9 @@ ROUTE_CREATEINGRESS="TRUE"
     fi
 
     if fission fn get --name $FN_NAME --namespace $FISSION_NAMESPACE &>/dev/null; then
-        fission fn update --name $FN_NAME --env $ENV_NAME --pkg $PKG_NAME --entrypoint $FN_ENTRYPOINT --namespace $FISSION_NAMESPACE --configmap api-urls --configmap internal-service-ports --secret auth --configmap es-index-names
+        fission fn update --name $FN_NAME --env $ENV_NAME --pkg $PKG_NAME --entrypoint $FN_ENTRYPOINT --namespace $FISSION_NAMESPACE --configmap api-urls --configmap internal-service-ports --secret auth
     else
-        fission fn create --name $FN_NAME --env $ENV_NAME --pkg $PKG_NAME --entrypoint $FN_ENTRYPOINT --namespace $FISSION_NAMESPACE --configmap api-urls --configmap internal-service-ports --secret auth --configmap es-index-names
+        fission fn create --name $FN_NAME --env $ENV_NAME --pkg $PKG_NAME --entrypoint $FN_ENTRYPOINT --namespace $FISSION_NAMESPACE --configmap api-urls --configmap internal-service-ports --secret auth
     fi
 
     if fission route get --name $ROUTE_NAME --namespace $FISSION_NAMESPACE &>/dev/null; then
