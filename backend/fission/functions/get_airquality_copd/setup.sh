@@ -6,14 +6,14 @@ FISSION_NAMESPACE=default
 
 ENV_NAME="python"
 
-PKG_NAME="airquality-copd"
+PKG_NAME="get-airquality-copd"
 
-FN_NAME="airquality-copd"
-FN_ENTRYPOINT="get_airquality_copd.handler"
+FN_NAME="get-airquality-copd"
+FN_ENTRYPOINT="get_airquality_copd.main"
 
 ROUTE_NAME="airquality-copd"
 ROUTE_METHOD="GET"
-ROUTE_URL="/airquality-copd"
+ROUTE_URL="/airquality/copd"
 ROUTE_CREATEINGRESS="TRUE"
 #####################################
 
