@@ -1,0 +1,45 @@
+curl -XPUT -k 'https://127.0.0.1:9200/houseprice'\
+   --header 'Content-Type: application/json'\
+   --data '{
+    "settings": {
+        "index": {
+            "number_of_shards": 3,
+            "number_of_replicas": 1
+        }
+    },
+    "mappings": {
+        "properties": {
+            "id": {
+                "type": "keyword"
+            },
+            "suburb": {
+                "type": "text"
+            },
+            "address": {
+                "type": "text"
+            },
+            "price": {
+                "type": "integer"
+            },
+            "date": {
+                "type": "date"
+            },
+            "distance": {
+                "type": "float"
+            },
+            "postcode": {
+                "type": "integer"
+            },
+            "latitude": {
+                "type": "float"
+            },
+            "longitude": {
+                "type": "float"
+            },
+            "station_id": {
+                "type": "text"
+            }
+        }
+    }
+}'\
+   --user 'elastic:elastic' | jq '.'

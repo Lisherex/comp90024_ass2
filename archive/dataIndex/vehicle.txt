@@ -1,0 +1,45 @@
+curl -XPUT -k 'https://127.0.0.1:9200/vehicle'\
+   --header 'Content-Type: application/json'\
+   --data '{
+    "settings": {
+        "index": {
+            "number_of_shards": 3,
+            "number_of_replicas": 1
+        }
+    },
+    "mappings": {
+        "properties": {
+            "id": {
+                "type": "keyword"
+            },
+            "lga_code": {
+                "type": "integer"
+            },
+            "lga_name": {
+                "type": "text"
+            },
+            "station_id": {
+                "type": "text"
+            },
+            "none_vehicle_per_dwelling": {
+                "type": "integer"
+            },
+            "one_vehicle_per_dwelling": {
+                "type": "integer"
+            },
+            "two_vehicle_per_dwelling": {
+                "type": "integer"
+            },
+            "three_vehicle_per_dwelling": {
+                "type": "integer"
+            },
+            "more_than_four_vehicle_per_dwelling": {
+                "type": "integer"
+            },
+            "total_dwelling": {
+                "type": "integer"
+            }
+        }
+    }
+}'\
+   --user 'elastic:elastic' | jq '.'

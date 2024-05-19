@@ -1,0 +1,45 @@
+curl -XPUT -k 'https://127.0.0.1:9200/copd'\
+   --header 'Content-Type: application/json'\
+   --data '{
+    "settings": {
+        "index": {
+            "number_of_shards": 3,
+            "number_of_replicas": 1
+        }
+    },
+    "mappings": {
+        "properties": {
+            "id": {
+                "type": "keyword"
+            },
+            "lga_code": {
+                "type": "integer"
+            },
+            "lga_name": {
+                "type": "text"
+            },
+            "station_id": {
+                "type": "text"
+            },
+            "admissions_respiratory_system_diseases_public_hospital_total_number": {
+                "type": "float"
+            },
+            "admissions_respiratory_system_diseases_public_hospital_males_number": {
+                "type": "float"
+            },
+            "admissions_respiratory_system_diseases_public_hospital_females_number": {
+                "type": "float"
+            },
+            "admissions_chronic_obstructive_pulmonary_disease_public_hospital_total_number": {
+                "type": "float"
+            },
+            "admissions_chronic_obstructive_pulmonary_disease_public_hospital_males_number": {
+                "type": "float"
+            },
+            "admissions_chronic_obstructive_pulmonary_disease_public_hospital_females_number": {
+                "type": "float"
+            }
+        }
+    }
+}'\
+   --user 'elastic:elastic' | jq '.'

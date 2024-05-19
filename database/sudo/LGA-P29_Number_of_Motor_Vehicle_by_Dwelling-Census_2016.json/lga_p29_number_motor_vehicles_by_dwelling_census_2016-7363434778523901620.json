@@ -1,0 +1,1291 @@
+{
+    "type": "FeatureCollection",
+    "bbox": [
+        0.0,
+        0.0,
+        -1.0,
+        -1.0
+    ],
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 5147,
+                "num_mvs_per_dweling_2_mvs": 17644,
+                "num_mvs_per_dweling_1_mvs": 27032,
+                "num_mvs_per_dweling_3_mvs": 4424,
+                "total_dwelings": 64688,
+                "lga_code_2016": "25250",
+                "num_mvs_per_dweling_tot": 59541,
+                "lga_name16": "Moreland (C)",
+                "num_mvs_per_dweling_0_mvs": 8418,
+                "num_mvs_per_dweling_4mo_mvs": 2017
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21de"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 649,
+                "num_mvs_per_dweling_2_mvs": 1826,
+                "num_mvs_per_dweling_1_mvs": 1830,
+                "num_mvs_per_dweling_3_mvs": 645,
+                "total_dwelings": 5558,
+                "lga_code_2016": "20110",
+                "num_mvs_per_dweling_tot": 4906,
+                "lga_name16": "Alpine (S)",
+                "num_mvs_per_dweling_0_mvs": 219,
+                "num_mvs_per_dweling_4mo_mvs": 381
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21f3"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 458,
+                "num_mvs_per_dweling_2_mvs": 1475,
+                "num_mvs_per_dweling_1_mvs": 1470,
+                "num_mvs_per_dweling_3_mvs": 582,
+                "total_dwelings": 4627,
+                "lga_code_2016": "20260",
+                "num_mvs_per_dweling_tot": 4177,
+                "lga_name16": "Ararat (RC)",
+                "num_mvs_per_dweling_0_mvs": 289,
+                "num_mvs_per_dweling_4mo_mvs": 352
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21f4"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3393,
+                "num_mvs_per_dweling_2_mvs": 14247,
+                "num_mvs_per_dweling_1_mvs": 13945,
+                "num_mvs_per_dweling_3_mvs": 4242,
+                "total_dwelings": 40616,
+                "lga_code_2016": "20570",
+                "num_mvs_per_dweling_tot": 37221,
+                "lga_name16": "Ballarat (C)",
+                "num_mvs_per_dweling_0_mvs": 2605,
+                "num_mvs_per_dweling_4mo_mvs": 2187
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21f5"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 2705,
+                "num_mvs_per_dweling_2_mvs": 17725,
+                "num_mvs_per_dweling_1_mvs": 15691,
+                "num_mvs_per_dweling_3_mvs": 4899,
+                "total_dwelings": 46205,
+                "lga_code_2016": "20660",
+                "num_mvs_per_dweling_tot": 43493,
+                "lga_name16": "Banyule (C)",
+                "num_mvs_per_dweling_0_mvs": 2752,
+                "num_mvs_per_dweling_4mo_mvs": 2425
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21f6"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1413,
+                "num_mvs_per_dweling_2_mvs": 4901,
+                "num_mvs_per_dweling_1_mvs": 5318,
+                "num_mvs_per_dweling_3_mvs": 1369,
+                "total_dwelings": 14351,
+                "lga_code_2016": "20740",
+                "num_mvs_per_dweling_tot": 12939,
+                "lga_name16": "Bass Coast (S)",
+                "num_mvs_per_dweling_0_mvs": 752,
+                "num_mvs_per_dweling_4mo_mvs": 599
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21f7"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1660,
+                "num_mvs_per_dweling_2_mvs": 6836,
+                "num_mvs_per_dweling_1_mvs": 5293,
+                "num_mvs_per_dweling_3_mvs": 2612,
+                "total_dwelings": 18747,
+                "lga_code_2016": "20830",
+                "num_mvs_per_dweling_tot": 17079,
+                "lga_name16": "Baw Baw (S)",
+                "num_mvs_per_dweling_0_mvs": 659,
+                "num_mvs_per_dweling_4mo_mvs": 1681
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21f8"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 2347,
+                "num_mvs_per_dweling_2_mvs": 14911,
+                "num_mvs_per_dweling_1_mvs": 12083,
+                "num_mvs_per_dweling_3_mvs": 3865,
+                "total_dwelings": 36776,
+                "lga_code_2016": "20910",
+                "num_mvs_per_dweling_tot": 34432,
+                "lga_name16": "Bayside (C)",
+                "num_mvs_per_dweling_0_mvs": 1861,
+                "num_mvs_per_dweling_4mo_mvs": 1703
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21f9"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 616,
+                "num_mvs_per_dweling_2_mvs": 1988,
+                "num_mvs_per_dweling_1_mvs": 1937,
+                "num_mvs_per_dweling_3_mvs": 728,
+                "total_dwelings": 6016,
+                "lga_code_2016": "21010",
+                "num_mvs_per_dweling_tot": 5403,
+                "lga_name16": "Benalla (RC)",
+                "num_mvs_per_dweling_0_mvs": 339,
+                "num_mvs_per_dweling_4mo_mvs": 417
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21fa"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3735,
+                "num_mvs_per_dweling_2_mvs": 22941,
+                "num_mvs_per_dweling_1_mvs": 22230,
+                "num_mvs_per_dweling_3_mvs": 6254,
+                "total_dwelings": 62794,
+                "lga_code_2016": "21110",
+                "num_mvs_per_dweling_tot": 59055,
+                "lga_name16": "Boroondara (C)",
+                "num_mvs_per_dweling_0_mvs": 4852,
+                "num_mvs_per_dweling_4mo_mvs": 2779
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21fb"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 5704,
+                "num_mvs_per_dweling_2_mvs": 22247,
+                "num_mvs_per_dweling_1_mvs": 19657,
+                "num_mvs_per_dweling_3_mvs": 8468,
+                "total_dwelings": 64847,
+                "lga_code_2016": "21180",
+                "num_mvs_per_dweling_tot": 59143,
+                "lga_name16": "Brimbank (C)",
+                "num_mvs_per_dweling_0_mvs": 4398,
+                "num_mvs_per_dweling_4mo_mvs": 4371
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21fc"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 336,
+                "num_mvs_per_dweling_2_mvs": 822,
+                "num_mvs_per_dweling_1_mvs": 791,
+                "num_mvs_per_dweling_3_mvs": 338,
+                "total_dwelings": 2694,
+                "lga_code_2016": "21270",
+                "num_mvs_per_dweling_tot": 2362,
+                "lga_name16": "Buloke (S)",
+                "num_mvs_per_dweling_0_mvs": 141,
+                "num_mvs_per_dweling_4mo_mvs": 269
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21fd"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1453,
+                "num_mvs_per_dweling_2_mvs": 5269,
+                "num_mvs_per_dweling_1_mvs": 4193,
+                "num_mvs_per_dweling_3_mvs": 1989,
+                "total_dwelings": 14816,
+                "lga_code_2016": "21370",
+                "num_mvs_per_dweling_tot": 13363,
+                "lga_name16": "Campaspe (S)",
+                "num_mvs_per_dweling_0_mvs": 678,
+                "num_mvs_per_dweling_4mo_mvs": 1226
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21fe"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 2414,
+                "num_mvs_per_dweling_2_mvs": 13014,
+                "num_mvs_per_dweling_1_mvs": 8601,
+                "num_mvs_per_dweling_3_mvs": 4688,
+                "total_dwelings": 32656,
+                "lga_code_2016": "21450",
+                "num_mvs_per_dweling_tot": 30242,
+                "lga_name16": "Cardinia (S)",
+                "num_mvs_per_dweling_0_mvs": 883,
+                "num_mvs_per_dweling_4mo_mvs": 3059
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_21ff"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 6656,
+                "num_mvs_per_dweling_2_mvs": 40418,
+                "num_mvs_per_dweling_1_mvs": 24443,
+                "num_mvs_per_dweling_3_mvs": 13936,
+                "total_dwelings": 96228,
+                "lga_code_2016": "21610",
+                "num_mvs_per_dweling_tot": 89570,
+                "lga_name16": "Casey (C)",
+                "num_mvs_per_dweling_0_mvs": 2907,
+                "num_mvs_per_dweling_4mo_mvs": 7859
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2200"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 562,
+                "num_mvs_per_dweling_2_mvs": 1829,
+                "num_mvs_per_dweling_1_mvs": 1984,
+                "num_mvs_per_dweling_3_mvs": 634,
+                "total_dwelings": 5777,
+                "lga_code_2016": "21670",
+                "num_mvs_per_dweling_tot": 5217,
+                "lga_name16": "Central Goldfields (S)",
+                "num_mvs_per_dweling_0_mvs": 375,
+                "num_mvs_per_dweling_4mo_mvs": 389
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2201"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 880,
+                "num_mvs_per_dweling_2_mvs": 2897,
+                "num_mvs_per_dweling_1_mvs": 2763,
+                "num_mvs_per_dweling_3_mvs": 1065,
+                "total_dwelings": 8659,
+                "lga_code_2016": "21750",
+                "num_mvs_per_dweling_tot": 7779,
+                "lga_name16": "Colac-Otway (S)",
+                "num_mvs_per_dweling_0_mvs": 435,
+                "num_mvs_per_dweling_4mo_mvs": 620
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2202"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 662,
+                "num_mvs_per_dweling_2_mvs": 2167,
+                "num_mvs_per_dweling_1_mvs": 1788,
+                "num_mvs_per_dweling_3_mvs": 912,
+                "total_dwelings": 6483,
+                "lga_code_2016": "21830",
+                "num_mvs_per_dweling_tot": 5825,
+                "lga_name16": "Corangamite (S)",
+                "num_mvs_per_dweling_0_mvs": 272,
+                "num_mvs_per_dweling_4mo_mvs": 677
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2203"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 5265,
+                "num_mvs_per_dweling_2_mvs": 16280,
+                "num_mvs_per_dweling_1_mvs": 23971,
+                "num_mvs_per_dweling_3_mvs": 3967,
+                "total_dwelings": 58412,
+                "lga_code_2016": "21890",
+                "num_mvs_per_dweling_tot": 53151,
+                "lga_name16": "Darebin (C)",
+                "num_mvs_per_dweling_0_mvs": 7162,
+                "num_mvs_per_dweling_4mo_mvs": 1768
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2204"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 2195,
+                "num_mvs_per_dweling_2_mvs": 6653,
+                "num_mvs_per_dweling_1_mvs": 6097,
+                "num_mvs_per_dweling_3_mvs": 2221,
+                "total_dwelings": 19152,
+                "lga_code_2016": "22110",
+                "num_mvs_per_dweling_tot": 16950,
+                "lga_name16": "East Gippsland (S)",
+                "num_mvs_per_dweling_0_mvs": 842,
+                "num_mvs_per_dweling_4mo_mvs": 1137
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2205"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 4612,
+                "num_mvs_per_dweling_2_mvs": 19286,
+                "num_mvs_per_dweling_1_mvs": 17131,
+                "num_mvs_per_dweling_3_mvs": 5685,
+                "total_dwelings": 52700,
+                "lga_code_2016": "22170",
+                "num_mvs_per_dweling_tot": 48091,
+                "lga_name16": "Frankston (C)",
+                "num_mvs_per_dweling_0_mvs": 2999,
+                "num_mvs_per_dweling_4mo_mvs": 2982
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2206"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 462,
+                "num_mvs_per_dweling_2_mvs": 1517,
+                "num_mvs_per_dweling_1_mvs": 1307,
+                "num_mvs_per_dweling_3_mvs": 609,
+                "total_dwelings": 4513,
+                "lga_code_2016": "22250",
+                "num_mvs_per_dweling_tot": 4045,
+                "lga_name16": "Gannawarra (S)",
+                "num_mvs_per_dweling_0_mvs": 210,
+                "num_mvs_per_dweling_4mo_mvs": 406
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2207"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 2623,
+                "num_mvs_per_dweling_2_mvs": 8388,
+                "num_mvs_per_dweling_1_mvs": 7382,
+                "num_mvs_per_dweling_3_mvs": 3014,
+                "total_dwelings": 24406,
+                "lga_code_2016": "22830",
+                "num_mvs_per_dweling_tot": 21784,
+                "lga_name16": "Greater Shepparton (C)",
+                "num_mvs_per_dweling_0_mvs": 1301,
+                "num_mvs_per_dweling_4mo_mvs": 1710
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2208"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 791,
+                "num_mvs_per_dweling_2_mvs": 2231,
+                "num_mvs_per_dweling_1_mvs": 1965,
+                "num_mvs_per_dweling_3_mvs": 849,
+                "total_dwelings": 6637,
+                "lga_code_2016": "22910",
+                "num_mvs_per_dweling_tot": 5844,
+                "lga_name16": "Hepburn (S)",
+                "num_mvs_per_dweling_0_mvs": 252,
+                "num_mvs_per_dweling_4mo_mvs": 544
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2209"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 218,
+                "num_mvs_per_dweling_2_mvs": 774,
+                "num_mvs_per_dweling_1_mvs": 721,
+                "num_mvs_per_dweling_3_mvs": 342,
+                "total_dwelings": 2454,
+                "lga_code_2016": "22980",
+                "num_mvs_per_dweling_tot": 2232,
+                "lga_name16": "Hindmarsh (S)",
+                "num_mvs_per_dweling_0_mvs": 126,
+                "num_mvs_per_dweling_4mo_mvs": 267
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_220a"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 2548,
+                "num_mvs_per_dweling_2_mvs": 11994,
+                "num_mvs_per_dweling_1_mvs": 12482,
+                "num_mvs_per_dweling_3_mvs": 3147,
+                "total_dwelings": 34195,
+                "lga_code_2016": "23110",
+                "num_mvs_per_dweling_tot": 31651,
+                "lga_name16": "Hobsons Bay (C)",
+                "num_mvs_per_dweling_0_mvs": 2504,
+                "num_mvs_per_dweling_4mo_mvs": 1519
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_220b"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 583,
+                "num_mvs_per_dweling_2_mvs": 2818,
+                "num_mvs_per_dweling_1_mvs": 2585,
+                "num_mvs_per_dweling_3_mvs": 1008,
+                "total_dwelings": 8084,
+                "lga_code_2016": "23190",
+                "num_mvs_per_dweling_tot": 7497,
+                "lga_name16": "Horsham (RC)",
+                "num_mvs_per_dweling_0_mvs": 491,
+                "num_mvs_per_dweling_4mo_mvs": 602
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_220c"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 4926,
+                "num_mvs_per_dweling_2_mvs": 23848,
+                "num_mvs_per_dweling_1_mvs": 17909,
+                "num_mvs_per_dweling_3_mvs": 8619,
+                "total_dwelings": 63210,
+                "lga_code_2016": "23270",
+                "num_mvs_per_dweling_tot": 58285,
+                "lga_name16": "Hume (C)",
+                "num_mvs_per_dweling_0_mvs": 2881,
+                "num_mvs_per_dweling_4mo_mvs": 5025
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_220d"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 499,
+                "num_mvs_per_dweling_2_mvs": 2340,
+                "num_mvs_per_dweling_1_mvs": 1629,
+                "num_mvs_per_dweling_3_mvs": 985,
+                "total_dwelings": 6267,
+                "lga_code_2016": "23350",
+                "num_mvs_per_dweling_tot": 5771,
+                "lga_name16": "Indigo (S)",
+                "num_mvs_per_dweling_0_mvs": 189,
+                "num_mvs_per_dweling_4mo_mvs": 628
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_220e"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 4052,
+                "num_mvs_per_dweling_2_mvs": 22023,
+                "num_mvs_per_dweling_1_mvs": 20397,
+                "num_mvs_per_dweling_3_mvs": 5880,
+                "total_dwelings": 58769,
+                "lga_code_2016": "23430",
+                "num_mvs_per_dweling_tot": 54718,
+                "lga_name16": "Kingston (C) (Vic.)",
+                "num_mvs_per_dweling_0_mvs": 3668,
+                "num_mvs_per_dweling_4mo_mvs": 2745
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_220f"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 2924,
+                "num_mvs_per_dweling_2_mvs": 22537,
+                "num_mvs_per_dweling_1_mvs": 15499,
+                "num_mvs_per_dweling_3_mvs": 8002,
+                "total_dwelings": 55442,
+                "lga_code_2016": "23670",
+                "num_mvs_per_dweling_tot": 52512,
+                "lga_name16": "Knox (C)",
+                "num_mvs_per_dweling_0_mvs": 2047,
+                "num_mvs_per_dweling_4mo_mvs": 4438
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2210"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3161,
+                "num_mvs_per_dweling_2_mvs": 9894,
+                "num_mvs_per_dweling_1_mvs": 9963,
+                "num_mvs_per_dweling_3_mvs": 3352,
+                "total_dwelings": 30280,
+                "lga_code_2016": "23810",
+                "num_mvs_per_dweling_tot": 27118,
+                "lga_name16": "Latrobe (C) (Vic.)",
+                "num_mvs_per_dweling_0_mvs": 2093,
+                "num_mvs_per_dweling_4mo_mvs": 1818
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2211"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 465,
+                "num_mvs_per_dweling_2_mvs": 994,
+                "num_mvs_per_dweling_1_mvs": 857,
+                "num_mvs_per_dweling_3_mvs": 459,
+                "total_dwelings": 3319,
+                "lga_code_2016": "23940",
+                "num_mvs_per_dweling_tot": 2856,
+                "lga_name16": "Loddon (S)",
+                "num_mvs_per_dweling_0_mvs": 132,
+                "num_mvs_per_dweling_4mo_mvs": 406
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2212"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1356,
+                "num_mvs_per_dweling_2_mvs": 6666,
+                "num_mvs_per_dweling_1_mvs": 3840,
+                "num_mvs_per_dweling_3_mvs": 2709,
+                "total_dwelings": 16764,
+                "lga_code_2016": "24130",
+                "num_mvs_per_dweling_tot": 15409,
+                "lga_name16": "Macedon Ranges (S)",
+                "num_mvs_per_dweling_0_mvs": 405,
+                "num_mvs_per_dweling_4mo_mvs": 1785
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2213"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 2234,
+                "num_mvs_per_dweling_2_mvs": 16862,
+                "num_mvs_per_dweling_1_mvs": 11797,
+                "num_mvs_per_dweling_3_mvs": 5712,
+                "total_dwelings": 41541,
+                "lga_code_2016": "24210",
+                "num_mvs_per_dweling_tot": 39307,
+                "lga_name16": "Manningham (C)",
+                "num_mvs_per_dweling_0_mvs": 1647,
+                "num_mvs_per_dweling_4mo_mvs": 3295
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2214"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 388,
+                "num_mvs_per_dweling_2_mvs": 1239,
+                "num_mvs_per_dweling_1_mvs": 1030,
+                "num_mvs_per_dweling_3_mvs": 480,
+                "total_dwelings": 3537,
+                "lga_code_2016": "24250",
+                "num_mvs_per_dweling_tot": 3151,
+                "lga_name16": "Mansfield (S)",
+                "num_mvs_per_dweling_0_mvs": 116,
+                "num_mvs_per_dweling_4mo_mvs": 290
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2215"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3029,
+                "num_mvs_per_dweling_2_mvs": 9189,
+                "num_mvs_per_dweling_1_mvs": 13433,
+                "num_mvs_per_dweling_3_mvs": 1996,
+                "total_dwelings": 32735,
+                "lga_code_2016": "24330",
+                "num_mvs_per_dweling_tot": 29706,
+                "lga_name16": "Maribyrnong (C)",
+                "num_mvs_per_dweling_0_mvs": 4294,
+                "num_mvs_per_dweling_4mo_mvs": 792
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2216"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 2284,
+                "num_mvs_per_dweling_2_mvs": 16294,
+                "num_mvs_per_dweling_1_mvs": 13468,
+                "num_mvs_per_dweling_3_mvs": 4796,
+                "total_dwelings": 41362,
+                "lga_code_2016": "24410",
+                "num_mvs_per_dweling_tot": 39080,
+                "lga_name16": "Maroondah (C)",
+                "num_mvs_per_dweling_0_mvs": 1934,
+                "num_mvs_per_dweling_4mo_mvs": 2583
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2217"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 8503,
+                "num_mvs_per_dweling_2_mvs": 6213,
+                "num_mvs_per_dweling_1_mvs": 21704,
+                "num_mvs_per_dweling_3_mvs": 911,
+                "total_dwelings": 65795,
+                "lga_code_2016": "24600",
+                "num_mvs_per_dweling_tot": 57290,
+                "lga_name16": "Melbourne (C)",
+                "num_mvs_per_dweling_0_mvs": 28135,
+                "num_mvs_per_dweling_4mo_mvs": 325
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2218"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3540,
+                "num_mvs_per_dweling_2_mvs": 18425,
+                "num_mvs_per_dweling_1_mvs": 11498,
+                "num_mvs_per_dweling_3_mvs": 5952,
+                "total_dwelings": 43981,
+                "lga_code_2016": "24650",
+                "num_mvs_per_dweling_tot": 40442,
+                "lga_name16": "Melton (C)",
+                "num_mvs_per_dweling_0_mvs": 1354,
+                "num_mvs_per_dweling_4mo_mvs": 3218
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2219"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 2465,
+                "num_mvs_per_dweling_2_mvs": 7151,
+                "num_mvs_per_dweling_1_mvs": 6705,
+                "num_mvs_per_dweling_3_mvs": 2491,
+                "total_dwelings": 21649,
+                "lga_code_2016": "24780",
+                "num_mvs_per_dweling_tot": 19188,
+                "lga_name16": "Mildura (RC)",
+                "num_mvs_per_dweling_0_mvs": 1354,
+                "num_mvs_per_dweling_4mo_mvs": 1482
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_221a"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1590,
+                "num_mvs_per_dweling_2_mvs": 5330,
+                "num_mvs_per_dweling_1_mvs": 3798,
+                "num_mvs_per_dweling_3_mvs": 2140,
+                "total_dwelings": 14864,
+                "lga_code_2016": "24850",
+                "num_mvs_per_dweling_tot": 13275,
+                "lga_name16": "Mitchell (S)",
+                "num_mvs_per_dweling_0_mvs": 492,
+                "num_mvs_per_dweling_4mo_mvs": 1518
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_221b"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1270,
+                "num_mvs_per_dweling_2_mvs": 3844,
+                "num_mvs_per_dweling_1_mvs": 3562,
+                "num_mvs_per_dweling_3_mvs": 1524,
+                "total_dwelings": 11733,
+                "lga_code_2016": "24900",
+                "num_mvs_per_dweling_tot": 10464,
+                "lga_name16": "Moira (S)",
+                "num_mvs_per_dweling_0_mvs": 550,
+                "num_mvs_per_dweling_4mo_mvs": 988
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_221c"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3837,
+                "num_mvs_per_dweling_2_mvs": 24478,
+                "num_mvs_per_dweling_1_mvs": 21447,
+                "num_mvs_per_dweling_3_mvs": 7176,
+                "total_dwelings": 64913,
+                "lga_code_2016": "24970",
+                "num_mvs_per_dweling_tot": 61077,
+                "lga_name16": "Monash (C)",
+                "num_mvs_per_dweling_0_mvs": 4819,
+                "num_mvs_per_dweling_4mo_mvs": 3157
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_221d"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3684,
+                "num_mvs_per_dweling_2_mvs": 15079,
+                "num_mvs_per_dweling_1_mvs": 16667,
+                "num_mvs_per_dweling_3_mvs": 4143,
+                "total_dwelings": 46010,
+                "lga_code_2016": "25060",
+                "num_mvs_per_dweling_tot": 42323,
+                "lga_name16": "Moonee Valley (C)",
+                "num_mvs_per_dweling_0_mvs": 4453,
+                "num_mvs_per_dweling_4mo_mvs": 1987
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_221e"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1046,
+                "num_mvs_per_dweling_2_mvs": 4273,
+                "num_mvs_per_dweling_1_mvs": 2980,
+                "num_mvs_per_dweling_3_mvs": 1880,
+                "total_dwelings": 11849,
+                "lga_code_2016": "25150",
+                "num_mvs_per_dweling_tot": 10804,
+                "lga_name16": "Moorabool (S)",
+                "num_mvs_per_dweling_0_mvs": 371,
+                "num_mvs_per_dweling_4mo_mvs": 1298
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_221f"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 4814,
+                "num_mvs_per_dweling_2_mvs": 23494,
+                "num_mvs_per_dweling_1_mvs": 19324,
+                "num_mvs_per_dweling_3_mvs": 7254,
+                "total_dwelings": 61110,
+                "lga_code_2016": "25340",
+                "num_mvs_per_dweling_tot": 56291,
+                "lga_name16": "Mornington Peninsula (S)",
+                "num_mvs_per_dweling_0_mvs": 2429,
+                "num_mvs_per_dweling_4mo_mvs": 3793
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2220"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3480,
+                "num_mvs_per_dweling_2_mvs": 19021,
+                "num_mvs_per_dweling_1_mvs": 21194,
+                "num_mvs_per_dweling_3_mvs": 4260,
+                "total_dwelings": 54727,
+                "lga_code_2016": "22310",
+                "num_mvs_per_dweling_tot": 51246,
+                "lga_name16": "Glen Eira (C)",
+                "num_mvs_per_dweling_0_mvs": 4872,
+                "num_mvs_per_dweling_4mo_mvs": 1895
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2222"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 868,
+                "num_mvs_per_dweling_2_mvs": 2699,
+                "num_mvs_per_dweling_1_mvs": 2496,
+                "num_mvs_per_dweling_3_mvs": 1137,
+                "total_dwelings": 8250,
+                "lga_code_2016": "22410",
+                "num_mvs_per_dweling_tot": 7378,
+                "lga_name16": "Glenelg (S)",
+                "num_mvs_per_dweling_0_mvs": 362,
+                "num_mvs_per_dweling_4mo_mvs": 685
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2223"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 561,
+                "num_mvs_per_dweling_2_mvs": 3059,
+                "num_mvs_per_dweling_1_mvs": 1269,
+                "num_mvs_per_dweling_3_mvs": 1491,
+                "total_dwelings": 7558,
+                "lga_code_2016": "22490",
+                "num_mvs_per_dweling_tot": 6996,
+                "lga_name16": "Golden Plains (S)",
+                "num_mvs_per_dweling_0_mvs": 78,
+                "num_mvs_per_dweling_4mo_mvs": 1099
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2224"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3915,
+                "num_mvs_per_dweling_2_mvs": 15758,
+                "num_mvs_per_dweling_1_mvs": 13756,
+                "num_mvs_per_dweling_3_mvs": 5385,
+                "total_dwelings": 43969,
+                "lga_code_2016": "22620",
+                "num_mvs_per_dweling_tot": 40051,
+                "lga_name16": "Greater Bendigo (C)",
+                "num_mvs_per_dweling_0_mvs": 2322,
+                "num_mvs_per_dweling_4mo_mvs": 2829
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2225"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 4627,
+                "num_mvs_per_dweling_2_mvs": 16250,
+                "num_mvs_per_dweling_1_mvs": 17295,
+                "num_mvs_per_dweling_3_mvs": 5845,
+                "total_dwelings": 51171,
+                "lga_code_2016": "22670",
+                "num_mvs_per_dweling_tot": 46541,
+                "lga_name16": "Greater Dandenong (C)",
+                "num_mvs_per_dweling_0_mvs": 4255,
+                "num_mvs_per_dweling_4mo_mvs": 2899
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2226"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 7187,
+                "num_mvs_per_dweling_2_mvs": 33500,
+                "num_mvs_per_dweling_1_mvs": 30921,
+                "num_mvs_per_dweling_3_mvs": 9792,
+                "total_dwelings": 91802,
+                "lga_code_2016": "22750",
+                "num_mvs_per_dweling_tot": 84616,
+                "lga_name16": "Greater Geelong (C)",
+                "num_mvs_per_dweling_0_mvs": 5535,
+                "num_mvs_per_dweling_4mo_mvs": 4869
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2227"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 770,
+                "num_mvs_per_dweling_2_mvs": 2608,
+                "num_mvs_per_dweling_1_mvs": 2690,
+                "num_mvs_per_dweling_3_mvs": 917,
+                "total_dwelings": 7933,
+                "lga_code_2016": "25430",
+                "num_mvs_per_dweling_tot": 7164,
+                "lga_name16": "Mount Alexander (S)",
+                "num_mvs_per_dweling_0_mvs": 377,
+                "num_mvs_per_dweling_4mo_mvs": 572
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2228"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 613,
+                "num_mvs_per_dweling_2_mvs": 2334,
+                "num_mvs_per_dweling_1_mvs": 1532,
+                "num_mvs_per_dweling_3_mvs": 962,
+                "total_dwelings": 6372,
+                "lga_code_2016": "25490",
+                "num_mvs_per_dweling_tot": 5762,
+                "lga_name16": "Moyne (S)",
+                "num_mvs_per_dweling_0_mvs": 172,
+                "num_mvs_per_dweling_4mo_mvs": 751
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2229"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 690,
+                "num_mvs_per_dweling_2_mvs": 1980,
+                "num_mvs_per_dweling_1_mvs": 1522,
+                "num_mvs_per_dweling_3_mvs": 827,
+                "total_dwelings": 5753,
+                "lga_code_2016": "25620",
+                "num_mvs_per_dweling_tot": 5062,
+                "lga_name16": "Murrindindi (S)",
+                "num_mvs_per_dweling_0_mvs": 161,
+                "num_mvs_per_dweling_4mo_mvs": 580
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_222a"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 959,
+                "num_mvs_per_dweling_2_mvs": 8761,
+                "num_mvs_per_dweling_1_mvs": 3989,
+                "num_mvs_per_dweling_3_mvs": 3690,
+                "total_dwelings": 20438,
+                "lga_code_2016": "25710",
+                "num_mvs_per_dweling_tot": 19478,
+                "lga_name16": "Nillumbik (S)",
+                "num_mvs_per_dweling_0_mvs": 376,
+                "num_mvs_per_dweling_4mo_mvs": 2660
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_222b"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 562,
+                "num_mvs_per_dweling_2_mvs": 1637,
+                "num_mvs_per_dweling_1_mvs": 1572,
+                "num_mvs_per_dweling_3_mvs": 645,
+                "total_dwelings": 5105,
+                "lga_code_2016": "25810",
+                "num_mvs_per_dweling_tot": 4548,
+                "lga_name16": "Northern Grampians (S)",
+                "num_mvs_per_dweling_0_mvs": 325,
+                "num_mvs_per_dweling_4mo_mvs": 367
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_222c"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 6211,
+                "num_mvs_per_dweling_2_mvs": 10754,
+                "num_mvs_per_dweling_1_mvs": 23341,
+                "num_mvs_per_dweling_3_mvs": 1531,
+                "total_dwelings": 50601,
+                "lga_code_2016": "25900",
+                "num_mvs_per_dweling_tot": 44393,
+                "lga_name16": "Port Phillip (C)",
+                "num_mvs_per_dweling_0_mvs": 8184,
+                "num_mvs_per_dweling_4mo_mvs": 583
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_222d"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 309,
+                "num_mvs_per_dweling_2_mvs": 1031,
+                "num_mvs_per_dweling_1_mvs": 745,
+                "num_mvs_per_dweling_3_mvs": 417,
+                "total_dwelings": 2943,
+                "lga_code_2016": "25990",
+                "num_mvs_per_dweling_tot": 2628,
+                "lga_name16": "Pyrenees (S)",
+                "num_mvs_per_dweling_0_mvs": 95,
+                "num_mvs_per_dweling_4mo_mvs": 348
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_222e"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 128,
+                "num_mvs_per_dweling_2_mvs": 449,
+                "num_mvs_per_dweling_1_mvs": 528,
+                "num_mvs_per_dweling_3_mvs": 97,
+                "total_dwelings": 1296,
+                "lga_code_2016": "26080",
+                "num_mvs_per_dweling_tot": 1171,
+                "lga_name16": "Queenscliffe (B)",
+                "num_mvs_per_dweling_0_mvs": 51,
+                "num_mvs_per_dweling_4mo_mvs": 44
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_222f"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1132,
+                "num_mvs_per_dweling_2_mvs": 4118,
+                "num_mvs_per_dweling_1_mvs": 3450,
+                "num_mvs_per_dweling_3_mvs": 1617,
+                "total_dwelings": 11718,
+                "lga_code_2016": "26170",
+                "num_mvs_per_dweling_tot": 10589,
+                "lga_name16": "South Gippsland (S)",
+                "num_mvs_per_dweling_0_mvs": 416,
+                "num_mvs_per_dweling_4mo_mvs": 988
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2230"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 544,
+                "num_mvs_per_dweling_2_mvs": 2170,
+                "num_mvs_per_dweling_1_mvs": 2072,
+                "num_mvs_per_dweling_3_mvs": 909,
+                "total_dwelings": 6667,
+                "lga_code_2016": "26260",
+                "num_mvs_per_dweling_tot": 6129,
+                "lga_name16": "Southern Grampians (S)",
+                "num_mvs_per_dweling_0_mvs": 349,
+                "num_mvs_per_dweling_4mo_mvs": 625
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2231"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 4354,
+                "num_mvs_per_dweling_2_mvs": 12101,
+                "num_mvs_per_dweling_1_mvs": 19571,
+                "num_mvs_per_dweling_3_mvs": 2659,
+                "total_dwelings": 47417,
+                "lga_code_2016": "26350",
+                "num_mvs_per_dweling_tot": 43063,
+                "lga_name16": "Stonnington (C)",
+                "num_mvs_per_dweling_0_mvs": 7470,
+                "num_mvs_per_dweling_4mo_mvs": 1263
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2232"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 482,
+                "num_mvs_per_dweling_2_mvs": 1541,
+                "num_mvs_per_dweling_1_mvs": 1394,
+                "num_mvs_per_dweling_3_mvs": 581,
+                "total_dwelings": 4530,
+                "lga_code_2016": "26430",
+                "num_mvs_per_dweling_tot": 4053,
+                "lga_name16": "Strathbogie (S)",
+                "num_mvs_per_dweling_0_mvs": 172,
+                "num_mvs_per_dweling_4mo_mvs": 362
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2233"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 774,
+                "num_mvs_per_dweling_2_mvs": 4635,
+                "num_mvs_per_dweling_1_mvs": 2888,
+                "num_mvs_per_dweling_3_mvs": 1494,
+                "total_dwelings": 10881,
+                "lga_code_2016": "26490",
+                "num_mvs_per_dweling_tot": 10106,
+                "lga_name16": "Surf Coast (S)",
+                "num_mvs_per_dweling_0_mvs": 260,
+                "num_mvs_per_dweling_4mo_mvs": 832
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2234"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1319,
+                "num_mvs_per_dweling_2_mvs": 2610,
+                "num_mvs_per_dweling_1_mvs": 2291,
+                "num_mvs_per_dweling_3_mvs": 941,
+                "total_dwelings": 8234,
+                "lga_code_2016": "26610",
+                "num_mvs_per_dweling_tot": 6914,
+                "lga_name16": "Swan Hill (RC)",
+                "num_mvs_per_dweling_0_mvs": 465,
+                "num_mvs_per_dweling_4mo_mvs": 609
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2235"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 258,
+                "num_mvs_per_dweling_2_mvs": 865,
+                "num_mvs_per_dweling_1_mvs": 682,
+                "num_mvs_per_dweling_3_mvs": 377,
+                "total_dwelings": 2502,
+                "lga_code_2016": "26670",
+                "num_mvs_per_dweling_tot": 2249,
+                "lga_name16": "Towong (S)",
+                "num_mvs_per_dweling_0_mvs": 72,
+                "num_mvs_per_dweling_4mo_mvs": 262
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2236"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1092,
+                "num_mvs_per_dweling_2_mvs": 4129,
+                "num_mvs_per_dweling_1_mvs": 3610,
+                "num_mvs_per_dweling_3_mvs": 1381,
+                "total_dwelings": 11664,
+                "lga_code_2016": "26700",
+                "num_mvs_per_dweling_tot": 10576,
+                "lga_name16": "Wangaratta (RC)",
+                "num_mvs_per_dweling_0_mvs": 586,
+                "num_mvs_per_dweling_4mo_mvs": 858
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2237"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1322,
+                "num_mvs_per_dweling_2_mvs": 4874,
+                "num_mvs_per_dweling_1_mvs": 4593,
+                "num_mvs_per_dweling_3_mvs": 1338,
+                "total_dwelings": 13548,
+                "lga_code_2016": "26730",
+                "num_mvs_per_dweling_tot": 12227,
+                "lga_name16": "Warrnambool (C)",
+                "num_mvs_per_dweling_0_mvs": 766,
+                "num_mvs_per_dweling_4mo_mvs": 666
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2238"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1674,
+                "num_mvs_per_dweling_2_mvs": 5918,
+                "num_mvs_per_dweling_1_mvs": 5286,
+                "num_mvs_per_dweling_3_mvs": 2249,
+                "total_dwelings": 17339,
+                "lga_code_2016": "26810",
+                "num_mvs_per_dweling_tot": 15662,
+                "lga_name16": "Wellington (S)",
+                "num_mvs_per_dweling_0_mvs": 827,
+                "num_mvs_per_dweling_4mo_mvs": 1382
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2239"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 116,
+                "num_mvs_per_dweling_2_mvs": 549,
+                "num_mvs_per_dweling_1_mvs": 445,
+                "num_mvs_per_dweling_3_mvs": 266,
+                "total_dwelings": 1658,
+                "lga_code_2016": "26890",
+                "num_mvs_per_dweling_tot": 1539,
+                "lga_name16": "West Wimmera (S)",
+                "num_mvs_per_dweling_0_mvs": 54,
+                "num_mvs_per_dweling_4mo_mvs": 227
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_223a"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3147,
+                "num_mvs_per_dweling_2_mvs": 22491,
+                "num_mvs_per_dweling_1_mvs": 21768,
+                "num_mvs_per_dweling_3_mvs": 5659,
+                "total_dwelings": 60430,
+                "lga_code_2016": "26980",
+                "num_mvs_per_dweling_tot": 57279,
+                "lga_name16": "Whitehorse (C)",
+                "num_mvs_per_dweling_0_mvs": 4834,
+                "num_mvs_per_dweling_4mo_mvs": 2534
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_223b"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 4513,
+                "num_mvs_per_dweling_2_mvs": 26507,
+                "num_mvs_per_dweling_1_mvs": 19353,
+                "num_mvs_per_dweling_3_mvs": 8606,
+                "total_dwelings": 66528,
+                "lga_code_2016": "27070",
+                "num_mvs_per_dweling_tot": 62021,
+                "lga_name16": "Whittlesea (C)",
+                "num_mvs_per_dweling_0_mvs": 2967,
+                "num_mvs_per_dweling_4mo_mvs": 4582
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_223c"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 1222,
+                "num_mvs_per_dweling_2_mvs": 5795,
+                "num_mvs_per_dweling_1_mvs": 4829,
+                "num_mvs_per_dweling_3_mvs": 1722,
+                "total_dwelings": 15130,
+                "lga_code_2016": "27170",
+                "num_mvs_per_dweling_tot": 13904,
+                "lga_name16": "Wodonga (C)",
+                "num_mvs_per_dweling_0_mvs": 781,
+                "num_mvs_per_dweling_4mo_mvs": 783
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_223d"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 4891,
+                "num_mvs_per_dweling_2_mvs": 28918,
+                "num_mvs_per_dweling_1_mvs": 21795,
+                "num_mvs_per_dweling_3_mvs": 8348,
+                "total_dwelings": 70297,
+                "lga_code_2016": "27260",
+                "num_mvs_per_dweling_tot": 65408,
+                "lga_name16": "Wyndham (C)",
+                "num_mvs_per_dweling_0_mvs": 2429,
+                "num_mvs_per_dweling_4mo_mvs": 3921
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_223e"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 4462,
+                "num_mvs_per_dweling_2_mvs": 7900,
+                "num_mvs_per_dweling_1_mvs": 17996,
+                "num_mvs_per_dweling_3_mvs": 1452,
+                "total_dwelings": 39867,
+                "lga_code_2016": "27350",
+                "num_mvs_per_dweling_tot": 35409,
+                "lga_name16": "Yarra (C)",
+                "num_mvs_per_dweling_0_mvs": 7653,
+                "num_mvs_per_dweling_4mo_mvs": 414
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_223f"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 3414,
+                "num_mvs_per_dweling_2_mvs": 21314,
+                "num_mvs_per_dweling_1_mvs": 13954,
+                "num_mvs_per_dweling_3_mvs": 8234,
+                "total_dwelings": 54097,
+                "lga_code_2016": "27450",
+                "num_mvs_per_dweling_tot": 50689,
+                "lga_name16": "Yarra Ranges (S)",
+                "num_mvs_per_dweling_0_mvs": 1576,
+                "num_mvs_per_dweling_4mo_mvs": 5607
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2240"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 293,
+                "num_mvs_per_dweling_2_mvs": 908,
+                "num_mvs_per_dweling_1_mvs": 887,
+                "num_mvs_per_dweling_3_mvs": 379,
+                "total_dwelings": 2868,
+                "lga_code_2016": "27630",
+                "num_mvs_per_dweling_tot": 2578,
+                "lga_name16": "Yarriambiack (S)",
+                "num_mvs_per_dweling_0_mvs": 141,
+                "num_mvs_per_dweling_4mo_mvs": 262
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2241"
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "num_mvs_ns": 230,
+                "num_mvs_per_dweling_2_mvs": 85,
+                "num_mvs_per_dweling_1_mvs": 224,
+                "num_mvs_per_dweling_3_mvs": 18,
+                "total_dwelings": 746,
+                "lga_code_2016": "29399",
+                "num_mvs_per_dweling_tot": 513,
+                "lga_name16": "Unincorporated Vic",
+                "num_mvs_per_dweling_0_mvs": 177,
+                "num_mvs_per_dweling_4mo_mvs": 11
+            },
+            "id": "lga_p29_number_motor_vehicles_by_dwelling_census_2016.fid-4d8cdae8_18f4df060a3_2242"
+        }
+    ]
+}

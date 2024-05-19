@@ -1,0 +1,1712 @@
+[
+    {
+        "_index": "airquality",
+        "_id": "77062cb7-3e3b-4984-b6d0-03dda76177f2_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "77062cb7-3e3b-4984-b6d0-03dda76177f2",
+            "site_name": "Box Hill",
+            "site_location": {
+                "lat": -37.8287277,
+                "lon": 145.1324
+            },
+            "parameter": "PM2.5",
+            "value": 11.07,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "c69ed768-34d2-4d72-86f3-088c250758a8_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "c69ed768-34d2-4d72-86f3-088c250758a8",
+            "site_name": "Alphington",
+            "site_location": {
+                "lat": -37.7784081,
+                "lon": 145.0306
+            },
+            "parameter": "PM2.5",
+            "value": 2.87,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "ee780b50-0240-4c7e-99f8-0df759caf3a3_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "ee780b50-0240-4c7e-99f8-0df759caf3a3",
+            "site_name": "Churchill",
+            "site_location": {
+                "lat": -38.3043137,
+                "lon": 146.414932
+            },
+            "parameter": "PM2.5",
+            "value": 2.43,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "cddf953a-b932-4918-97ea-1d19583d507a_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "cddf953a-b932-4918-97ea-1d19583d507a",
+            "site_name": "Traralgon South",
+            "site_location": {
+                "lat": -38.29585,
+                "lon": 146.5392
+            },
+            "parameter": "Particles",
+            "value": 5.28,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "70584bae-a7e7-4ae9-adf5-1e8e92b15386_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "70584bae-a7e7-4ae9-adf5-1e8e92b15386",
+            "site_name": "Traralgon",
+            "site_location": {
+                "lat": -38.1942825,
+                "lon": 146.531464
+            },
+            "parameter": "PM2.5",
+            "value": 3.9,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "69fa2d5e-557c-457a-9103-21bc2609f5eb_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "69fa2d5e-557c-457a-9103-21bc2609f5eb",
+            "site_name": "Tyers North",
+            "site_location": {
+                "lat": -38.12967,
+                "lon": 146.4828
+            },
+            "parameter": "Particles",
+            "value": 8.48,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "69088979-01eb-4b48-9535-22b6d69421ec_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "69088979-01eb-4b48-9535-22b6d69421ec",
+            "site_name": "Dandenong",
+            "site_location": {
+                "lat": -37.98576,
+                "lon": 145.1987
+            },
+            "parameter": "PM2.5",
+            "value": 0,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "f5c385fd-c136-4398-99b0-35696b711b7b_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "f5c385fd-c136-4398-99b0-35696b711b7b",
+            "site_name": "Moe",
+            "site_location": {
+                "lat": -38.1864662,
+                "lon": 146.258331
+            },
+            "parameter": "PM2.5",
+            "value": 1.78,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "dd8279c0-018d-469b-92c7-49eeeecd27de_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "dd8279c0-018d-469b-92c7-49eeeecd27de",
+            "site_name": "Boolarra South",
+            "site_location": {
+                "lat": -38.44398,
+                "lon": 146.2742
+            },
+            "parameter": "Particles",
+            "value": 9.62,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "33fd2638-98ff-4b6c-8b75-5feecae706df_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "33fd2638-98ff-4b6c-8b75-5feecae706df",
+            "site_name": "Traralgon East",
+            "site_location": {
+                "lat": -38.19631,
+                "lon": 146.5621
+            },
+            "parameter": "Particles",
+            "value": 7.98,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "1adaf80a-f20f-4fd3-8fa1-60d87acfce61_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "1adaf80a-f20f-4fd3-8fa1-60d87acfce61",
+            "site_name": "Boolarra",
+            "site_location": {
+                "lat": -38.36981,
+                "lon": 146.2751
+            },
+            "parameter": "Particles",
+            "value": 8.28,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "aa39a036-4514-4b51-aaf4-6276e98b036c_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "aa39a036-4514-4b51-aaf4-6276e98b036c",
+            "site_name": "Yinnar",
+            "site_location": {
+                "lat": -38.32779,
+                "lon": 146.3371
+            },
+            "parameter": "Particles",
+            "value": 6.28,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "032edf91-3cb9-42be-8ff3-70d3f56dba68_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "032edf91-3cb9-42be-8ff3-70d3f56dba68",
+            "site_name": "Morwell East",
+            "site_location": {
+                "lat": -38.229393,
+                "lon": 146.424454
+            },
+            "parameter": "PM2.5",
+            "value": 0.98,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "5fa9b7aa-651d-4c9d-96b1-8f6813b2d933_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "5fa9b7aa-651d-4c9d-96b1-8f6813b2d933",
+            "site_name": "Geelong South",
+            "site_location": {
+                "lat": -38.17356,
+                "lon": 144.3703
+            },
+            "parameter": "PM2.5",
+            "value": 0,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "3a0e909b-a278-4c5b-8786-975c5ef4c4c9_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "3a0e909b-a278-4c5b-8786-975c5ef4c4c9",
+            "site_name": "Willow Grove",
+            "site_location": {
+                "lat": -38.07072,
+                "lon": 146.1779
+            },
+            "parameter": "Particles",
+            "value": 8.45,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "a4f9fa11-1e9b-45eb-9473-9a8418a1c6bf_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "a4f9fa11-1e9b-45eb-9473-9a8418a1c6bf",
+            "site_name": "Yallourn North",
+            "site_location": {
+                "lat": -38.16144,
+                "lon": 146.3629
+            },
+            "parameter": "Particles",
+            "value": 7.48,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "15b90658-97fe-42a4-8bb8-cfc5cc90cdc9_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "15b90658-97fe-42a4-8bb8-cfc5cc90cdc9",
+            "site_name": "Point Cook",
+            "site_location": {
+                "lat": -37.9263153,
+                "lon": 144.7567
+            },
+            "parameter": "PM2.5",
+            "value": 5.01,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "932e8220-8d30-4e51-9200-e5b1ec8f87fb_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "932e8220-8d30-4e51-9200-e5b1ec8f87fb",
+            "site_name": "Yinnar",
+            "site_location": {
+                "lat": -38.32676,
+                "lon": 146.3261
+            },
+            "parameter": "PM10",
+            "value": 4.13,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "7e56abba-a570-4139-ad68-f45033862599_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "7e56abba-a570-4139-ad68-f45033862599",
+            "site_name": "Flynns Creek",
+            "site_location": {
+                "lat": -38.24396,
+                "lon": 146.6362
+            },
+            "parameter": "Particles",
+            "value": 8.28,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "4afe6adc-cbac-4bf1-afbe-ff98d59564f9_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "4afe6adc-cbac-4bf1-afbe-ff98d59564f9",
+            "site_name": "Melbourne CBD",
+            "site_location": {
+                "lat": -37.8073959,
+                "lon": 144.97
+            },
+            "parameter": null,
+            "value": null,
+            "unit": null,
+            "health_advice": null,
+            "health_advice_color": null,
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "8413d21d-5440-4f2b-81f9-2e5cfb8620d0_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "8413d21d-5440-4f2b-81f9-2e5cfb8620d0",
+            "site_name": "Wangaratta",
+            "site_location": {
+                "lat": -36.36926,
+                "lon": 146.3133
+            },
+            "parameter": "PM2.5",
+            "value": 3.73,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "33f48fb3-f771-49e8-b554-0fcec8eb70bb_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "33f48fb3-f771-49e8-b554-0fcec8eb70bb",
+            "site_name": "Morwell South",
+            "site_location": {
+                "lat": -38.2392921,
+                "lon": 146.3873
+            },
+            "parameter": "PM2.5",
+            "value": 4.48,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "d56ede8c-637a-41e9-a055-f53198e9456a_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "d56ede8c-637a-41e9-a055-f53198e9456a",
+            "site_name": "Brighton",
+            "site_location": {
+                "lat": -37.9135475,
+                "lon": 144.998
+            },
+            "parameter": "PM2.5",
+            "value": 2.8,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "1ddbf1d8-eb8b-43cd-acca-9c23c29ff338_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "1ddbf1d8-eb8b-43cd-acca-9c23c29ff338",
+            "site_name": "Echuca",
+            "site_location": {
+                "lat": -36.12591,
+                "lon": 144.754288
+            },
+            "parameter": null,
+            "value": null,
+            "unit": null,
+            "health_advice": null,
+            "health_advice_color": null,
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "22b21e76-76f2-4b0d-b133-3fc852c721b5_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "22b21e76-76f2-4b0d-b133-3fc852c721b5",
+            "site_name": "Healesville",
+            "site_location": {
+                "lat": -37.6468239,
+                "lon": 145.5275
+            },
+            "parameter": "Particles",
+            "value": 7.3,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "3a5e1716-5612-4f3e-a3d6-a924c0899804_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "3a5e1716-5612-4f3e-a3d6-a924c0899804",
+            "site_name": "Warrnambool",
+            "site_location": {
+                "lat": -38.3860931,
+                "lon": 142.510986
+            },
+            "parameter": "Particles",
+            "value": 5.95,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "48b39f0a-0ea6-4016-b8f2-23adbc72897a_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "48b39f0a-0ea6-4016-b8f2-23adbc72897a",
+            "site_name": "Mildura",
+            "site_location": {
+                "lat": -34.1635132,
+                "lon": 142.139374
+            },
+            "parameter": "Particles",
+            "value": 5.3,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "5e9e5f47-e85b-493e-9b39-e6b5f282bc61_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "5e9e5f47-e85b-493e-9b39-e6b5f282bc61",
+            "site_name": "Horsham",
+            "site_location": {
+                "lat": -36.72263,
+                "lon": 142.175415
+            },
+            "parameter": "Particles",
+            "value": 5.53,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "4c4e8933-a66b-4e76-b2c2-ad9bb56d8809_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "4c4e8933-a66b-4e76-b2c2-ad9bb56d8809",
+            "site_name": "Altona North",
+            "site_location": {
+                "lat": -37.8441238,
+                "lon": 144.861618
+            },
+            "parameter": "PM2.5",
+            "value": 1.83,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "e47fa291-45de-4b06-b6ac-6bb8bf6421f8_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "e47fa291-45de-4b06-b6ac-6bb8bf6421f8",
+            "site_name": "Ballarat",
+            "site_location": {
+                "lat": -37.5293274,
+                "lon": 143.842438
+            },
+            "parameter": "Particles",
+            "value": 5.73,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "b860d407-5227-4b15-a0d9-eb5773b9d083_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "b860d407-5227-4b15-a0d9-eb5773b9d083",
+            "site_name": "Bairnsdale",
+            "site_location": {
+                "lat": -37.829895,
+                "lon": 147.620209
+            },
+            "parameter": "Particles",
+            "value": 5.1,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "cda783ad-39fb-4ace-a8cd-15324fdb6147_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "cda783ad-39fb-4ace-a8cd-15324fdb6147",
+            "site_name": "Castlemaine",
+            "site_location": {
+                "lat": -37.0730247,
+                "lon": 144.233292
+            },
+            "parameter": "Particles",
+            "value": 6.2,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "0ad5e111-20d2-44d8-ad03-efa0736f65fc_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "0ad5e111-20d2-44d8-ad03-efa0736f65fc",
+            "site_name": "Beechworth",
+            "site_location": {
+                "lat": -36.37299,
+                "lon": 146.679077
+            },
+            "parameter": "Particles",
+            "value": 7.05,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "ab1a6394-e44b-4ff1-a1c0-cb8a4b48408e_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "ab1a6394-e44b-4ff1-a1c0-cb8a4b48408e",
+            "site_name": "Benalla",
+            "site_location": {
+                "lat": -36.54932,
+                "lon": 145.997223
+            },
+            "parameter": "Particles",
+            "value": 5.15,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "39ae637d-9102-49f0-b741-6b280055b033_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "39ae637d-9102-49f0-b741-6b280055b033",
+            "site_name": "Ararat",
+            "site_location": {
+                "lat": -37.2828064,
+                "lon": 142.935608
+            },
+            "parameter": "Particles",
+            "value": 4.97,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "883b5df6-8125-4e63-a2b6-1200faac4324_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "883b5df6-8125-4e63-a2b6-1200faac4324",
+            "site_name": "Cobden",
+            "site_location": {
+                "lat": -38.32716,
+                "lon": 143.076
+            },
+            "parameter": "Particles",
+            "value": 8.42,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "b17f9b91-fdcf-43e6-9837-0ae6a775711d_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "b17f9b91-fdcf-43e6-9837-0ae6a775711d",
+            "site_name": "Camperdown",
+            "site_location": {
+                "lat": -38.2248344,
+                "lon": 143.140152
+            },
+            "parameter": "Particles",
+            "value": 8.15,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "36a0e96c-7527-4a78-811c-230205a1640e_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "36a0e96c-7527-4a78-811c-230205a1640e",
+            "site_name": "Colac",
+            "site_location": {
+                "lat": -38.3456841,
+                "lon": 143.594269
+            },
+            "parameter": "Particles",
+            "value": 7.43,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "57f7b166-7696-4238-8a9b-8a1505e7de8f_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "57f7b166-7696-4238-8a9b-8a1505e7de8f",
+            "site_name": "Maffra",
+            "site_location": {
+                "lat": -37.9596977,
+                "lon": 146.991745
+            },
+            "parameter": "Particles",
+            "value": 5.63,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "3420cbd3-a860-455b-813d-38656d72ef11_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "3420cbd3-a860-455b-813d-38656d72ef11",
+            "site_name": "Gisborne",
+            "site_location": {
+                "lat": -37.4853172,
+                "lon": 144.5862
+            },
+            "parameter": "Particles",
+            "value": 5.23,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "8ed3a265-73dc-4458-8977-13cb6f533ef5_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "8ed3a265-73dc-4458-8977-13cb6f533ef5",
+            "site_name": "Macedon",
+            "site_location": {
+                "lat": -37.4230652,
+                "lon": 144.562225
+            },
+            "parameter": null,
+            "value": null,
+            "unit": null,
+            "health_advice": null,
+            "health_advice_color": null,
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "6bfdd604-0c03-4ea3-8783-782a3673441f_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "6bfdd604-0c03-4ea3-8783-782a3673441f",
+            "site_name": "Lancefield",
+            "site_location": {
+                "lat": -37.2782669,
+                "lon": 144.73526
+            },
+            "parameter": "Particles",
+            "value": 5,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "cc5367e5-58b2-4e08-b9ec-920d9afe72ca_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "cc5367e5-58b2-4e08-b9ec-920d9afe72ca",
+            "site_name": "Kyneton",
+            "site_location": {
+                "lat": -37.24706,
+                "lon": 144.451111
+            },
+            "parameter": "Particles",
+            "value": 5.18,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "f9a9a4b6-7067-41d4-93e2-3cc39fb0784b_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "f9a9a4b6-7067-41d4-93e2-3cc39fb0784b",
+            "site_name": "Heathcote",
+            "site_location": {
+                "lat": -36.92107,
+                "lon": 144.709946
+            },
+            "parameter": "Particles",
+            "value": 4.95,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "13be38f2-816d-4c99-8d0b-ec59fdcc952f_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "13be38f2-816d-4c99-8d0b-ec59fdcc952f",
+            "site_name": "Kinglake",
+            "site_location": {
+                "lat": -37.5337448,
+                "lon": 145.340515
+            },
+            "parameter": "Particles",
+            "value": 6.65,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "2108694e-5804-4164-a1c6-7a97d6c82ddb_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "2108694e-5804-4164-a1c6-7a97d6c82ddb",
+            "site_name": "Daylesford",
+            "site_location": {
+                "lat": -37.3410339,
+                "lon": 144.130463
+            },
+            "parameter": "Particles",
+            "value": 4.52,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "51bff557-dea8-44b3-8ae3-10897be6df61_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "51bff557-dea8-44b3-8ae3-10897be6df61",
+            "site_name": "Heywood",
+            "site_location": {
+                "lat": -38.1323051,
+                "lon": 141.631821
+            },
+            "parameter": "Particles",
+            "value": 8.65,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "262abeb7-7cd3-44ea-abb5-14f80a355bfa_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "262abeb7-7cd3-44ea-abb5-14f80a355bfa",
+            "site_name": "Hamilton",
+            "site_location": {
+                "lat": -37.73387,
+                "lon": 142.020813
+            },
+            "parameter": "Particles",
+            "value": 5.7,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "f3aaef44-43be-4557-b572-5de293dd1d85_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "f3aaef44-43be-4557-b572-5de293dd1d85",
+            "site_name": "Kerang",
+            "site_location": {
+                "lat": -35.7475281,
+                "lon": 143.924866
+            },
+            "parameter": "Particles",
+            "value": 7.58,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "bafb0050-7888-4477-bff7-733f1608c8c6_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "bafb0050-7888-4477-bff7-733f1608c8c6",
+            "site_name": "Lorne",
+            "site_location": {
+                "lat": -38.5403671,
+                "lon": 143.9738
+            },
+            "parameter": "Particles",
+            "value": 8.68,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "58da8231-682a-44ce-97ee-17de937c3782_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "58da8231-682a-44ce-97ee-17de937c3782",
+            "site_name": "Mallacoota",
+            "site_location": {
+                "lat": -37.56016,
+                "lon": 149.751114
+            },
+            "parameter": null,
+            "value": null,
+            "unit": null,
+            "health_advice": null,
+            "health_advice_color": null,
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "6e1cb2da-1537-40b4-b011-9519095d7e06_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "6e1cb2da-1537-40b4-b011-9519095d7e06",
+            "site_name": "Shepparton",
+            "site_location": {
+                "lat": -36.3808365,
+                "lon": 145.406616
+            },
+            "parameter": "Particles",
+            "value": 6.1,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "eb624ae2-42e4-49eb-a8e0-025121c9d629_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "eb624ae2-42e4-49eb-a8e0-025121c9d629",
+            "site_name": "Orbost",
+            "site_location": {
+                "lat": -37.7059746,
+                "lon": 148.456284
+            },
+            "parameter": "Particles",
+            "value": 5.9,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "cfe63589-fcb8-4a85-b500-4920b37f92e7_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "cfe63589-fcb8-4a85-b500-4920b37f92e7",
+            "site_name": "Sale",
+            "site_location": {
+                "lat": -38.102684,
+                "lon": 147.057541
+            },
+            "parameter": "Particles",
+            "value": 6,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "703c0c30-adc6-4e69-94cc-78b8aaa23255_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "703c0c30-adc6-4e69-94cc-78b8aaa23255",
+            "site_name": "Myrtleford",
+            "site_location": {
+                "lat": -36.5539742,
+                "lon": 146.72081
+            },
+            "parameter": "Particles",
+            "value": 6,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "6f12e44a-29d7-4ca9-9756-bcb444962af4_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "6f12e44a-29d7-4ca9-9756-bcb444962af4",
+            "site_name": "Mansfield",
+            "site_location": {
+                "lat": -37.0508,
+                "lon": 146.077087
+            },
+            "parameter": "Particles",
+            "value": 5.68,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "0f58d8a5-4856-4de8-8ce8-5a741e27522c_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "0f58d8a5-4856-4de8-8ce8-5a741e27522c",
+            "site_name": "Portland",
+            "site_location": {
+                "lat": -38.3525276,
+                "lon": 141.6071
+            },
+            "parameter": "Particles",
+            "value": 10.23,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "63f9b336-cf04-41a4-a08b-cbdb2d20a351_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "63f9b336-cf04-41a4-a08b-cbdb2d20a351",
+            "site_name": "Ouyen",
+            "site_location": {
+                "lat": -35.0655365,
+                "lon": 142.318649
+            },
+            "parameter": "Particles",
+            "value": 4.82,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "cc0b9034-7758-4c8e-9680-7fc2915fdcb8_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "cc0b9034-7758-4c8e-9680-7fc2915fdcb8",
+            "site_name": "Torquay",
+            "site_location": {
+                "lat": -38.3079338,
+                "lon": 144.310516
+            },
+            "parameter": "Particles",
+            "value": 8.15,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "6006c323-1709-4b4f-a048-040f51cc801e_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "6006c323-1709-4b4f-a048-040f51cc801e",
+            "site_name": "Wonthaggi",
+            "site_location": {
+                "lat": -38.5871048,
+                "lon": 145.578491
+            },
+            "parameter": "Particles",
+            "value": 7.63,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "c7d0c270-8c0e-4f5d-8d3b-cd15e786cbbc_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "c7d0c270-8c0e-4f5d-8d3b-cd15e786cbbc",
+            "site_name": "Warragul",
+            "site_location": {
+                "lat": -38.1666527,
+                "lon": 145.941544
+            },
+            "parameter": "Particles",
+            "value": 5.8,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "ea05039d-28a1-4cd4-838a-648a7843059a_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "ea05039d-28a1-4cd4-838a-648a7843059a",
+            "site_name": "Yarrawonga",
+            "site_location": {
+                "lat": -36.01634,
+                "lon": 146.013016
+            },
+            "parameter": "Particles",
+            "value": 7.3,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "7c3c27ba-2255-4c0a-b604-94ae63959a51_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "7c3c27ba-2255-4c0a-b604-94ae63959a51",
+            "site_name": "Wodonga",
+            "site_location": {
+                "lat": -36.1377754,
+                "lon": 146.8983
+            },
+            "parameter": "Particles",
+            "value": 6.2,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "a50f4750-b17a-47cd-954b-dc694bd441c2_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "a50f4750-b17a-47cd-954b-dc694bd441c2",
+            "site_name": "Broadford",
+            "site_location": {
+                "lat": -37.2078857,
+                "lon": 145.04805
+            },
+            "parameter": "Particles",
+            "value": 5.52,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "fc15d85f-4141-4949-b2ef-e93c5c825205_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "fc15d85f-4141-4949-b2ef-e93c5c825205",
+            "site_name": "Yarra Glen",
+            "site_location": {
+                "lat": -37.65686,
+                "lon": 145.373459
+            },
+            "parameter": "Particles",
+            "value": 8.83,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "07967f24-444c-4fd8-901c-9c0c67144053_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "07967f24-444c-4fd8-901c-9c0c67144053",
+            "site_name": "Sunbury",
+            "site_location": {
+                "lat": -37.58954,
+                "lon": 144.719727
+            },
+            "parameter": "Particles",
+            "value": 5.3,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "9888bb86-6422-44e6-9f7c-92fc38f2736d_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "9888bb86-6422-44e6-9f7c-92fc38f2736d",
+            "site_name": "Lakes Entrance",
+            "site_location": {
+                "lat": -37.8716469,
+                "lon": 148.006744
+            },
+            "parameter": "Particles",
+            "value": 5.53,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "3aacf39f-dda4-4716-8db4-58b7ea2767b1_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "3aacf39f-dda4-4716-8db4-58b7ea2767b1",
+            "site_name": "Leongatha",
+            "site_location": {
+                "lat": -38.4689522,
+                "lon": 145.956421
+            },
+            "parameter": "Particles",
+            "value": 8.57,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "1619e162-e4a5-4f96-b6a4-540ecd1a471c_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "1619e162-e4a5-4f96-b6a4-540ecd1a471c",
+            "site_name": "Bacchus Marsh",
+            "site_location": {
+                "lat": -37.674633,
+                "lon": 144.4354
+            },
+            "parameter": "Particles",
+            "value": 5.85,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "27088121-4310-48ce-8d3f-b1ec5c1608c6_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "27088121-4310-48ce-8d3f-b1ec5c1608c6",
+            "site_name": "Warburton",
+            "site_location": {
+                "lat": -37.75449,
+                "lon": 145.688278
+            },
+            "parameter": "Particles",
+            "value": 11.45,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "8f03fc05-84f0-4aef-befb-37725c9c5d69_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "8f03fc05-84f0-4aef-befb-37725c9c5d69",
+            "site_name": "Drysdale",
+            "site_location": {
+                "lat": -38.1913528,
+                "lon": 144.550659
+            },
+            "parameter": "Particles",
+            "value": 9.57,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "c2d7348a-918e-444f-9cf1-3f67055cd90a_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "c2d7348a-918e-444f-9cf1-3f67055cd90a",
+            "site_name": "Rutherglen",
+            "site_location": {
+                "lat": -36.0538254,
+                "lon": 146.463989
+            },
+            "parameter": "Particles",
+            "value": 6.4,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "ed97e7b3-1ce6-4c6c-bb45-7f42ef305620_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "ed97e7b3-1ce6-4c6c-bb45-7f42ef305620",
+            "site_name": "Bright",
+            "site_location": {
+                "lat": -36.73228,
+                "lon": 146.9702
+            },
+            "parameter": "PM2.5",
+            "value": 3.94,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "fd9971b2-130e-4163-b56c-a37beadc7846_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "fd9971b2-130e-4163-b56c-a37beadc7846",
+            "site_name": "Macleod",
+            "site_location": {
+                "lat": -37.722477,
+                "lon": 145.0576
+            },
+            "parameter": "PM2.5",
+            "value": 2.86,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "4246f120-80ff-44e5-9c94-ec5a16a7276e_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "4246f120-80ff-44e5-9c94-ec5a16a7276e",
+            "site_name": "Mildura",
+            "site_location": {
+                "lat": -34.19561,
+                "lon": 142.1616
+            },
+            "parameter": "PM2.5",
+            "value": 2.72,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "f70a1ce9-691e-4dff-83e4-792065d77779_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "f70a1ce9-691e-4dff-83e4-792065d77779",
+            "site_name": "Swan Hill",
+            "site_location": {
+                "lat": -35.34331,
+                "lon": 143.5341
+            },
+            "parameter": "PM2.5",
+            "value": 1.84,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "b2972c05-c6c6-4d50-94ad-7fa53722e9d0_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "b2972c05-c6c6-4d50-94ad-7fa53722e9d0",
+            "site_name": "Spotswood",
+            "site_location": {
+                "lat": -37.82743,
+                "lon": 144.8801
+            },
+            "parameter": "PM2.5",
+            "value": 1.89,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "0968ba97-5cdf-464a-a8be-8ae789b83f37_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "0968ba97-5cdf-464a-a8be-8ae789b83f37",
+            "site_name": "Swan Hill",
+            "site_location": {
+                "lat": -35.34314,
+                "lon": 143.534088
+            },
+            "parameter": "Particles",
+            "value": 5.55,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "d9c23fd4-2ed0-4627-87a7-4199bffad9b4_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "d9c23fd4-2ed0-4627-87a7-4199bffad9b4",
+            "site_name": "Wallan",
+            "site_location": {
+                "lat": -37.41652,
+                "lon": 144.981232
+            },
+            "parameter": "Particles",
+            "value": 5,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "63a73778-4244-481b-82d9-3a7c416832eb_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "63a73778-4244-481b-82d9-3a7c416832eb",
+            "site_name": "Rosedale",
+            "site_location": {
+                "lat": -38.15588,
+                "lon": 146.7842
+            },
+            "parameter": "PM2.5",
+            "value": 1.77,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "9a9f2a8f-e108-4ae6-b9d3-ec6fe25863b5_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "9a9f2a8f-e108-4ae6-b9d3-ec6fe25863b5",
+            "site_name": "Kingsville",
+            "site_location": {
+                "lat": -37.81191,
+                "lon": 144.8741
+            },
+            "parameter": "PM2.5",
+            "value": 2.05,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "f2190dd1-176f-439f-856d-b7ca1a7b00cd_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "f2190dd1-176f-439f-856d-b7ca1a7b00cd",
+            "site_name": "Rosedale",
+            "site_location": {
+                "lat": -38.15044,
+                "lon": 146.7858
+            },
+            "parameter": "Particles",
+            "value": 6.27,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "86a49d71-03f4-4589-af5a-cc63b730faaf_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "86a49d71-03f4-4589-af5a-cc63b730faaf",
+            "site_name": "Flynn",
+            "site_location": {
+                "lat": -38.17107,
+                "lon": 146.6933
+            },
+            "parameter": "Particles",
+            "value": 6.4,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "3d1a81e7-ef78-4800-80c6-cc7e6ea01cf4_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "3d1a81e7-ef78-4800-80c6-cc7e6ea01cf4",
+            "site_name": "Glengarry",
+            "site_location": {
+                "lat": -38.12751,
+                "lon": 146.5691
+            },
+            "parameter": "Particles",
+            "value": 5.75,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "ea40fbea-46ce-4acf-8f3e-eb76c26c712b_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "ea40fbea-46ce-4acf-8f3e-eb76c26c712b",
+            "site_name": "Melton",
+            "site_location": {
+                "lat": -37.7064552,
+                "lon": 144.5669
+            },
+            "parameter": "PM2.5",
+            "value": 4.2,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "9348c1f5-60c5-4c35-b4f1-1f0931ab1415_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "9348c1f5-60c5-4c35-b4f1-1f0931ab1415",
+            "site_name": "Mooroolbark",
+            "site_location": {
+                "lat": -37.77512,
+                "lon": 145.3284
+            },
+            "parameter": "PM2.5",
+            "value": 6.76,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "031354b3-b6a2-403b-aae3-79e18f69c957_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "031354b3-b6a2-403b-aae3-79e18f69c957",
+            "site_name": "Footscray",
+            "site_location": {
+                "lat": -37.80266,
+                "lon": 144.8778
+            },
+            "parameter": "PM2.5",
+            "value": 2.98,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "78dbc892-d9e9-490b-94a6-baf1ca72c36c_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "78dbc892-d9e9-490b-94a6-baf1ca72c36c",
+            "site_name": "Brooklyn",
+            "site_location": {
+                "lat": -37.8220978,
+                "lon": 144.8471
+            },
+            "parameter": "PM2.5",
+            "value": 5.31,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "82e215ca-e0e5-4a00-9357-98d53b04311b_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "82e215ca-e0e5-4a00-9357-98d53b04311b",
+            "site_name": "Bendigo",
+            "site_location": {
+                "lat": -36.77841,
+                "lon": 144.300064
+            },
+            "parameter": "PM2.5",
+            "value": 2.12,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    },
+    {
+        "_index": "airquality",
+        "_id": "c21b7785-acfa-45c0-83c6-7700760bf8f1_2024-05-17T04:00:00Z",
+        "_source": {
+            "site_id": "c21b7785-acfa-45c0-83c6-7700760bf8f1",
+            "site_name": "Porepunkah",
+            "site_location": {
+                "lat": -36.70419,
+                "lon": 146.9169
+            },
+            "parameter": "PM2.5",
+            "value": 3.98,
+            "unit": "&micro;g/m&sup3;",
+            "health_advice": "Good",
+            "health_advice_color": "#42A93C",
+            "since": "2024-05-17T04:00:00Z",
+            "until": "2024-05-17T05:00:00Z"
+        }
+    }
+]
