@@ -2,27 +2,35 @@ import os
 from elasticsearch import Elasticsearch
 import json
 
+# Fetch all records from a specific Elasticsearch index.
 def get_data_from_elasticsearch(client, index):
-    """Fetch all records from a specific Elasticsearch index."""
     try:
-        response = client.search(index=index, body={"query": {"match_all": {}}}, size=1000)
+        response = client.search(
+            index=index,
+            body={
+                "query": {
+                    "match_all": {}
+                  }
+                },
+            size=1000)
+
         return [hit["_source"] for hit in response['hits']['hits']]
+
     except Exception as e:
         print(f"Error fetching data from {index}:", e)
         return []
-
 def main():
     # Configure Elasticsearch connection
-    es = Elasticsearch(
+    client = Elasticsearch(
         ["https://localhost:9200/"],
         verify_certs=False,
         basic_auth=("elastic", "elastic")
     )
 
     # Fetch data from airquality index
-    air_quality_data = get_data_from_elasticsearch(es, 'airquality')
+    air_quality_data = get_data_from_elasticsearch(client, 'airquality')
     # Fetch data from vehicle index
-    vehicle_data = get_data_from_elasticsearch(es, 'vehicle')
+    vehicle_data = get_data_from_elasticsearch(client, 'vehicle')
 
     # Output the fetched data
     print("Air Quality Data:")

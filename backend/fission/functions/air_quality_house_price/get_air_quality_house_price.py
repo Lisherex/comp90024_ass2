@@ -1,54 +1,59 @@
-import logging, json
-from flask import current_app, request
+import json
 from elasticsearch import Elasticsearch
 from elasticsearch.helpers import scan
 
 def main():
     client = Elasticsearch(
-        # 'https://elasticsearch-master.elastic.svc.cluster.local:9200',
         'https://localhost:9200',
-        verify_certs= False,
+        verify_certs=False,
         basic_auth=('elastic', 'elastic')
     )
 
-    res = client.search(
+    # Initialize a scroll session for air quality data
+    air_quality_data = scan(
+        client=client,
         index='airquality*',
-        body={
-            'size': 10000,
+        query={
             'query': {
                 'match_all': {}
             }
-        }
+        },
+        size=1000  # Retrieves 1000 docs at a time
     )
 
-    air_quality_data = res['hits']['hits']
-    air_quality_site_ids = [air_quality['_source']['site_id'] for air_quality in air_quality_data]
     response = []
 
-    for site_id in air_quality_site_ids:
-        doc = {
+    # Process each document in air quality data
+    for air_quality in air_quality_data:
+        site_id = air_quality['_source']['site_id']
+
+        # Prepare a query to fetch house price data related to the current site_id
+        house_price_query = {
             'query': {
                 'match': {
                     'station_id': site_id
                 }
-                # 'match_all': {}
             }
         }
 
-        # Use the scan helper to iterate over all documents, size is the batch size
-        house_price_data = scan(client=client, index='houseprice*', query=doc, size=1000)
+        # Use the scan helper to fetch house price data related to the current site_id
+        house_price_data = scan(
+            client=client,
+            index='houseprice*',
+            query=house_price_query,
+            size=1000  # Retrieves 1000 docs at a time
+        )
 
-        # Iterate over the results
-        documents = []
-        for doc in house_price_data:
-            documents.append(doc["_source"])
-            if len(documents) > 0:
-                response.append({
-                    site_id: documents
-                })
+        # Collect house price documents
+        documents = [doc['_source'] for doc in house_price_data]
+        if documents:
+            response.append({
+                site_id: documents
+            })
 
+    # Return the results as a formatted JSON string
     return json.dumps(response, indent=4)
 
 if __name__ == '__main__':
     data = main()
-    print(data, len(data))
+    print(data)
