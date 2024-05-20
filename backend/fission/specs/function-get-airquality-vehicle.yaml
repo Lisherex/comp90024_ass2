@@ -1,0 +1,36 @@
+apiVersion: fission.io/v1
+kind: Function
+metadata:
+  creationTimestamp: null
+  name: get-airquality-vehicle
+  namespace: default
+spec:
+  InvokeStrategy:
+    ExecutionStrategy:
+      ExecutorType: poolmgr
+      MaxScale: 0
+      MinScale: 0
+      SpecializationTimeout: 120
+      TargetCPUPercent: 0
+    StrategyType: execution
+  concurrency: 500
+  configmaps:
+  - name: api-urls
+    namespace: default
+  - name: internal-service-ports
+    namespace: default
+  environment:
+    name: python
+    namespace: default
+  functionTimeout: 60
+  idletimeout: 120
+  package:
+    functionName: get_airquality_vehicle.main
+    packageref:
+      name: get-airquality-vehicle
+      namespace: default
+  requestsPerPod: 1
+  resources: {}
+  secrets:
+  - name: auth
+    namespace: default

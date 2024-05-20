@@ -1,0 +1,26 @@
+include:
+- ./functions/get_houseprice_vehicle/get-houseprice-vehicle.zip
+kind: ArchiveUploadSpec
+name: functions-get-houseprice-vehicle-get-houseprice-vehicle-zip-Aawr
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: get-houseprice-vehicle
+  namespace: default
+spec:
+  buildcmd: ./build.sh
+  deployment:
+    checksum: {}
+  environment:
+    name: python
+    namespace: default
+  source:
+    checksum: {}
+    type: url
+    url: archive://functions-get-houseprice-vehicle-get-houseprice-vehicle-zip-Aawr
+status:
+  buildstatus: pending
+  lastUpdateTimestamp: "2024-05-20T07:09:03Z"
