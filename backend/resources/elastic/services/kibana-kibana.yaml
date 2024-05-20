@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kibana
+    meta.helm.sh/release-namespace: elastic
+  creationTimestamp: "2024-04-26T01:32:44Z"
+  labels:
+    app: kibana
+    app.kubernetes.io/managed-by: Helm
+    heritage: Helm
+    release: kibana
+  name: kibana-kibana
+  namespace: elastic
+  resourceVersion: "107913"
+  uid: 8c550cf1-1ea8-4c17-9730-0263c167b042
+spec:
+  clusterIP: 10.254.83.60
+  clusterIPs:
+  - 10.254.83.60
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: http
+    port: 5601
+    protocol: TCP
+    targetPort: 5601
+  selector:
+    app: kibana
+    release: kibana
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

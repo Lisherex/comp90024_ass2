@@ -1,0 +1,137 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2024-04-26T01:49:30Z"
+  generateName: timer-66c797b5c6-
+  labels:
+    pod-template-hash: 66c797b5c6
+    svc: timer
+  name: timer-66c797b5c6-ptz78
+  namespace: fission
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: timer-66c797b5c6
+    uid: 1f020071-32f5-4727-aac1-b3879146c43c
+  resourceVersion: "111236"
+  uid: effa5210-e79c-464b-9972-ecdbaf6cc3ab
+spec:
+  containers:
+  - args:
+    - --timer
+    - --routerUrl
+    - http://router.fission
+    command:
+    - /fission-bundle
+    env:
+    - name: DEBUG_ENV
+      value: "false"
+    - name: PPROF_ENABLED
+      value: "false"
+    - name: FISSION_BUILDER_NAMESPACE
+    - name: FISSION_FUNCTION_NAMESPACE
+    - name: FISSION_DEFAULT_NAMESPACE
+      value: default
+    - name: FISSION_RESOURCE_NAMESPACES
+      value: default
+    - name: OTEL_EXPORTER_OTLP_ENDPOINT
+    - name: OTEL_EXPORTER_OTLP_INSECURE
+      value: "true"
+    - name: OTEL_TRACES_SAMPLER
+      value: parentbased_traceidratio
+    - name: OTEL_TRACES_SAMPLER_ARG
+      value: "0.1"
+    - name: OTEL_PROPAGATORS
+      value: tracecontext,baggage
+    image: ghcr.io/fission/fission-bundle:v1.20.0
+    imagePullPolicy: IfNotPresent
+    name: timer
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-z4bxb
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: elastic-g3wcd274rwob-node-0
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 10001
+    runAsGroup: 10001
+    runAsNonRoot: true
+    runAsUser: 10001
+  serviceAccount: fission-timer
+  serviceAccountName: fission-timer
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-z4bxb
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:30Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:50Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:50Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:30Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://e04bea89c08ac47d5dd71140fb8f42f32b9702955c4b8e5c5cf57472fcc7d550
+    image: ghcr.io/fission/fission-bundle:v1.20.0
+    imageID: ghcr.io/fission/fission-bundle@sha256:53bfa3f9c7ea3beb3c51775372a1ab5aa43e58a88c6fde155d0cf58663cc82bd
+    lastState: {}
+    name: timer
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-04-26T01:49:49Z"
+  hostIP: 192.168.10.60
+  phase: Running
+  podIP: 10.100.1.11
+  podIPs:
+  - ip: 10.100.1.11
+  qosClass: BestEffort
+  startTime: "2024-04-26T01:49:30Z"

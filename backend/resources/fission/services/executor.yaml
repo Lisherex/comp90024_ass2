@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    meta.helm.sh/release-name: fission
+    meta.helm.sh/release-namespace: fission
+  creationTimestamp: "2024-04-26T01:49:29Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+    chart: fission-all-v1.20.0
+    svc: executor
+  name: executor
+  namespace: fission
+  resourceVersion: "110978"
+  uid: d5e8ffc7-befe-489b-9efd-d43ad47b6cd9
+spec:
+  clusterIP: 10.254.192.3
+  clusterIPs:
+  - 10.254.192.3
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 8888
+  selector:
+    svc: executor
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

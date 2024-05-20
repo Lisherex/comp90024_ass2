@@ -1,0 +1,193 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: "8080"
+    prometheus.io/scrape: "true"
+  creationTimestamp: "2024-04-26T01:49:30Z"
+  generateName: executor-8b5c8489c-
+  labels:
+    pod-template-hash: 8b5c8489c
+    svc: executor
+  name: executor-8b5c8489c-vxctr
+  namespace: fission
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: executor-8b5c8489c
+    uid: 6252fe51-6384-4ea4-88e9-08e787e10cda
+  resourceVersion: "111199"
+  uid: 734c083f-b3e5-4365-9132-ff4f9d81ee18
+spec:
+  containers:
+  - args:
+    - --executorPort
+    - "8888"
+    command:
+    - /fission-bundle
+    env:
+    - name: FETCHER_IMAGE
+      value: fission/fetcher:v1.20.0
+    - name: FETCHER_IMAGE_PULL_POLICY
+      value: IfNotPresent
+    - name: RUNTIME_IMAGE_PULL_POLICY
+      value: IfNotPresent
+    - name: ADOPT_EXISTING_RESOURCES
+      value: "false"
+    - name: POD_READY_TIMEOUT
+      value: 300s
+    - name: ENABLE_ISTIO
+      value: "false"
+    - name: FETCHER_MINCPU
+      value: 10m
+    - name: FETCHER_MINMEM
+      value: 16Mi
+    - name: FETCHER_MAXCPU
+    - name: FETCHER_MAXMEM
+    - name: DEBUG_ENV
+      value: "false"
+    - name: PPROF_ENABLED
+      value: "false"
+    - name: OBJECT_REAPER_INTERVAL
+      value: "5"
+    - name: SERVICEACCOUNT_CHECK_ENABLED
+      value: "true"
+    - name: SERVICEACCOUNT_CHECK_INTERVAL
+      value: "0"
+    - name: FISSION_BUILDER_NAMESPACE
+    - name: FISSION_FUNCTION_NAMESPACE
+    - name: FISSION_DEFAULT_NAMESPACE
+      value: default
+    - name: FISSION_RESOURCE_NAMESPACES
+      value: default
+    - name: HELM_RELEASE_NAME
+      value: fission
+    - name: OTEL_EXPORTER_OTLP_ENDPOINT
+    - name: OTEL_EXPORTER_OTLP_INSECURE
+      value: "true"
+    - name: OTEL_TRACES_SAMPLER
+      value: parentbased_traceidratio
+    - name: OTEL_TRACES_SAMPLER_ARG
+      value: "0.1"
+    - name: OTEL_PROPAGATORS
+      value: tracecontext,baggage
+    image: ghcr.io/fission/fission-bundle:v1.20.0
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8888
+        scheme: HTTP
+      initialDelaySeconds: 35
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: executor
+    ports:
+    - containerPort: 8080
+      name: metrics
+      protocol: TCP
+    - containerPort: 8888
+      name: http
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 30
+      httpGet:
+        path: /healthz
+        port: 8888
+        scheme: HTTP
+      initialDelaySeconds: 1
+      periodSeconds: 1
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-ksjgp
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: elastic-g3wcd274rwob-node-0
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 10001
+    runAsGroup: 10001
+    runAsNonRoot: true
+    runAsUser: 10001
+  serviceAccount: fission-executor
+  serviceAccountName: fission-executor
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-ksjgp
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:30Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:45Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:45Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:30Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://14de5341ff8d70ea19f26b6d6fe6097dd3eb8f60aea173371e0e8078d9972b9f
+    image: ghcr.io/fission/fission-bundle:v1.20.0
+    imageID: ghcr.io/fission/fission-bundle@sha256:53bfa3f9c7ea3beb3c51775372a1ab5aa43e58a88c6fde155d0cf58663cc82bd
+    lastState: {}
+    name: executor
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-04-26T01:49:44Z"
+  hostIP: 192.168.10.60
+  phase: Running
+  podIP: 10.100.1.9
+  podIPs:
+  - ip: 10.100.1.9
+  qosClass: BestEffort
+  startTime: "2024-04-26T01:49:30Z"

@@ -1,0 +1,39 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-05-09T04:44:07Z"
+  labels:
+    envName: nodejs
+    envNamespace: default
+    envResourceVersion: "3305577"
+    owner: buildermgr
+  name: nodejs-3305577
+  namespace: default
+  resourceVersion: "3305579"
+  uid: 35d64fc0-ab18-4ca9-9467-135cfda5ab6c
+spec:
+  clusterIP: 10.254.131.0
+  clusterIPs:
+  - 10.254.131.0
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - name: fetcher-port
+    port: 8000
+    protocol: TCP
+    targetPort: 8000
+  - name: builder-port
+    port: 8001
+    protocol: TCP
+    targetPort: 8001
+  selector:
+    envName: nodejs
+    envNamespace: default
+    envResourceVersion: "3305577"
+    owner: buildermgr
+  sessionAffinity: None
+  type: ClusterIP
+status:
+  loadBalancer: {}

@@ -1,0 +1,32 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    meta.helm.sh/release-name: kibana
+    meta.helm.sh/release-namespace: elastic
+  creationTimestamp: "2024-04-26T01:32:44Z"
+  generation: 1
+  labels:
+    app: kibana
+    app.kubernetes.io/managed-by: Helm
+    heritage: Helm
+    release: kibana
+  name: kibana-kibana
+  namespace: elastic
+  resourceVersion: "107919"
+  uid: 8d364142-b0a2-4165-95de-c54f2f0d3a77
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: kibana-example.local
+    http:
+      paths:
+      - backend:
+          service:
+            name: kibana-kibana
+            port:
+              number: 5601
+        path: /
+        pathType: ImplementationSpecific
+status:
+  loadBalancer: {}

@@ -1,0 +1,15 @@
+apiVersion: v1
+data:
+  config.yaml: Y2FuYXJ5OgogIGVuYWJsZWQ6IGZhbHNlCiAgcHJvbWV0aGV1c1N2YzogIiIKYXV0aDoKICBlbmFibGVkOiBmYWxzZQ==
+kind: ConfigMap
+metadata:
+  annotations:
+    meta.helm.sh/release-name: fission
+    meta.helm.sh/release-namespace: fission
+  creationTimestamp: "2024-04-26T01:49:29Z"
+  labels:
+    app.kubernetes.io/managed-by: Helm
+  name: feature-config
+  namespace: fission
+  resourceVersion: "110931"
+  uid: e3700318-e28f-4850-afb5-45964771e3b2

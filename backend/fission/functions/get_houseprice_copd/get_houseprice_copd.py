@@ -1,17 +1,9 @@
 from elasticsearch import Elasticsearch, helpers
 import json
 import os
-# from dotenv import load_dotenv
 import logging
 from collections import defaultdict
 from config import Config
-
-# load_dotenv()
-
-# ELASTIC_SEARCH_URL = os.getenv('ELASTIC_SEARCH_URL')
-# ELASTIC_SEARCH_PORT = os.getenv('ELASTIC_SEARCH_PORT')
-# ES_USERNAME = os.getenv('ES_USERNAME')
-# ES_PASSWORD = os.getenv('ES_PASSWORD')
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -57,9 +49,9 @@ def fetch_copd_data_all(client):
     )
     return res['hits']['hits']
 
-def fetch_air_quality_data(client):
+def fetch_avg_house_price_data(client):
     res = client.search(
-        index='airquality*',
+        index='avg_house_price*',
         body={
             'size': 10000,
             'query': {
@@ -69,29 +61,23 @@ def fetch_air_quality_data(client):
     )
     return res['hits']['hits']
 
-def merge_data(air_quality_hits, average_respiratory_admissions):
+def merge_data(avg_house_price_hits, average_respiratory_admissions):
     merged_data = []
 
-    for hit in air_quality_hits:
-        site_id = hit['_source']['site_id']
-        if site_id in average_respiratory_admissions:
-            averages = average_respiratory_admissions[site_id]
+    for hit in avg_house_price_hits:
+        station_id = hit['_source']['station_id']
+        avg_price = hit['_source']['average_price']
+        if station_id in average_respiratory_admissions:
+            averages = average_respiratory_admissions[station_id]
             merged_data.append({
-                "site_id": site_id,
-                "site_name": hit['_source']['site_name'],
-                "site_location": hit['_source']['site_location'],
-                "value": hit['_source']['value'],
-                "unit": hit['_source']['unit'],
-                "health_advice": hit['_source']['health_advice'],
-                "health_advice_color": hit['_source']['health_advice_color'],
+                "station_id": station_id,
+                "average_price": avg_price,
                 "average_total_copd_admissions_num": averages['average_copd_total'],
                 "average_male_copd_admissions_num": averages['average_copd_males'],
                 "average_female_copd_admissions_num": averages['average_copd_females']
             })
 
     return merged_data
-
-
 
 def main():
     configLoader = Config(True)
@@ -103,31 +89,26 @@ def main():
     password = secretLoader("auth", "ES_PASSWORD")
 
     try:
-        # client = Elasticsearch(
-        #     f'{ELASTIC_SEARCH_URL}:{ELASTIC_SEARCH_PORT}',
-        #     verify_certs=False,
-        #     basic_auth=(ES_USERNAME, ES_PASSWORD)
-        # )
-        client = Elasticsearch(f'{url}:{port}',
-                                verify_certs=False,
-                                basic_auth=(username, password)
-                                )
+        client = Elasticsearch(
+            f'{url}:{port}',
+            verify_certs=False,
+            basic_auth=(username, password)
+        )
 
         # Fetch data
         copd_hits_all = fetch_copd_data_all(client)
-        air_quality_hits = fetch_air_quality_data(client)
+        avg_house_price_hits = fetch_avg_house_price_data(client)
 
         # Calculate average respiratory admissions
         average_copd_admissions = calculate_average_copd_admissions(copd_hits_all)
 
         # Merge data
-        merged_results = merge_data(air_quality_hits, average_copd_admissions)
-        # print("merged_results: ", json.dumps(merged_results, indent=4))
+        merged_results = merge_data(avg_house_price_hits, average_copd_admissions)
         return json.dumps(merged_results, indent=4)
-
 
     except Exception as e:
         logger.error(f"Error connecting to Elasticsearch: {e}")
 
 # if __name__ == "__main__":
-#     main()
+#     data = main()
+#     print(data)

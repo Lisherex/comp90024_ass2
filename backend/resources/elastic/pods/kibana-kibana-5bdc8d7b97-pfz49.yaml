@@ -1,0 +1,190 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2024-04-26T01:32:44Z"
+  generateName: kibana-kibana-5bdc8d7b97-
+  labels:
+    app: kibana
+    pod-template-hash: 5bdc8d7b97
+    release: kibana
+  name: kibana-kibana-5bdc8d7b97-pfz49
+  namespace: elastic
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: kibana-kibana-5bdc8d7b97
+    uid: f8b4085e-8c30-49b9-bb02-f7dba209d1bf
+  resourceVersion: "108056"
+  uid: 556ce929-d4a8-4132-a7a3-cb6ce53dde50
+spec:
+  automountServiceAccountToken: true
+  containers:
+  - env:
+    - name: ELASTICSEARCH_HOSTS
+      value: https://elasticsearch-master:9200
+    - name: ELASTICSEARCH_SSL_CERTIFICATEAUTHORITIES
+      value: /usr/share/kibana/config/certs/ca.crt
+    - name: SERVER_HOST
+      value: 0.0.0.0
+    - name: ELASTICSEARCH_SERVICEACCOUNTTOKEN
+      valueFrom:
+        secretKeyRef:
+          key: token
+          name: kibana-kibana-es-token
+          optional: false
+    - name: NODE_OPTIONS
+      value: --max-old-space-size=1800
+    image: docker.elastic.co/kibana/kibana:8.5.1
+    imagePullPolicy: IfNotPresent
+    name: kibana
+    ports:
+    - containerPort: 5601
+      protocol: TCP
+    readinessProbe:
+      exec:
+        command:
+        - bash
+        - -c
+        - |
+          #!/usr/bin/env bash -e
+
+          # Disable nss cache to avoid filling dentry cache when calling curl
+          # This is required with Kibana Docker using nss < 3.52
+          export NSS_SDB_USE_CACHE=no
+
+          http () {
+              local path="${1}"
+              set -- -XGET -s --fail -L
+
+              if [ -n "${ELASTICSEARCH_USERNAME}" ] && [ -n "${ELASTICSEARCH_PASSWORD}" ]; then
+                set -- "$@" -u "${ELASTICSEARCH_USERNAME}:${ELASTICSEARCH_PASSWORD}"
+              fi
+
+              STATUS=$(curl --output /dev/null --write-out "%{http_code}" -k "$@" "http://localhost:5601${path}")
+              if [[ "${STATUS}" -eq 200 ]]; then
+                exit 0
+              fi
+
+              echo "Error: Got HTTP code ${STATUS} but expected a 200"
+              exit 1
+          }
+
+          http "/app/kibana"
+      failureThreshold: 3
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 3
+      timeoutSeconds: 5
+    resources:
+      limits:
+        cpu: "1"
+        memory: 2Gi
+      requests:
+        cpu: 100m
+        memory: 512Mi
+    securityContext:
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /usr/share/kibana/config/certs
+      name: elasticsearch-certs
+      readOnly: true
+    - mountPath: /usr/share/kibana/config/tokens
+      name: kibana-tokens
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cp5ws
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: elastic-g3wcd274rwob-node-0
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - emptyDir: {}
+    name: kibana-tokens
+  - name: elasticsearch-certs
+    secret:
+      defaultMode: 420
+      secretName: elasticsearch-master-certs
+  - name: kube-api-access-cp5ws
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:32:44Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:33:25Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:33:25Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:32:44Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://3224e057691a3f5a939a1521cd549d63c88c1ec2b64516924d07919af3bf3094
+    image: docker.elastic.co/kibana/kibana:8.5.1
+    imageID: docker.elastic.co/kibana/kibana@sha256:3266a417b69207dab8da9a732d93c11512944f2ec88a9cd169bfbb0d6fd878f5
+    lastState: {}
+    name: kibana
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-04-26T01:32:47Z"
+  hostIP: 192.168.10.60
+  phase: Running
+  podIP: 10.100.1.6
+  podIPs:
+  - ip: 10.100.1.6
+  qosClass: Burstable
+  startTime: "2024-04-26T01:32:44Z"

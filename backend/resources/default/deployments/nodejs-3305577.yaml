@@ -1,0 +1,169 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    deployment.kubernetes.io/revision: "1"
+  creationTimestamp: "2024-05-09T04:44:07Z"
+  generation: 1
+  labels:
+    envName: nodejs
+    envNamespace: default
+    envResourceVersion: "3305577"
+    owner: buildermgr
+  name: nodejs-3305577
+  namespace: default
+  resourceVersion: "3305777"
+  uid: 89bfa0b2-c1aa-4a62-99e6-cbcd5939cb8d
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      envName: nodejs
+      envNamespace: default
+      envResourceVersion: "3305577"
+      owner: buildermgr
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        envName: nodejs
+        envNamespace: default
+        envResourceVersion: "3305577"
+        owner: buildermgr
+    spec:
+      containers:
+      - command:
+        - /builder
+        - /packages
+        image: fission/node-builder
+        imagePullPolicy: IfNotPresent
+        name: builder
+        readinessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /healthz
+            port: 8001
+            scheme: HTTP
+          initialDelaySeconds: 5
+          periodSeconds: 2
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources: {}
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /packages
+          name: userfunc
+        - mountPath: /secrets
+          name: secrets
+        - mountPath: /configs
+          name: configmaps
+        - mountPath: /etc/podinfo
+          name: podinfo
+      - command:
+        - /fetcher
+        - -secret-dir
+        - /secrets
+        - -cfgmap-dir
+        - /configs
+        - /packages
+        env:
+        - name: OTEL_TRACES_SAMPLER
+          value: parentbased_traceidratio
+        - name: OTEL_PROPAGATORS
+          value: tracecontext,baggage
+        - name: OTEL_EXPORTER_OTLP_ENDPOINT
+        - name: OTEL_EXPORTER_OTLP_INSECURE
+          value: "true"
+        - name: OTEL_TRACES_SAMPLER_ARG
+          value: "0.1"
+        image: fission/fetcher:v1.20.0
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /healthz
+            port: 8000
+            scheme: HTTP
+          initialDelaySeconds: 1
+          periodSeconds: 5
+          successThreshold: 1
+          timeoutSeconds: 1
+        name: fetcher
+        readinessProbe:
+          failureThreshold: 30
+          httpGet:
+            path: /readiness-healthz
+            port: 8000
+            scheme: HTTP
+          initialDelaySeconds: 1
+          periodSeconds: 1
+          successThreshold: 1
+          timeoutSeconds: 1
+        resources:
+          requests:
+            cpu: 10m
+            memory: 16Mi
+        terminationMessagePath: /dev/termination-log
+        terminationMessagePolicy: File
+        volumeMounts:
+        - mountPath: /packages
+          name: userfunc
+        - mountPath: /secrets
+          name: secrets
+        - mountPath: /configs
+          name: configmaps
+        - mountPath: /etc/podinfo
+          name: podinfo
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      serviceAccount: fission-builder
+      serviceAccountName: fission-builder
+      terminationGracePeriodSeconds: 30
+      volumes:
+      - emptyDir: {}
+        name: userfunc
+      - emptyDir: {}
+        name: secrets
+      - emptyDir: {}
+        name: configmaps
+      - downwardAPI:
+          defaultMode: 420
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.name
+            path: name
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+        name: podinfo
+status:
+  availableReplicas: 1
+  conditions:
+  - lastTransitionTime: "2024-05-09T04:44:22Z"
+    lastUpdateTime: "2024-05-09T04:44:22Z"
+    message: Deployment has minimum availability.
+    reason: MinimumReplicasAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2024-05-09T04:44:07Z"
+    lastUpdateTime: "2024-05-09T04:44:22Z"
+    message: ReplicaSet "nodejs-3305577-745d5c7db7" has successfully progressed.
+    reason: NewReplicaSetAvailable
+    status: "True"
+    type: Progressing
+  observedGeneration: 1
+  readyReplicas: 1
+  replicas: 1
+  updatedReplicas: 1

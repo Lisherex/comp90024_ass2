@@ -1,0 +1,299 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2024-04-26T01:18:01Z"
+  generateName: elasticsearch-master-
+  labels:
+    app: elasticsearch-master
+    chart: elasticsearch
+    controller-revision-hash: elasticsearch-master-789c8dcd5d
+    release: elasticsearch
+    statefulset.kubernetes.io/pod-name: elasticsearch-master-0
+  name: elasticsearch-master-0
+  namespace: elastic
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: elasticsearch-master
+    uid: 9408c89a-4ba6-4560-b6be-aad870d415f1
+  resourceVersion: "106078"
+  uid: 15ed8503-ebeb-41ae-9ecd-a33d21201dfe
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - elasticsearch-master
+        topologyKey: kubernetes.io/hostname
+  automountServiceAccountToken: true
+  containers:
+  - env:
+    - name: node.name
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: cluster.initial_master_nodes
+      value: elasticsearch-master-0,elasticsearch-master-1,
+    - name: node.roles
+      value: master,data,data_content,data_hot,data_warm,data_cold,ingest,ml,remote_cluster_client,transform,
+    - name: discovery.seed_hosts
+      value: elasticsearch-master-headless
+    - name: cluster.name
+      value: elasticsearch
+    - name: network.host
+      value: 0.0.0.0
+    - name: ELASTIC_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          key: password
+          name: elasticsearch-master-credentials
+    - name: xpack.security.enabled
+      value: "true"
+    - name: xpack.security.transport.ssl.enabled
+      value: "true"
+    - name: xpack.security.http.ssl.enabled
+      value: "true"
+    - name: xpack.security.transport.ssl.verification_mode
+      value: certificate
+    - name: xpack.security.transport.ssl.key
+      value: /usr/share/elasticsearch/config/certs/tls.key
+    - name: xpack.security.transport.ssl.certificate
+      value: /usr/share/elasticsearch/config/certs/tls.crt
+    - name: xpack.security.transport.ssl.certificate_authorities
+      value: /usr/share/elasticsearch/config/certs/ca.crt
+    - name: xpack.security.http.ssl.key
+      value: /usr/share/elasticsearch/config/certs/tls.key
+    - name: xpack.security.http.ssl.certificate
+      value: /usr/share/elasticsearch/config/certs/tls.crt
+    - name: xpack.security.http.ssl.certificate_authorities
+      value: /usr/share/elasticsearch/config/certs/ca.crt
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.5.1
+    imagePullPolicy: IfNotPresent
+    name: elasticsearch
+    ports:
+    - containerPort: 9200
+      name: http
+      protocol: TCP
+    - containerPort: 9300
+      name: transport
+      protocol: TCP
+    readinessProbe:
+      exec:
+        command:
+        - bash
+        - -c
+        - |
+          set -e
+
+          # Exit if ELASTIC_PASSWORD in unset
+          if [ -z "${ELASTIC_PASSWORD}" ]; then
+            echo "ELASTIC_PASSWORD variable is missing, exiting"
+            exit 1
+          fi
+
+          # If the node is starting up wait for the cluster to be ready (request params: "wait_for_status=green&timeout=1s" )
+          # Once it has started only check that the node itself is responding
+          START_FILE=/tmp/.es_start_file
+
+          # Disable nss cache to avoid filling dentry cache when calling curl
+          # This is required with Elasticsearch Docker using nss < 3.52
+          export NSS_SDB_USE_CACHE=no
+
+          http () {
+            local path="${1}"
+            local args="${2}"
+            set -- -XGET -s
+
+            if [ "$args" != "" ]; then
+              set -- "$@" $args
+            fi
+
+            set -- "$@" -u "elastic:${ELASTIC_PASSWORD}"
+
+            curl --output /dev/null -k "$@" "https://127.0.0.1:9200${path}"
+          }
+
+          if [ -f "${START_FILE}" ]; then
+            echo 'Elasticsearch is already running, lets check the node is healthy'
+            HTTP_CODE=$(http "/" "-w %{http_code}")
+            RC=$?
+            if [[ ${RC} -ne 0 ]]; then
+              echo "curl --output /dev/null -k -XGET -s -w '%{http_code}' \${BASIC_AUTH} https://127.0.0.1:9200/ failed with RC ${RC}"
+              exit ${RC}
+            fi
+            # ready if HTTP code 200, 503 is tolerable if ES version is 6.x
+            if [[ ${HTTP_CODE} == "200" ]]; then
+              exit 0
+            elif [[ ${HTTP_CODE} == "503" && "8" == "6" ]]; then
+              exit 0
+            else
+              echo "curl --output /dev/null -k -XGET -s -w '%{http_code}' \${BASIC_AUTH} https://127.0.0.1:9200/ failed with HTTP code ${HTTP_CODE}"
+              exit 1
+            fi
+
+          else
+            echo 'Waiting for elasticsearch cluster to become ready (request params: "wait_for_status=green&timeout=1s" )'
+            if http "/_cluster/health?wait_for_status=green&timeout=1s" "--fail" ; then
+              touch ${START_FILE}
+              exit 0
+            else
+              echo 'Cluster is not yet ready (request params: "wait_for_status=green&timeout=1s" )'
+              exit 1
+            fi
+          fi
+      failureThreshold: 3
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 3
+      timeoutSeconds: 5
+    resources:
+      limits:
+        cpu: "1"
+        memory: 2Gi
+      requests:
+        cpu: "1"
+        memory: 2Gi
+    securityContext:
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /usr/share/elasticsearch/data
+      name: elasticsearch-master
+    - mountPath: /usr/share/elasticsearch/config/certs
+      name: elasticsearch-certs
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-7fxf8
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: elasticsearch-master-0
+  initContainers:
+  - command:
+    - sysctl
+    - -w
+    - vm.max_map_count=262144
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.5.1
+    imagePullPolicy: IfNotPresent
+    name: configure-sysctl
+    resources: {}
+    securityContext:
+      privileged: true
+      runAsUser: 0
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-7fxf8
+      readOnly: true
+  nodeName: elastic-g3wcd274rwob-node-1
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000
+    runAsUser: 1000
+  serviceAccount: default
+  serviceAccountName: default
+  subdomain: elasticsearch-master-headless
+  terminationGracePeriodSeconds: 120
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: elasticsearch-master
+    persistentVolumeClaim:
+      claimName: elasticsearch-master-elasticsearch-master-0
+  - name: elasticsearch-certs
+    secret:
+      defaultMode: 420
+      secretName: elasticsearch-master-certs
+  - name: kube-api-access-7fxf8
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:18:41Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:22:36Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:22:36Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:18:06Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://4c7bcb96eea2fed3a8f61036c4b239d660d9e39ee9acd22bfc379605ed56d479
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.5.1
+    imageID: docker.elastic.co/elasticsearch/elasticsearch@sha256:d784066422aec9f66ae424f692d2416057e78853ab015915a04530570c955cc8
+    lastState: {}
+    name: elasticsearch
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-04-26T01:18:43Z"
+  hostIP: 192.168.10.161
+  initContainerStatuses:
+  - containerID: containerd://a07839a92d1ab8d8e3638cc7237915f6b84e112d5b4c2b6d6fd3ee707e12132a
+    image: docker.elastic.co/elasticsearch/elasticsearch:8.5.1
+    imageID: docker.elastic.co/elasticsearch/elasticsearch@sha256:d784066422aec9f66ae424f692d2416057e78853ab015915a04530570c955cc8
+    lastState: {}
+    name: configure-sysctl
+    ready: true
+    restartCount: 0
+    state:
+      terminated:
+        containerID: containerd://a07839a92d1ab8d8e3638cc7237915f6b84e112d5b4c2b6d6fd3ee707e12132a
+        exitCode: 0
+        finishedAt: "2024-04-26T01:18:38Z"
+        reason: Completed
+        startedAt: "2024-04-26T01:18:38Z"
+  phase: Running
+  podIP: 10.100.2.3
+  podIPs:
+  - ip: 10.100.2.3
+  qosClass: Burstable
+  startTime: "2024-04-26T01:18:06Z"
