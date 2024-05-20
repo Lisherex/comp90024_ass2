@@ -9,7 +9,7 @@ ENV_NAME="python"
 PKG_NAME="get-airquality-houseprice"
 
 FN_NAME="get-airquality-houseprice"
-FN_ENTRYPOINT="get_air_quality_house_price.main"
+FN_ENTRYPOINT="get_airquality_houseprice.main"
 
 ROUTE_NAME="airquality-houseprice"
 ROUTE_METHOD="GET"

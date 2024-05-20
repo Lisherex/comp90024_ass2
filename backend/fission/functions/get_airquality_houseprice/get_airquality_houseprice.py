@@ -1,26 +1,27 @@
 import json
 from elasticsearch import Elasticsearch
+from config import Config
 
 def main():
-    # configLoader = Config(True)
-    # secretLoader = Config(False)
-    #
-    # url = configLoader("internal-service-ports", "ELASTIC_SEARCH_URL")
-    # port = configLoader("internal-service-ports", "ELASTIC_SEARCH_PORT")
-    # username = secretLoader("auth", "ES_USERNAME")
-    # password = secretLoader("auth", "ES_PASSWORD")
-    #
-    # client = Elasticsearch(
-    #     f'{url}:{port}',
-    #     verify_certs=False,
-    #     basic_auth=(username, password)
-    # )
+    configLoader = Config(True)
+    secretLoader = Config(False)
+
+    url = configLoader("internal-service-ports", "ELASTIC_SEARCH_URL")
+    port = configLoader("internal-service-ports", "ELASTIC_SEARCH_PORT")
+    username = secretLoader("auth", "ES_USERNAME")
+    password = secretLoader("auth", "ES_PASSWORD")
 
     client = Elasticsearch(
-        'https://localhost:9200',
+        f'{url}:{port}',
         verify_certs=False,
-        basic_auth=('elastic', 'elastic')
+        basic_auth=(username, password)
     )
+
+    # client = Elasticsearch(
+    #     'https://localhost:9200',
+    #     verify_certs=False,
+    #     basic_auth=('elastic', 'elastic')
+    # )
 
     # Initialize a scroll session for air quality data
     air_quality_data = client.search(
@@ -86,6 +87,6 @@ def main():
     # Return the results as a formatted JSON string
     return json.dumps(response, indent=4)
 
-if __name__ == '__main__':
-    data = main()
-    print(data)
+# if __name__ == '__main__':
+#     data = main()
+#     print(data)
