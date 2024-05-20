@@ -1,0 +1,179 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    prometheus.io/path: /metrics
+    prometheus.io/port: "8080"
+    prometheus.io/scrape: "true"
+  creationTimestamp: "2024-04-26T01:49:30Z"
+  generateName: storagesvc-5d98cd6f54-
+  labels:
+    application: fission-storage
+    pod-template-hash: 5d98cd6f54
+    svc: storagesvc
+  name: storagesvc-5d98cd6f54-hk5pn
+  namespace: fission
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: storagesvc-5d98cd6f54
+    uid: 677f213d-7cca-4a96-bd9a-1c5590397ee5
+  resourceVersion: "111215"
+  uid: 7bf0d573-79f8-4b8a-871e-fc175fb24fe6
+spec:
+  containers:
+  - args:
+    - --storageServicePort
+    - "8000"
+    - --storageType
+    - local
+    command:
+    - /fission-bundle
+    env:
+    - name: PRUNE_ENABLED
+      value: "true"
+    - name: PRUNE_INTERVAL
+      value: "60"
+    - name: DEBUG_ENV
+      value: "false"
+    - name: PPROF_ENABLED
+      value: "false"
+    - name: FISSION_BUILDER_NAMESPACE
+    - name: FISSION_FUNCTION_NAMESPACE
+    - name: FISSION_DEFAULT_NAMESPACE
+      value: default
+    - name: FISSION_RESOURCE_NAMESPACES
+      value: default
+    - name: OTEL_EXPORTER_OTLP_ENDPOINT
+    - name: OTEL_EXPORTER_OTLP_INSECURE
+      value: "true"
+    - name: OTEL_TRACES_SAMPLER
+      value: parentbased_traceidratio
+    - name: OTEL_TRACES_SAMPLER_ARG
+      value: "0.1"
+    - name: OTEL_PROPAGATORS
+      value: tracecontext,baggage
+    image: ghcr.io/fission/fission-bundle:v1.20.0
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: 8000
+        scheme: HTTP
+      initialDelaySeconds: 35
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 1
+    name: storagesvc
+    ports:
+    - containerPort: 8080
+      name: metrics
+      protocol: TCP
+    - containerPort: 8000
+      name: http
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 30
+      httpGet:
+        path: /healthz
+        port: 8000
+        scheme: HTTP
+      initialDelaySeconds: 1
+      periodSeconds: 1
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /fission
+      name: fission-storage
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-c7fck
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: elastic-g3wcd274rwob-node-0
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 10001
+    runAsGroup: 10001
+    runAsNonRoot: true
+    runAsUser: 10001
+  serviceAccount: fission-storagesvc
+  serviceAccountName: fission-storagesvc
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: fission-storage
+    persistentVolumeClaim:
+      claimName: fission-storage-pvc
+  - name: kube-api-access-c7fck
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:31Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:47Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:47Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2024-04-26T01:49:31Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://6b7b22e9eb8a177765e37e161d90bfa65adaedf4f3715aac2fb3f37d5a37a7c3
+    image: ghcr.io/fission/fission-bundle:v1.20.0
+    imageID: ghcr.io/fission/fission-bundle@sha256:53bfa3f9c7ea3beb3c51775372a1ab5aa43e58a88c6fde155d0cf58663cc82bd
+    lastState: {}
+    name: storagesvc
+    ready: true
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2024-04-26T01:49:46Z"
+  hostIP: 192.168.10.60
+  phase: Running
+  podIP: 10.100.1.15
+  podIPs:
+  - ip: 10.100.1.15
+  qosClass: BestEffort
+  startTime: "2024-04-26T01:49:31Z"

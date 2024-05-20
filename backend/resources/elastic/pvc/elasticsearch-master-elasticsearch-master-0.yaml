@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  annotations:
+    pv.kubernetes.io/bind-completed: "yes"
+    pv.kubernetes.io/bound-by-controller: "yes"
+    volume.beta.kubernetes.io/storage-provisioner: cinder.csi.openstack.org
+    volume.kubernetes.io/storage-provisioner: cinder.csi.openstack.org
+  creationTimestamp: "2024-04-26T01:18:01Z"
+  finalizers:
+  - kubernetes.io/pvc-protection
+  labels:
+    app: elasticsearch-master
+  name: elasticsearch-master-elasticsearch-master-0
+  namespace: elastic
+  resourceVersion: "105201"
+  uid: 0849778b-677f-437f-aab8-18e33bab7713
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Gi
+  storageClassName: default
+  volumeMode: Filesystem
+  volumeName: pvc-0849778b-677f-437f-aab8-18e33bab7713
+status:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 100Gi
+  phase: Bound

@@ -1,6 +1,7 @@
 from elasticsearch import Elasticsearch, helpers
 import json
 import os
+# from dotenv import load_dotenv
 import logging
 from collections import defaultdict
 from config import Config
@@ -43,7 +44,6 @@ def calculate_average_copd_admissions(copd_hits):
         }
 
     return average_admissions
-    
 
 def fetch_copd_data_all(client):
     res = client.search(

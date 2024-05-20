@@ -3,7 +3,7 @@ import json
 import os
 import logging
 from collections import defaultdict
-from Config import Config
+from config import Config
 
 # Configure logging
 logging.basicConfig(level=logging.DEBUG)
@@ -11,8 +11,6 @@ logger = logging.getLogger(__name__)
 
 def calculate_average_copd_admissions(copd_hits):
     admissions_data = defaultdict(lambda: defaultdict(list))
-
-    
 
     for hit in copd_hits:
         station_id = hit['_source']['station_id']
@@ -38,7 +36,6 @@ def calculate_average_copd_admissions(copd_hits):
         }
 
     return average_admissions
-    
 
 def fetch_copd_data_all(client):
     res = client.search(
@@ -82,8 +79,6 @@ def merge_data(avg_house_price_hits, average_respiratory_admissions):
 
     return merged_data
 
-
-
 def main():
     configLoader = Config(True)
     secretLoader = Config(False)
@@ -92,6 +87,7 @@ def main():
     port = configLoader("internal-service-ports", "ELASTIC_SEARCH_PORT")
     username = secretLoader("auth", "ES_USERNAME")
     password = secretLoader("auth", "ES_PASSWORD")
+
     try:
         client = Elasticsearch(
             f'{url}:{port}',
@@ -110,9 +106,9 @@ def main():
         merged_results = merge_data(avg_house_price_hits, average_copd_admissions)
         return json.dumps(merged_results, indent=4)
 
-
     except Exception as e:
         logger.error(f"Error connecting to Elasticsearch: {e}")
 
 # if __name__ == "__main__":
-#     main()
+#     data = main()
+#     print(data)
