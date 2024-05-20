@@ -1,0 +1,13 @@
+FISSION_NAMESPACE="default"
+
+ENV_NAME="python"
+
+PKG_NAME="update-airquality"
+
+FN_NAME="update-airquality"
+FN_ENTRYPOINT="Main.handler"
+
+ROUTE_NAME="update-airquality"
+ROUTE_METHOD="GET"
+ROUTE_URL="/update-airquality"
+ROUTE_CREATEINGRESS="TRUE"

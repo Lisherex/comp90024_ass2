@@ -1,0 +1,13 @@
+FISSION_NAMESPACE="default"
+
+ENV_NAME="python"
+
+PKG_NAME="get-airquality-vehicle"
+
+FN_NAME="get-airquality-vehicle"
+FN_ENTRYPOINT="get_airquality_vehicle.main"
+
+ROUTE_NAME="airquality-vehicle"
+ROUTE_METHOD="GET"
+ROUTE_URL="/airquality/vehicle"
+ROUTE_CREATEINGRESS="TRUE"

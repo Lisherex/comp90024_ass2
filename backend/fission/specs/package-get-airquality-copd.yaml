@@ -1,0 +1,26 @@
+include:
+- ./functions/get_airquality_copd/get-airquality-copd.zip
+kind: ArchiveUploadSpec
+name: functions-get-airquality-copd-get-airquality-copd-zip-vnBt
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: get-airquality-copd
+  namespace: default
+spec:
+  buildcmd: ./build.sh
+  deployment:
+    checksum: {}
+  environment:
+    name: python
+    namespace: default
+  source:
+    checksum: {}
+    type: url
+    url: archive://functions-get-airquality-copd-get-airquality-copd-zip-vnBt
+status:
+  buildstatus: pending
+  lastUpdateTimestamp: "2024-05-20T07:09:00Z"

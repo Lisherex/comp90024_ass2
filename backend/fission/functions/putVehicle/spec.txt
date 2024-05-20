@@ -1,0 +1,13 @@
+FISSION_NAMESPACE="default"
+
+ENV_NAME="python"
+
+PKG_NAME="put-vehicle"
+
+FN_NAME="put-vehicle"
+FN_ENTRYPOINT="Main.handler"
+
+ROUTE_NAME="put-vehicle"
+ROUTE_METHOD="PUT"
+ROUTE_URL="/put-vehicle"
+ROUTE_CREATEINGRESS="FALSE"

@@ -1,0 +1,26 @@
+include:
+- ./functions/air_quality_house_price/get-airquality-houseprice.zip
+kind: ArchiveUploadSpec
+name: functions-air-quality-house-price-get-airquality-houseprice-zip-gonE
+
+---
+apiVersion: fission.io/v1
+kind: Package
+metadata:
+  creationTimestamp: null
+  name: get-airquality-houseprice
+  namespace: default
+spec:
+  buildcmd: ./build.sh
+  deployment:
+    checksum: {}
+  environment:
+    name: python
+    namespace: default
+  source:
+    checksum: {}
+    type: url
+    url: archive://functions-air-quality-house-price-get-airquality-houseprice-zip-gonE
+status:
+  buildstatus: pending
+  lastUpdateTimestamp: "2024-05-20T07:08:59Z"

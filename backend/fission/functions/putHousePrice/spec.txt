@@ -1,0 +1,13 @@
+FISSION_NAMESPACE="default"
+
+ENV_NAME="python"
+
+PKG_NAME="put-houseprice"
+
+FN_NAME="put-houseprice"
+FN_ENTRYPOINT="Main.handler"
+
+ROUTE_NAME="put-houseprice"
+ROUTE_METHOD="PUT"
+ROUTE_URL="/put-houseprice"
+ROUTE_CREATEINGRESS="FALSE"

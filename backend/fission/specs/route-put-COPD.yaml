@@ -1,0 +1,23 @@
+apiVersion: fission.io/v1
+kind: HTTPTrigger
+metadata:
+  creationTimestamp: null
+  name: put-COPD
+  namespace: default
+spec:
+  createingress: false
+  functionref:
+    functionweights: null
+    name: put-COPD
+    type: name
+  host: ""
+  ingressconfig:
+    annotations: null
+    host: '*'
+    path: /put-COPD
+    tls: ""
+  method: ""
+  methods:
+  - PUT
+  prefix: ""
+  relativeurl: /put-COPD
