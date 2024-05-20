@@ -6,14 +6,14 @@ FISSION_NAMESPACE=default
 
 ENV_NAME="python"
 
-PKG_NAME="get-houseprice-copd"
+PKG_NAME="get-airquality-houseprice"
 
-FN_NAME="get-houseprice-copd"
-FN_ENTRYPOINT="get_houseprice_copd.main"
+FN_NAME="get-airquality-houseprice"
+FN_ENTRYPOINT="get_air_quality_house_price.main"
 
-ROUTE_NAME="houseprice-copd"
+ROUTE_NAME="airquality-houseprice"
 ROUTE_METHOD="GET"
-ROUTE_URL="/houseprice/copd"
+ROUTE_URL="/airquality/houseprice"
 ROUTE_CREATEINGRESS="TRUE"
 #####################################
 
