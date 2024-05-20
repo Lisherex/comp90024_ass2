@@ -26,3 +26,6 @@ URL:
 /airquality/houseprice
 
 /airquality/vehicle
+
+/put-json-data-from-local/{index}
+- stream data from local to elastic search by index
