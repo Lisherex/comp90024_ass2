@@ -13,19 +13,12 @@ Data:
 
 URL:
 
-/airquality
-
-/airquality/weather/wind
-
-/airquality/weather/rainfall
-
-/airquality/respiratory
-
-/airquality/copd
-
-/airquality/houseprice
-
-/airquality/vehicle
-
-/put-json-data-from-local/{index}
-- stream data from local to elastic search by index
+|            Name           | Method |                 URL                | Ingress | Path                               | Namespace |
+|:-------------------------:|:------:|:----------------------------------:|---------|------------------------------------|-----------|
+| airquality-copd           | [GET]  | /airquality/copd                   | true    | /airquality/copd                   | default   |
+| airquality-houseprice     | [GET]  | /airquality/houseprice             | true    | /airquality/houseprice             | default   |
+| airquality-rsd            | [GET]  | /airquality/rsd                    | true    | /airquality/rsd                    | default   |
+| airquality-vehicle        | [GET]  | /houseprice/copd                   | true    | /houseprice/copd                   | default   |
+| houseprice-copd           | [GET]  | /houseprice/copd                   | true    | /houseprice/copd                   | default   |
+| post-json-data-from-local | [POST] | /post-json-data-from-local/{index} | false   | /post-json-data-from-local/{index} | default   |
+| update-airquality         | [PUT]  | /update-airquality                 | false   | /update-airquality                 | default   |
