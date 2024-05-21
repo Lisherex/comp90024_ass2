@@ -12,17 +12,22 @@ class HTTPSession:
     
 
 class TestEnd2End(unittest.TestCase):
-    def test_student(self):
+    def test_airqaulity_copd(self):
         self.assertEqual(test_request.get('/airquality/copd').status_code, 200)
-
+    
+    def test_airqaulity_houseprice(self):
         self.assertEqual(test_request.get('/airquality/houseprice').status_code, 200)
-
+        
+    def test_airqaulity_vehicle(self):
         self.assertEqual(test_request.get('/airquality/vehicle').status_code, 200)
 
+    def test_airqaulity_rsd(self):
         self.assertEqual(test_request.get('/airquality/rsd').status_code, 200)
-
+    
+    def test_houseprice_copd(self):
         self.assertEqual(test_request.get('/houseprice/copd').status_code, 200)
-
+    
+    def test_houseprice_vehicle(self):
         self.assertEqual(test_request.get('/houseprice/vehicle').status_code, 200)
 
 
