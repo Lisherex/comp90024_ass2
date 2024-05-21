@@ -21,6 +21,7 @@ class HTTPSession:
         return self.session.delete(f'{self.base_url}/{path}')
 
 class TestEnd2End(unittest.TestCase):
+    #Mocking External Services
     def test_airquality_copd(self):
         self.assertEqual(test_request.get('/airquality/copd').status_code, 200)
         self.assertIsNotNone(test_request.get('/airquality/copd').json())
@@ -44,6 +45,31 @@ class TestEnd2End(unittest.TestCase):
     def test_houseprice_vehicle(self):
         self.assertEqual(test_request.get('/houseprice/vehicle').status_code, 200)
         self.assertIsNotNone(test_request.get('/houseprice/vehicle').json())
+
+    #Test content type and headers verification
+    def test_content_type_for_copd(self):
+        response = self.test_request.get('/airquality/copd')
+        self.assertIn('application/json', response.headers['Content-Type'])
+
+    def test_content_type_for_rsd(self):
+        response = self.test_request.get('/airquality/rsd')
+        self.assertIn('application/json', response.headers['Content-Type'])
+
+    def test_content_type_for_vehicle(self):
+        response = self.test_request.get('/airquality/vehicle')
+        self.assertIn('application/json', response.headers['Content-Type'])
+
+    def test_content_type_for_houseprice(self):
+        response = self.test_request.get('/airquality/houseprice')
+        self.assertIn('application/json', response.headers['Content-Type'])
+
+    def test_content_type_for_houseprice_copd(self):
+        response = self.test_request.get('/houseprice/copd')
+        self.assertIn('application/json', response.headers['Content-Type'])
+
+    def test_content_type_for_houseprice_vehicle(self):
+        response = self.test_request.get('/houseprice/vehicle')
+        self.assertIn('application/json', response.headers['Content-Type'])
 
 if __name__ == '__main__':
     test_request = HTTPSession('http', 'localhost', 9090)
