@@ -1,14 +1,14 @@
 include:
-- ./functions/putCOPD/put-COPD.zip
+- ./functions/post_json_data_from_local/upload.zip
 kind: ArchiveUploadSpec
-name: functions-putcopd-put-copd-zip-bjMg
+name: functions-post-json-data-from-local-upload-zip-iAEg
 
 ---
 apiVersion: fission.io/v1
 kind: Package
 metadata:
   creationTimestamp: null
-  name: put-COPD
+  name: post-json-data-from-local
   namespace: default
 spec:
   buildcmd: ./build.sh
@@ -20,13 +20,7 @@ spec:
   source:
     checksum: {}
     type: url
-    url: archive://functions-putcopd-put-copd-zip-bjMg
+    url: archive://functions-post-json-data-from-local-upload-zip-iAEg
 status:
   buildstatus: pending
-  lastUpdateTimestamp: "2024-05-20T07:09:03Z"
-
----
-include:
-- ./functions/putCOPD/put-COPD.zip
-kind: ArchiveUploadSpec
-name: functions-putcopd-put-copd-zip-FIUk
+  lastUpdateTimestamp: "2024-05-21T04:56:10Z"

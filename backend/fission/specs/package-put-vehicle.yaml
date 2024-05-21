@@ -24,3 +24,9 @@ spec:
 status:
   buildstatus: pending
   lastUpdateTimestamp: "2024-05-20T07:09:05Z"
+
+---
+include:
+- ./functions/putVehicle/put-vehicle.zip
+kind: ArchiveUploadSpec
+name: functions-putvehicle-put-vehicle-zip-8BaX

@@ -6,15 +6,15 @@ FISSION_NAMESPACE=default
 
 ENV_NAME="python"
 
-PKG_NAME="update-airquality"
+PKG_NAME="post-json-data-from-local"
 
-FN_NAME="update-airquality"
-FN_ENTRYPOINT="Main.handler"
+FN_NAME="post-json-data-from-local"
+FN_ENTRYPOINT="main.main"
 
-ROUTE_NAME="update-airquality"
-ROUTE_METHOD="GET"
-ROUTE_URL="/update-airquality"
-ROUTE_CREATEINGRESS="TRUE"
+ROUTE_NAME="post-json-data-from-local"
+ROUTE_METHOD="POST"
+ROUTE_URL="/post-json-data-from-local"
+ROUTE_CREATEINGRESS="FALSE"
 #####################################
 
 (
@@ -44,15 +44,15 @@ ROUTE_CREATEINGRESS="TRUE"
 
     if fission route get --name $ROUTE_NAME --namespace $FISSION_NAMESPACE &>/dev/null; then
         if [ "$ROUTE_CREATEINGRESS" = "TRUE" ]; then
-            fission route update --name $ROUTE_NAME --method $ROUTE_METHOD --url $ROUTE_URL --function $FN_NAME --namespace $FISSION_NAMESPACE --createingress
+            fission route update --name $ROUTE_NAME --method $ROUTE_METHOD --url $ROUTE_URL/{index} --function $FN_NAME --namespace $FISSION_NAMESPACE --createingress
         else
-            fission route update --name $ROUTE_NAME --method $ROUTE_METHOD --url $ROUTE_URL --function $FN_NAME --namespace $FISSION_NAMESPACE
+            fission route update --name $ROUTE_NAME --method $ROUTE_METHOD --url $ROUTE_URL/{index} --function $FN_NAME --namespace $FISSION_NAMESPACE
         fi
     else
         if [ "$ROUTE_CREATEINGRESS" = "TRUE" ]; then
-            fission route create --name $ROUTE_NAME --method $ROUTE_METHOD --url $ROUTE_URL --function $FN_NAME --namespace $FISSION_NAMESPACE --createingress
+            fission route create --name $ROUTE_NAME --method $ROUTE_METHOD --url $ROUTE_URL/{index} --function $FN_NAME --namespace $FISSION_NAMESPACE --createingress
         else
-            fission route create --name $ROUTE_NAME --method $ROUTE_METHOD --url $ROUTE_URL --function $FN_NAME --namespace $FISSION_NAMESPACE
+            fission route create --name $ROUTE_NAME --method $ROUTE_METHOD --url $ROUTE_URL/{index} --function $FN_NAME --namespace $FISSION_NAMESPACE
         fi
     fi
 

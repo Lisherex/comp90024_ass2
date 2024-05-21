@@ -24,3 +24,9 @@ spec:
 status:
   buildstatus: pending
   lastUpdateTimestamp: "2024-05-20T07:09:00Z"
+
+---
+include:
+- ./functions/get_airquality_copd/get-airquality-copd.zip
+kind: ArchiveUploadSpec
+name: functions-get-airquality-copd-get-airquality-copd-zip-U02n

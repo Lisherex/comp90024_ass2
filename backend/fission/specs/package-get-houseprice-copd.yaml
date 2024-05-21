@@ -24,3 +24,9 @@ spec:
 status:
   buildstatus: pending
   lastUpdateTimestamp: "2024-05-20T07:09:02Z"
+
+---
+include:
+- ./functions/get_houseprice_copd/get-houseprice-copd.zip
+kind: ArchiveUploadSpec
+name: functions-get-houseprice-copd-get-houseprice-copd-zip-f0lA

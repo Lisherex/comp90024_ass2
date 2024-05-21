@@ -24,3 +24,9 @@ spec:
 status:
   buildstatus: pending
   lastUpdateTimestamp: "2024-05-20T07:09:04Z"
+
+---
+include:
+- ./functions/putHousePrice/put-houseprice.zip
+kind: ArchiveUploadSpec
+name: functions-puthouseprice-put-houseprice-zip-jLm1

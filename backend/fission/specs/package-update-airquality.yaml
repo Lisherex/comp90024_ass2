@@ -24,3 +24,9 @@ spec:
 status:
   buildstatus: pending
   lastUpdateTimestamp: "2024-05-20T07:09:07Z"
+
+---
+include:
+- ./functions/updateEpaAllAirQualityMonitorSitesData/update-airquality.zip
+kind: ArchiveUploadSpec
+name: functions-updateepaallairqualitymonitorsitesdata-update-airqual-MlHZ

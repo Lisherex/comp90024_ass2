@@ -24,3 +24,9 @@ spec:
 status:
   buildstatus: pending
   lastUpdateTimestamp: "2024-05-20T07:08:59Z"
+
+---
+include:
+- ./functions/air_quality_house_price/get-airquality-houseprice.zip
+kind: ArchiveUploadSpec
+name: functions-air-quality-house-price-get-airquality-houseprice-zip-Tuvm
