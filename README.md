@@ -13,16 +13,13 @@ Data:
 
 URL:
 
-/airquality
-
-/airquality/weather/wind
-
-/airquality/weather/rainfall
-
-/airquality/respiratory
-
-/airquality/copd
-
-/airquality/houseprice
-
-/airquality/vehicle
+|            Name           | Method |                 URL                | Ingress | Path                               | Namespace | Description                                   |
+|:-------------------------:|:------:|:----------------------------------:|---------|------------------------------------|-----------|-----------------------------------------------|
+| airquality-copd           | [GET]  | /airquality/copd                   | true    | /airquality/copd                   | default   | Get Air Quality Station data related to COPD data |
+| airquality-houseprice     | [GET]  | /airquality/houseprice             | true    | /airquality/houseprice             | default   | Get Air Quality Station data related to House Price data |
+| airquality-rsd            | [GET]  | /airquality/rsd                    | true    | /airquality/rsd                    | default   | Get Air Quality Station data related to RSD data |
+| airquality-vehicle        | [GET]  | /airquality/vehicle                   | true    | /houseprice/copd                   | default   | Get Air Quality Station data related to Vehicle Per Dwelling data |
+| houseprice-copd           | [GET]  | /houseprice/copd                   | true    | /houseprice/copd                   | default   | Get House Price data related to COPD data |
+| houseprice-copd           | [GET]  | /houseprice/vehicle                   | true    | /houseprice/vehicle                   | default   | Get House Price data related to Vehicle Per Dwelling data |
+| post-json-data-from-local | [POST] | /post-json-data-from-local/{index} | false   | /post-json-data-from-local/{index} | default   | Upload json data from local to ElasticSearch. |
+| update-airquality         | [PUT]  | /update-airquality                 | false   | /update-airquality                 | default   | Update Air Quality Station data from EPA.     |
